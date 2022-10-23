@@ -1,0 +1,24 @@
+#
+# Data about game info for different scripts.
+#
+# Game dir|meta port|factory port|table port|card size|full name
+#
+# Used: 
+#
+# 29100-29113
+# 29120-29131
+# 29140-29141
+# 29200-29999
+# 32000-32010
+#      
+Mtg|29100|29101|29200-29299|200x285|Magic the Gathering
+Mtg2|29100|29101|29200-29299|200x285|Magic the Gathering
+Poker|29102|29109|32000-32010|210x294|Collectible Poker
+Pokemon|29110|29111|29300-29399|238x328|Pokémon
+Lotr|29120|29121|29400-29499|357x497|Lord of the Rings
+Metw|29130|39131|29500-29599|420x590|Middle-earth
+Nr|29140|39141|29600-29699|420x590|Netrunner
+Cthulhu|29103|29104|29700-29799|300x415|Call of Cthulhu
+Vtes|29105|29106|29800-29899|362x507|Vampire: The Eternal Struggle
+Sw|29107|29108|29900-29999|350x490|Star Wars: The Collectible Card Game
+Inwo|29112|29113|29122-29129|Illuminati: New World Order

@@ -1,0 +1,22 @@
+<!ELEMENT ccg (phase|trigger|option|image|cardset)*>
+<!ATTLIST ccg
+    name        CDATA #REQUIRED
+    dir         CDATA #REQUIRED>
+<!ELEMENT phase EMPTY>
+<!ATTLIST phase
+    name        CDATA #REQUIRED>
+<!ELEMENT trigger EMPTY>
+<!ATTLIST trigger
+    event        CDATA #REQUIRED
+    attribute    CDATA #REQUIRED>
+<!ELEMENT option EMPTY>
+<!ATTLIST option
+    name         CDATA #REQUIRED
+    value        CDATA #REQUIRED>
+<!ELEMENT image EMPTY>
+<!ATTLIST image
+    file         CDATA #REQUIRED
+    tag          CDATA #REQUIRED>
+<!ELEMENT cardset EMPTY>
+<!ATTLIST cardset
+    source       CDATA #REQUIRED>

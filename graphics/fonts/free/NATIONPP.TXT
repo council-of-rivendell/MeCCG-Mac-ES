@@ -1,0 +1,55 @@
+NATIONPP.TXT
+
+The attached font NATIONAL PRIMARY is Copyright [c] Roger White - all rights reserved.
+This font is Freeware. Provided this font is used for non-commercial purposes then no fee
+is payable to the author for it's use. You may use this font yourself and may pass on copies
+to your friends provided that the copy contains all of the files from the original package
+as follows:-
+
+Postscript Type 1 package - NATIONPP.ZIP contains:-
+
+NATIONPP.AFM
+NATIONPP.PFB
+NATIONPP.PFM
+NATIONPP.INF
+NATIONPP.TXT
+
+TrueType package - NATIONPP.ZIP Contains:-
+
+NATIONPP.TTF
+NATIONPP.TXT
+
+Distribution of this font as part of a collection which has not been compiled
+by the author, distribution for financial gain, or distribution on a disk
+attached to a magazine is expressly forbidden except with the prior consent of
+the author. Alteration of this font in any way, or conversion to any other
+format is expressly forbidden. The Author is able to supply this font as
+Postscript type 3 for PC, Nimbus Q, Typetype for Mac, Type 1 and Type 3 for
+Mac, and Type 1 for Next. Please send a blank 3.5inch disk together with 1.0uk
+pound to cover post and packing.
+
+
+'NATIONAL PRIMARY' is a high quality font containing full hinting for correct
+rendering at small point sizes and a total of 104 kerning pairs for correct character
+spacing. It is supplied 'as is' and no waranty is implied or given by the
+author. The font has been designed to meet the specification issued by the Dept
+of Education and Science for the teaching of subjects contained within the National
+Curriculum. Its main use will be in the preparation of worksheets for use within a 
+classroom environment, and is suitable for both headlines and body text, and should
+render well down to 14 point. The font contains a full range of upper and lower
+case letters together with the figures 0 to 9, a full range of punctuation, 
+and a full range of diacritics. It was hand traced in order to achieve a high
+quality outline and compiled using Fontographer Version 3.5.2. This font represents
+aproximately 400 manhours of work.
+
+The author would appreciate notification of any problems experienced with this
+font together with any suggestions for improvments.
+
+Roger White,
+1, Owens Close,
+Rugeley,
+Staffs,
+WS15 2YH,
+England.
+
+rwhiteb@cix.compulink.co.uk

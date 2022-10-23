@@ -1,0 +1,108 @@
+#
+# Import/export definitions for NetMECCG
+# ======================================
+#
+
+#
+# IsNetMECCGDeck(file content) - Return 1 if the file is a NetMECCG-deck.
+#
+def IsNetMECCGDeck
+{
+  push(i);
+  i=0;
+  while(i<length(ARG))
+  {
+    if(left(ARG[i],9)=="[NetMECCG")
+    {
+      return(1);
+      i=length(ARG);
+    }
+    i=i+1;
+  }
+  i=pop();
+}
+
+#
+# ImportNetMECCGDeck(file content) - Importer for NetMECCG-deck.
+#
+def ImportNetMECCGDeck
+{
+  if(cardmap{"I"}{"NetMECCG"}==NULL)
+    execute("NetMECCG.cardmap");
+  ImportReaderLineByLine(ARG,"HashComments","TrimSpaces","None","NetMECCGFormatParser");
+}
+
+#
+# NetMECCGFormatParser(text line) - Text line parser for NetMECCG-deck.
+#
+def NetMECCGFormatParser
+{
+  if(left(ARG,9)=="[NetMECCG")
+  {}
+  else if(left(ARG,1)=="[")
+  {
+    if(ARG=="[starting]")
+      import.part="pool";
+    elseif(ARG=="[sites]")
+      import.part="sites";
+    elseif(ARG=="[sideboard]")
+      import.part="sideboard";
+    elseif(ARG=="[anti-FW]")
+      import.part="sideboard vs. fw";
+    elseif(ARG=="[characters]")
+      import.part="deck";
+    elseif(ARG=="[resources]")
+      import.part="deck";
+    elseif(ARG=="[hazards]")
+      import.part="deck";
+    else
+      ImportErrorAdd("Invalid deck part "+ARG);
+  }
+  else
+  {
+    if(has_entry(lc(ARG),cardmap{"I"}{"NetMECCG"}))
+      ImportAdd(1,cardmap{"I"}{"NetMECCG"}{lc(ARG)});
+    else
+      ImportErrorAdd("'"+ARG+"' unknown");
+  }
+}
+
+#
+# ExportNetMECCGDeck(deck name,deck strucutre) - Convert a deck to the list of lines of the NetMECCG file.
+#
+def ExportNetMECCGDeck
+{
+  if(cardmap{"E"}{"NetMECCG"}==NULL)
+    execute("NetMECCG.cardmap");
+
+  push(x);
+  x=(
+   ("[NetMECCG v1.4 Deck]",)+
+   ("","[starting]",)+ExportCards("NetMECCG",ARG[1]{"pool"})+
+   ("","[sideboard]",)+ExportCards("NetMECCG",ARG[1]{"sideboard"})
+  );
+
+  if(has_entry("sideboard vs. fw",ARG[1]))
+    x=x+("","[anti-FW]",)+ExportCards("NetMECCG",ARG[1]{"sideboard vs. fw"});
+  else
+    x=x+("","[anti-FW]",);
+
+  x=x+
+   ("","[characters]",)+ExportCards("NetMECCG",SelectByAttr(ARG[1]{"deck"},"type","Character"))+
+   ("","[resources]",)+ExportCards("NetMECCG",SelectByAttr(ARG[1]{"deck"},"type","Resource"))+
+   ("","[hazards]",)+ExportCards("NetMECCG",SelectByAttr(ARG[1]{"deck"},"type","Hazard"))+
+   ("","[sites]",)+ExportCards("NetMECCG",ARG[1]{"sites"})
+  ;
+
+  return(x);
+
+  x=pop();
+}
+
+#
+# NetMECCGFormatSuffix() - Return filename suffix .txt for NetMECCG-format.
+#
+def NetMECCGFormatSuffix
+{
+  return(".dck");
+}

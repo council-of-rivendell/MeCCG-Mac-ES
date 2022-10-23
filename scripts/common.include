@@ -1,0 +1,823 @@
+#
+#    Gccg - Generic collectible card game.
+#    Copyright (C) 2001-2012 Tommi Ronkainen
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program, in the file license.txt. If not, write
+# to the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+# Boston, MA 02111-1307, USA.
+#
+# Variables:
+#
+# deck_rulecheck.part - A deck part currently under check.
+# deck_rulecheck.info - This variable is used by special checks to transfer additional violation info.
+# deck_rulecheck.system - A game system currently under check.
+# deck_rulecheck.errors{game system} - List of errors found during the last check.
+#
+# Functions:
+#
+# abs(x) - Return absolute value of x.
+# CountCards(list of card numbers) - Return a list of pairs (# cards,card number)
+# dist((x1,y1),(x2,y2)) - compute square of the distance between (x1,y1) and (x2,y2)
+# GeneratePassword() - Return randomly generated string.
+# tofnc(text) - convert text to valid function name
+# tofilename(text) - Convert a text to valid filename.
+# TimeDiff(a,b) - Count number of seconds between time stamps from a to b.
+# ValidCardNumber(number) - Return 1 if the number is valid cardnumber.
+# ValidUsername(name) - Return 1 if name is valid as a username.
+# VersionCompare(ver1,ver2) - Return 1 if version ver1 is older than ver2.
+# wr(e) - Write expression literally to stdout.
+#
+
+# CONSTANTS
+# =========
+
+# Initial value for torrent version.
+TORRENT_VERSION=0;
+
+# MISCELLANOUS FUNCTIONS
+# ======================
+
+#
+# GeneratePassword() - Return randomly generated string.
+#
+def GeneratePassword
+{
+  randomize();
+  return(join(repeat(30,'random(split("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",""))')));
+}
+
+#
+# CountCards(list of card numbers) - Return list of pairs (card number,nmb.of card).
+#
+def CountCards
+{
+  push(c);
+  push(a);
+  push(r);
+  r=(,);
+  a=ARG;
+  while(length(a))
+  {
+    c=first(a);
+    r{c}=count(c,a);
+    a=a-(c,);
+  }
+  return(r);
+  r=pop();
+  a=pop();
+  c=pop();
+}
+
+#
+# ValidMode(mode) - Return 1 if mode is valid.
+#
+def ValidMode
+{
+  return(ARG=="" || ARG=="sealed" || ARG=="draft");
+}
+
+#
+# ValidUsername(name) - Return 1 if name is valid as a username.
+#
+def ValidUsername
+{
+  return(0);
+
+  if(typeof(ARG)=="string")
+  {
+    if(length(split(ARG,"-"))==2)
+    {
+      push(n);
+      n=split(ARG,"-");
+      return(ValidUsername(n[0]) && ValidUsername(n[1]));
+      n=pop();
+    }
+    else if(length(ARG) >= 2 && length(ARG) <= 10)
+      return(length((split(ARG,""))-split("0123456789_abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ",""))==0);
+  }
+}
+
+#
+# VersionCompare(ver1,ver2) - Return 1 if version ver1 is older than ver2.
+#
+def VersionCompare
+{
+  push(a);
+  push(b);
+  push(i);
+
+  return(0);
+  a=split(ARG[0],".");
+  b=split(ARG[1],".");
+  i=1;
+  
+  while(i)
+  {
+    if(!length(b))
+    {
+      return(0);
+      i=0;
+    }
+    else if(!length(a))
+    {
+#     version "1.0.0" is equivalent to "1.0", or "1"
+      if(max(apply("toint",b)) > 0)
+        return(1);
+      else
+        return(0);
+      i=0;
+    }
+    else if(a[0] < b[0])
+    {
+      return(1);
+      i=0;
+    }
+    else if(a[0] > b[0])
+    {
+      return(0);
+      i=0;
+    }
+    else
+    {
+      a=tail(a);
+      b=tail(b);
+    }
+  }
+  
+  i=pop();
+  b=pop();
+  a=pop();
+}
+
+#
+# MyPath() - Return my personal Gccg directory for the current game.
+#
+def MyPath
+{
+  return(HOME+"/.gccg/"+GAMEDIR+"/");
+}
+
+#
+# DataPath(section) - Return directory containing Gccg data for section.
+#
+def DataPath
+{
+  return(DATADIR+"/"+ARG+"/"+GAMEDIR+"/");
+}
+
+#
+# SavePath() - Return directory for (server) saves.
+#
+def SavePath
+{
+  return(SAVEDIR+"/"+GAMEDIR+"/");
+}
+
+#
+# wr(e) - Write expression literally to stdout.
+#
+def wr
+{
+  println(tostr(ARG));
+}
+
+#
+# ValidCardNumber(number) - Return 1 if the number is valid cardnumber and presents real card.
+#
+def ValidCardNumber
+{
+  return(set_of(ARG)!=NULL && set_of(ARG)!="");
+} 
+
+#
+# tofnc(text) - Convert a text to valid function name.
+#
+def tofnc
+{
+  if(ARG==NULL)
+    return("NULL");
+  else
+  {
+    push(x);
+    x=split(ARG,"")-split(" ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789","");
+    return(join(ucfirst(split(join(split(ARG,"")-x)," "))));
+    x=pop();
+  }
+}
+
+#
+# tofilename(text) - Convert a text to valid filename.
+#
+def tofilename
+{
+  return(strreplace(strreplace(strreplace(ARG,"/","_"),"\\","_"),"..","__"));
+}
+
+#
+# dist((x1,y1),(x2,y2)) - Compute the square of the distance between (x1,y1) and (x2,y2).
+#
+def dist
+{
+  return((ARG[0][0]-ARG[1][0])*(ARG[0][0]-ARG[1][0]) + (ARG[0][1]-ARG[1][1])*(ARG[0][1]-ARG[1][1]));
+}
+
+#
+# abs(x) - Return absolute value of x.
+#
+def abs
+{
+  if(ARG < 0)
+    return(-ARG);
+  else
+    return(ARG);
+}
+
+#
+# del(e,L) - Remove one instance of element e from the list L and return remaining list.
+#
+def del
+{
+  push(i);
+  i=find(ARG[0],ARG[1]);
+  if(i!=NULL)
+    return(index(ARG[1],seq(0,length(ARG[1])-1) - (i,)));
+  else
+    return(ARG[1]);
+  i=pop();
+}
+
+#
+# sum(e_1,...,e_n) - Return sum of arguments.
+#
+def sum
+{
+  push(s);
+  s=0;
+  for(n)(ARG)
+    s=s+n;
+  return(s);
+  s=pop();
+}
+
+#
+# round(n,d) - Round a number to d decimals.
+#
+def round
+{
+  return(toreal(format("%."+ARG[1]+"f",ARG[0])));
+}
+
+#
+# isreal(d) - Return 1 if string d represents a real number.
+#
+def isreal
+{
+  return(ARG!="" && length(split(ARG,"")-split(tostr(toreal(ARG)),""))==0);
+}
+
+#
+# listjoin(L,e) - Join elements of the list L to the new list by
+#   inserting an element e between each member of the list L.
+#
+def listjoin
+{
+  push(l);
+  l=(,);
+  for(e)(ARG[0])
+    l=l+(ARG[1],e);
+  return(tail(l));
+  l=pop();
+}
+
+#
+# DECK RULE CHECKING
+# ==================
+
+#
+# RuleViolation(reason) - Store deck rule violation message.
+#
+def RuleViolation
+{
+  deck_rulecheck.errors{deck_rulecheck.system}=
+    deck_rulecheck.errors{deck_rulecheck.system}+(ARG+".",);
+}
+
+#
+# RulePass() - Catch all rule, return empty list.
+#
+def RulePass
+{
+  return(,);
+}
+
+#
+# RuleDeckMinimum(min, list of cards) - Return card list, but report error if less than minimum.
+#
+def RuleDeckMinimum
+{
+  if(length(ARG[1]) < ARG[0])
+    RuleViolation("Minimum size of the "+deck_rulecheck.part+" is "+ARG[0]+" (current size "+length(ARG[1])+")");
+  else
+    return(ARG[1]);
+}
+
+#
+# RuleDeckMaximum(max, list of cards) - Return card list, but report error if more than maximum.
+#
+def RuleDeckMaximum
+{
+  if(length(ARG[1]) > ARG[0])
+    RuleViolation("Maximum size of the "+deck_rulecheck.part+" is "+ARG[0]+" (current size "+length(ARG[1])+")");
+  else
+    return(ARG[1]);
+}
+
+#
+# RuleDeckSizes(list of allowed sizes, list of cards) - Return card list, but report error if size is not in the list of allowed sizes.
+#
+def RuleDeckSizes
+{
+  if(count(length(ARG[1]),ARG[0])==0)
+    RuleViolation("Size of the "+deck_rulecheck.part+" must be "+join(forall("tostr(#)",ARG[0])," or "));
+  else
+    return(ARG[1]);
+}
+
+#
+# RuleCardLimitSingle((card name, limit), list of cards) - Check limit and remove cards by name.
+#
+def RuleCardLimitSingle
+{
+  if(count(ARG[0][0],name(ARG[1])) > ARG[0][1])
+  {
+    RuleViolation(ARG[0][0]+" is limited to "+ARG[0][1]);
+    return(NULL);
+  }
+  else if (ARG[0][1])
+    return(select("name(#)!=ARG[0][0]",ARG[1]));
+  else
+    return(ARG[1]);
+}
+
+#
+# RuleCardLimitEach((cardname1, [cardname2, cardname3... ,] limit), list of cards in deck) - Check deck for limit on listed cards and remove cards by name.
+#
+def RuleCardLimitEach
+{
+  push(l);
+  push(h);
+  push(r);
+  push(D);
+  push(d);
+  
+  l=last(ARG[0]);
+  h=head(ARG[0]);
+  r=flatten(images(h));
+  
+  D=ARG[1];
+  d=D-r;
+  
+  if(l>0)
+  {
+    if(RuleCardLimitGeneral(l,D-d) == NULL) D=NULL;
+    else D=d;
+  }
+  else if(length(D) > length(d))
+    RuleViolation("Banned cards found: "+join(unique(sort(name(D-d))),", "));
+  
+  return(D);
+  
+  d=pop();
+  D=pop();
+  r=pop();
+  h=pop();
+  l=pop();
+}
+
+#
+# RuleCanonicalCardLimitSingle((card name, limit), list of cards) - Check limit and remove cards by canonical name.
+#
+def RuleCanonicalCardLimitSingle
+{
+  if(count(ARG[0][0],canonical_name(ARG[1])) > ARG[0][1])
+  {
+    RuleViolation(ARG[0][0]+" is limited to "+ARG[0][1]);
+    return(NULL);
+  }
+  else
+    return(select("name(#)!=ARG[0][0]",ARG[1]));
+}
+
+#
+# RuleCardLimitAny(card name[, card name 2, ...], list of cards) - Remove matching cards by name.
+#
+def RuleCardLimitAny
+{
+  return(select("find(name(#), head(ARG))==NULL",last(ARG)));
+}
+
+#
+# RuleCardLimitGeneral(limit, list of cards) - Check the limit and remove cards with the given name and report errors.
+#
+def RuleCardLimitGeneral
+{
+  push(d);
+  push(r);
+  r=ARG[1];
+  d=sort(name(ARG[1]));
+  return(,);
+  for(c)(unique(d))
+  {
+    if(count(c,d) > ARG[0])
+    {
+      RuleViolation("Cards are generally limited to "+ARG[0]+" ("+c+" x "+count(c,d)+")");
+      return(NULL);
+    }
+    else
+      r=select("name(#)!=c",r);
+  }
+  r=pop();
+  d=pop();
+}
+
+#
+# RuleCardSet((set abbrev,limit), list of cards) - Check the number of cards belonging to the set.
+#
+def RuleCardSet
+{
+  push(D);
+  push(d);
+  D=ARG[1];
+  d=select("set_of(#)==ARG[0][0]",D);
+  for(c)(unique(sort(d)))
+  {
+    if(count(c,d) > ARG[0][1])
+      RuleViolation("Cards from "+first(set_data(ARG[0][0]))+" are limited to "+ARG[0][1]+" ("+canonical_name(c)+" x "+count(c,d)+")");
+    else
+      D=D-(c,);
+  }
+  return(D);
+  d=pop();
+  D=pop();
+}
+
+#
+# RuleCardSets((list of set abbrevs,limit), list of cards) - Check the number of cards belonging to the set.
+#
+def RuleCardSets
+{
+  push(D);
+  push(d);
+  push(s);
+  push(h);
+  push(l);
+  
+  l=last(ARG[0]);
+  h=head(ARG[0]);
+  s=(,);
+  
+  for(c)(h)
+    s=s+seq(tail(set_data(c)));
+  
+  D=ARG[1];
+  d=sort(select("count(#,s)",D));
+  
+  for(c)(unique(d))
+  {
+    if(D != NULL)
+    {
+      if(!l || count(c,d) > l)
+      {
+        RuleViolation(name(c)+"is limited to "+l+" by virtue of being in set "+set_of(c));
+        D=NULL;
+      }
+      else
+        D=D-(c,);
+    }
+  }
+  return(D);
+  l=pop();
+  h=pop();
+  s=pop();
+  d=pop();
+  D=pop();
+}
+
+#
+# RuleCardSetReprint((set abbrev,limit), list of cards) - Check the number of cards belonging to the set including cards with the same name.
+#
+def RuleCardSetReprint
+{
+  push(D);
+  push(d);
+  push(n);
+  n=unique(sort(name(seq((set_data(ARG[0][0]))[1],(set_data(ARG[0][0]))[2]))));
+
+  D=ARG[1];
+  d=select("count(name(#),n)",D);
+
+  for(c)(unique(sort(d)))
+  {
+    if(count(name(c),name(d)) <= ARG[0][1])
+      D=D-(c,);
+  }
+  return(D);
+  n=pop();
+  d=pop();
+  D=pop();
+}
+
+#
+# RuleAllowedSetsReprint((set code 1, [set code 2, set code 3... ,] limit), list of cards in deck) - Check to make sure only cards from listed sets (including cards with the same name) are present, and in no more than the listed quantity.
+#
+def RuleAllowedSetsReprint
+{
+  push(D);
+  push(d);
+  push(s);
+  push(h);
+  push(l);
+  push(o);
+  
+  l=last(ARG[0]);
+  h=head(ARG[0]);
+  s=(,);
+  
+  for(c)(h)
+    s=s+name(seq(tail(set_data(c))));
+
+  D=ARG[1];
+  o=name(D)-s;
+  if(length(o))
+  {
+    RuleViolation("Can only have cards from sets "+join(h,", ")+".\nExtra cards found: "+join(unique(sort(o)),", "));
+    D=NULL;
+  }
+  else
+    D=RuleCardLimitGeneral(l,D);
+  
+  return(D);
+  o=pop();
+  l=pop();
+  h=pop();
+  s=pop();
+  d=pop();
+  D=pop();
+}
+
+
+#
+# RuleLimitEachByExpression((limit,expression),list of cards) - Limit each card satisfying the expression and remove them.
+#
+def RuleLimitEachByExpression
+{
+  push(d);
+  push(i);
+  d=ARG[1];
+  i=select(ARG[0][1],ARG[1]);
+  for(c)(unique(sort(i)))
+  {
+    if(count(c,i) > ARG[0][0])
+        RuleViolation("Too many: "+canonical_name(c)+" (limit "+ARG[0][0]+")");
+    else
+        d=d-(c,);
+  }
+  return(d);
+  i=pop();
+  d=pop();
+}
+
+#
+# RuleLimitByExpression((limit,expression),list of cards) - Limit total number of card satisfying the expression and remove them.
+#
+def RuleLimitByExpression
+{
+  push(i);
+  push(d);
+  d=ARG[1];
+  i=select(ARG[0][1],ARG[1]);
+
+  if(length(i) > ARG[0][0])
+  {
+     if(ARG[0][0])
+       RuleViolation("Cannot have more than "+ARG[0][0]+" of cards like "+canonical_name(first(i))+" in the "+deck_rulecheck.part);
+     else
+       RuleViolation("Cannot have cards like "+canonical_name(first(i))+" in the "+deck_rulecheck.part);
+  }
+
+  return(d-i);
+  d=pop();
+  i=pop();
+}
+
+#
+# RuleMinProxies(num,list of cards) - Require minimum number of proxies.
+#
+def RuleMinProxies
+{
+  if(isdict(deck_status))
+  {
+    if(ARG[0] > deck_status{player.name[player][1]}[0])
+      RuleViolation("Needs at least "+tostr(ARG[0])+" proxies");
+  }
+  else if(!isdict(cards_missing))
+    RuleViolation("This client version cannot check this format");
+  else if(ARG[0] > sum(flatten(values(cards_missing))))
+    RuleViolation("Needs at least "+tostr(ARG[0])+" proxies");
+  
+  return(ARG[1]);
+}
+
+
+#
+# RuleMaxProxies(num,list of cards) - Set maximum number of proxies.
+#
+def RuleMaxProxies
+{
+  if(isdict(deck_status))
+  {
+    if(ARG[0] < deck_status{player.name[player][1]}[0])
+      RuleViolation("No more than "+tostr(ARG[0])+" proxies");
+  }
+  else if(!isdict(cards_missing))
+    RuleViolation("This client version cannot check this format");
+  else if(ARG[0] < sum(flatten(values(cards_missing))))
+    RuleViolation("No more than "+tostr(ARG[0])+" proxies");
+  
+  return(ARG[1]);
+}
+
+#
+# RuleCheckExpression((description, expression),list of cards) - Evaluate expression by substituting card list to # and report description if failed.
+#
+def RuleCheckExpression
+{
+  deck_rulecheck.info="";
+  if(!first(forall(ARG[0][1],(ARG[1],))))
+  {
+    if(deck_rulecheck.info=="")
+      RuleViolation("Check failed for "+ARG[0][0]);
+    else
+      RuleViolation("Check failed for "+ARG[0][0]+" ("+deck_rulecheck.info+")");
+  }
+
+  return(ARG[1]);
+}
+
+#
+# LegalityCheckRule((rule name,parameters),deck part,list of cards) -
+#   Evaluate one rule for the given deck part.
+#
+def LegalityCheckRule
+{
+  if(isfunction(ARG[0][0]))
+  {
+    if(length(ARG[0]) > 2)
+      return(call(ARG[0][0],(tail(ARG[0])+(ARG[2],))));
+    else
+      return(call(ARG[0][0],(ARG[0][1],ARG[2])));
+  }
+  else
+    println("WARNING: unknown rule "+ARG[0][0]);
+}
+
+#
+# LegalityCheckRules(rules,part name,list of cards) - Apply all rules in the
+#   rules list to the list of cards. Return 1 if the list of cards is
+#   valid, 0 otherwise.
+#
+def LegalityCheckRules
+{
+  push(c);
+  push(i);
+  c=ARG[2];
+  i=0;
+  while(i < length(ARG[0]))
+  {
+    c=LegalityCheckRule(ARG[0][i],ARG[1],c);
+    if(c==NULL || c==(,))
+      i=length(ARG[0]);
+    i=i+1;
+  }
+  if(c==(,))
+    return(1);
+  else if(c != NULL)
+    RuleViolation("Not allowed or too many: "+join(canonical_name(unique(sort(c))),", ")+" in the "+deck_rulecheck.part);
+  
+  i=pop();
+  c=pop();
+}
+
+#
+# LegalityCheckRuleset(ruleset name,deck) - Return 1 if a deck matches the given ruleset.
+#   If the ruleset name is "", collect all deckparts.
+#   Otherwise check the named deck parts, delimited by plus signs if more than one.
+#
+def LegalityCheckRuleset
+{
+  return(1);
+  for(r)(keys(deck_rules{ARG[0]}))
+  {
+    if(r=="")
+    {
+      deck_rulecheck.part="total";
+      if(!LegalityCheckRules(deck_rules{ARG[0]}{""},"",flatten(values(ARG[1]))))
+         return(0);
+    }
+    else
+    {
+      push(d);
+      push(p);
+      d=(,);
+      deck_rulecheck.part=r;
+      for(p)(split(r,"+"))
+      {
+        if(has_entry(p,ARG[1]))
+          d=d+ARG[1]{p};
+      }
+        
+      if(!LegalityCheckRules(deck_rules{ARG[0]}{r},r,d))
+        return(0);
+      p=pop();
+      d=pop();
+    }
+  }
+}
+
+#
+# LegalityCheckDeck(deck) - Return the list of rulesets to which deck matches.
+#
+def LegalityCheckDeck
+{
+  push(l);
+  deck_rulecheck.errors=(,);
+  l=(,);
+  if(deck_rules != NULL)
+  {
+    for(r)(keys(deck_rules))
+    {
+      deck_rulecheck.system=r;
+      deck_rulecheck.errors{r}=(,);
+      if(LegalityCheckRuleset(r,ARG) && length(deck_rulecheck.errors{r})==0)
+        l=l+(r,);
+    }
+  }
+  return(l);
+  l=pop();
+}
+
+#
+# TimeDiff(a,b) - Count number of seconds between time stamps from a to b.
+#
+def TimeDiff
+{
+  push(a);
+  push(b);
+  a=split(ARG[0],":");
+  b=split(ARG[1],":");
+  a=toint(a[0])*60*60+toint(a[1])*60+toint(a[2]);
+  b=toint(b[0])*60*60+toint(b[1])*60+toint(b[2]);
+  if(b<a)
+    return(b+24*60*60-a);
+  else
+    return(b-a);
+  b=pop();
+  a=pop();
+}
+
+#
+# Sec2Str(seconds) - Convert seconds to string with minutes and seconds.
+#
+def Sec2Str
+{
+  push(h);
+  push(m);
+  push(s);
+  s=ARG % 60;
+  m=ARG / 60;
+  if(m >= 60)
+  {
+    h=m / 60;
+    m=m % 60;
+    return(h+"h"+right("0"+m,2)+"m"+right("0"+s,2)+"s");
+  }
+  else
+    return(m+"m"+right("0"+s,2)+"s");
+  s=pop();
+  m=pop();
+  h=pop();
+}
+
+# Load game specific common file.
+execute((game_data()){"gamedir"}+"-common.include");

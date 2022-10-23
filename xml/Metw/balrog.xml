@@ -1,0 +1,1179 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE ccg-setinfo SYSTEM "../gccg-set.dtd">
+<ccg-setinfo name="The Balrog" dir="Balrog" abbrev="BA" game="Middle-earth">
+  <cards>
+
+    <card name="Strider" graphics="Strider.jpg" text="Unique. Manifestation of Aragorn II. You may bring Aragorn II into play with Strider's company, removing Strider from the game and automatically transferring all cards on Strider to Aragorn II. +3 direct influence against the Rangers of the North faction. Tap Strider to search your discard pile for any one item, ally, or faction playable at his current site the site must be in Arthedain, Cardolan, Rhudaur, or The Shire.">
+       <attr key="unique" value="yes"/>
+       <attr key="skills" value="Warrior/Scout/Ranger"/>
+       <attr key="mp" value="3"/>
+       <attr key="playable" value=""/>
+       <attr key="home_site" value="Bree"/>
+       <attr key="prowess" value="6"/>
+       <attr key="body" value="9"/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="race" value="Dúnadan"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Hero Character"/>
+       <attr key="mind" value="8"/>
+       <attr key="influence" value="2"/>
+    </card>
+
+    <card name="Azog" graphics="Azog.jpg" text="Unique. Balrog specific. Leader. Discard on a body check result of 9. +3 direct influence against Orcs and Orc factions. +2 direct influence against Balrog specific characters.">
+       <attr key="unique" value="yes"/>
+       <attr key="skills" value="Warrior/Diplomat"/>
+       <attr key="specific" value="Balrog"/>
+       <attr key="mp" value="2"/>
+       <attr key="playable" value=""/>
+       <attr key="home_site" value="Moria, The Under-gates"/>
+       <attr key="body" value="9"/>
+       <attr key="prowess" value="6"/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="race" value="Orc"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Minion Character"/>
+       <attr key="mind" value="7"/>
+       <attr key="influence" value="1"/>
+    </card>
+
+    <card name="The Balrog" graphics="TheBalrog.jpg" text="Unique. Manifestation of Balrog of Moria. Discard all other manifestations of Balrog of Moria when this card comes into play. +3 to the roll for his company to move between adjacent Under-deeps sites. The Balrog's prowess is only modified by -1 when not tapping to face a strike. He may not have any followers and may not use region or starter movement.">
+       <attr key="unique" value="yes"/>
+       <attr key="skills" value="Warrior/Ranger"/>
+       <attr key="specific" value="Balrog"/>
+       <attr key="playable" value=""/>
+       <attr key="home_site" value="The Under-gates"/>
+       <attr key="body" value="11"/>
+       <attr key="prowess" value="8"/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C6"/>
+       <attr key="race" value="Balrog"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Balrog Character"/>
+       <attr key="influence" value="6"/>
+    </card>
+
+    <card name="Bolg" graphics="Bolg.jpg" text="Unique. Balrog specific. Leader. Discard on a body check result of 9. +3 direct influence against Orcs and Orc factions. +2 direct influence against Balrog specific characters.">
+       <attr key="unique" value="yes"/>
+       <attr key="skills" value="Warrior/Ranger"/>
+       <attr key="specific" value="Balrog"/>
+       <attr key="mp" value="2"/>
+       <attr key="playable" value=""/>
+       <attr key="home_site" value="Moria, The Under-gates"/>
+       <attr key="body" value="9"/>
+       <attr key="prowess" value="7"/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="race" value="Orc"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Minion Character"/>
+       <attr key="mind" value="7"/>
+       <attr key="influence" value="0"/>
+    </card>
+
+    <card name="Bûthrakaur" graphics="Buthrakaur.jpg" text="Unique. Balrog specific. Leader. Manifestation of Bûthrakaur the Green. Discard on a body check result of 9. +3 direct influence against Trolls, Orcs, Troll factions, and Orc factions. +3 direct influence against Balrog specific characters.">
+       <attr key="unique" value="yes"/>
+       <attr key="skills" value="Warrior/Scout/Ranger"/>
+       <attr key="specific" value="Balrog"/>
+       <attr key="mp" value="3"/>
+       <attr key="playable" value=""/>
+       <attr key="home_site" value="Moria, The Under-gates"/>
+       <attr key="body" value="9"/>
+       <attr key="prowess" value="8"/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="race" value="Troll"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Minion Character"/>
+       <attr key="mind" value="9"/>
+       <attr key="influence" value="0"/>
+    </card>
+
+    <card name="Crook-legged Orc" graphics="CrookleggedOrc.jpg" text="Balrog specific. Discard on a body check result of 7.">
+       <attr key="skills" value="Warrior/Ranger"/>
+       <attr key="specific" value="Balrog"/>
+       <attr key="mp" value="0"/>
+       <attr key="playable" value=""/>
+       <attr key="home_site" value="any non-Dark-hold Under-deeps site"/>
+       <attr key="body" value="7"/>
+       <attr key="prowess" value="3"/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C2"/>
+       <attr key="race" value="Orc"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Minion Character"/>
+       <attr key="mind" value="2"/>
+       <attr key="influence" value="0"/>
+    </card>
+
+    <card name="Hill-troll" graphics="Hilltroll.jpg" text="Balrog specific. Discard on a body check result of 7.">
+       <attr key="skills" value="Warrior"/>
+       <attr key="specific" value="Balrog"/>
+       <attr key="mp" value="1"/>
+       <attr key="playable" value=""/>
+       <attr key="home_site" value="any non-Dark-hold Under-deeps site"/>
+       <attr key="body" value="7"/>
+       <attr key="prowess" value="5"/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C2"/>
+       <attr key="race" value="Troll"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Minion Character"/>
+       <attr key="mind" value="3"/>
+       <attr key="influence" value="0"/>
+    </card>
+
+    <card name="Mountain-maggot" graphics="Mountainmaggot.jpg" text="Balrog specific. Discard on a body check result of 7.">
+       <attr key="skills" value="Warrior"/>
+       <attr key="specific" value="Balrog"/>
+       <attr key="mp" value="0"/>
+       <attr key="playable" value=""/>
+       <attr key="home_site" value="any non-Dark-hold Under-deeps site"/>
+       <attr key="body" value="7"/>
+       <attr key="prowess" value="3"/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C3"/>
+       <attr key="race" value="Orc"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Minion Character"/>
+       <attr key="mind" value="1"/>
+       <attr key="influence" value="0"/>
+    </card>
+
+    <card name="Umagaur" graphics="Umagaur.jpg" text="Unique. Balrog specific. Leader. Manifestation of Umagaur the Pale. Discard on a body check result of 9. +2 direct influence against Trolls, Orcs, Troll factions, and Orc factions. +3 direct influence against Balrog specific characters.">
+       <attr key="unique" value="yes"/>
+       <attr key="skills" value="Warrior/Diplomat/Sage"/>
+       <attr key="specific" value="Balrog"/>
+       <attr key="mp" value="3"/>
+       <attr key="playable" value=""/>
+       <attr key="home_site" value="Moria, The Under-gates"/>
+       <attr key="body" value="9"/>
+       <attr key="prowess" value="7"/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="race" value="Troll"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Minion Character"/>
+       <attr key="mind" value="9"/>
+       <attr key="influence" value="2"/>
+    </card>
+
+    <card name="Beorning Skin-changers" graphics="BeorningSkinchangers.jpg" text="Animals. Men. Bears. Two strikes. As a creature, playable only against minion companies. May also be keyed to Anduin Vales, Western Mirkwood, Wold &amp; Foothills; and to sites in these regions. Alternatively, playable as a short-event against a moving hero company. Unless the company contains Beorn or an untapped warrior with prowess greater than 4, it must return to its site of origin.">
+       <attr key="strikes" value="2"/>
+       <attr key="mp" value="1*"/>
+       <attr key="playable" value="{w}{w}"/>
+       <attr key="body" value="-"/>
+       <attr key="prowess" value="10"/>
+       <attr key="auto_attack" value=""/>
+       <attr key="subclass" value="Animals, Men, Bears"/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Creature/Short-event"/>
+       <attr key="type" value="Hazard"/>
+    </card>
+
+    <card name="Carrion Feeders" graphics="CarrionFeeders.jpg" text="Animals. Each wounded character faces one strike. All body checks resulting from successful strikes are modified by an additional +1. Each untapped character in the company may tap to cancel a strike against a wounded character.">
+       <attr key="strikes" value="1"/>
+       <attr key="mp" value="1"/>
+       <attr key="playable" value="{w}{s}{R}{S}"/>
+       <attr key="body" value="-"/>
+       <attr key="prowess" value="9"/>
+       <attr key="auto_attack" value=""/>
+       <attr key="subclass" value="Animals"/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Creature"/>
+       <attr key="type" value="Hazard"/>
+    </card>
+
+    <card name="Olog Warlords" graphics="OlogWarlords.jpg" text="Trolls. Three strikes (playable only against hero companies).">
+       <attr key="strikes" value="3"/>
+       <attr key="mp" value="2"/>
+       <attr key="playable" value="{s}{d}{S}{D}"/>
+       <attr key="body" value="4"/>
+       <attr key="prowess" value="10"/>
+       <attr key="auto_attack" value=""/>
+       <attr key="subclass" value="Trolls"/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Creature"/>
+       <attr key="type" value="Hazard"/>
+    </card>
+
+    <card name="Shelob's Brood" graphics="ShelobsBrood.jpg" text="Spiders. Four strikes. Playable at any Under-deeps site or surface site thereof.">
+       <attr key="strikes" value="4"/>
+       <attr key="mp" value="1"/>
+       <attr key="playable" value=""/>
+       <attr key="body" value="-"/>
+       <attr key="prowess" value="8"/>
+       <attr key="auto_attack" value=""/>
+       <attr key="subclass" value="Spiders"/>
+       <attr key="rarity" value="C2"/>
+       <attr key="class" value="Creature"/>
+       <attr key="type" value="Hazard"/>
+    </card>
+
+    <card name="Black Vapour" graphics="BlackVapour.jpg" text="Target any effect (declared earlier in the same chain of effects) that would cancel a Spider attack. Make a roll and add the attack's prowess. If the result is greater than 14, the effect is canceled and the attack receives +1 prowess.  Alternatively, +1 prowess to a Spider attack. This card may be revealed as an on-guard card for either effect.">
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Short-event"/>
+       <attr key="type" value="Hazard"/>
+    </card>
+
+    <card name="Darkness Made by Malice" graphics="DarknessMadebyMalice.jpg" text="Playable on a company at or moving to a Ruins and Lairs or Under-deeps site, if there are more Spawn cards in play than characters in the company. Eliminated Spawn do not count. The company must do nothing during its site phase this turn.">
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Short-event"/>
+       <attr key="type" value="Hazard"/>
+    </card>
+
+    <card name="Desire All for Thy Belly" graphics="DesireAllforThyBelly.jpg" text="To play this card, you must discard a Spawn card from your hand. Reveal to yourself a number of cards from the top of opponent's play deck equal to the number of Spawn cards in play. Eliminated Spawn do not count. Choose one card and show it to your opponent. He must choose to either: remove the card from the game or decrease the number of cards he may hold in his hand by one for the rest of the game. Shuffle and replace all remaining cards back on top of his play deck. Remove this card from the game.">
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Short-event"/>
+       <attr key="type" value="Hazard"/>
+    </card>
+
+    <card name="Diminish and Depart" graphics="DiminishandDepart.jpg" text="Playable on an Elf, Hobbit, or Wizard. All Elves and Hobbits in the target's company have +1 mind, and a Wizard in the company has -1 direct influence. Tap target character at a Haven during the organization phase to discard this card. Cannot be duplicated in a given company.">
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Hazard"/>
+    </card>
+
+    <card name="Fled into Darkness" graphics="FledintoDarkness.jpg" text="Playable before the strike sequence on The Balrog facing a strike with a prowess higher than his. The strike is canceled and The Balrog taps, if untapped. The next time The Balrog would otherwise untap, make him tapped instead and discard this card. Cannot be duplicated.">
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Hazard"/>
+    </card>
+
+    <card name="Glance of Arien" graphics="GlanceofArien.jpg" text="Environment. Playable on The Balrog at or moving to a non-Under-deeps site. -2/-1 to his prowess/body until the end of the turn. This modification is -4/-2 if Gates of Morning is in play. Cannot be duplicated on a given turn.">
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Short-event"/>
+       <attr key="type" value="Hazard"/>
+    </card>
+
+    <card name="Imprisoned and Mocked" graphics="ImprisonedandMocked.jpg" text="Playable before strikes are assigned on a non-detainment Orc or Troll attack with more strikes than characters and allies in the company. If the attack is not canceled or defeated, make a roll following the attack adding two for each excess strike. If the result minus five is greater than the prowess of the highest mind character in the company (of your choice), place that character &quot;off to the side&quot; with this card and discard all cards on that character. Otherwise, discard this card. During that character's next long-event phase, discard this card and return the character to its owner's hand.">
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Hazard"/>
+    </card>
+
+    <card name="Monstrosity of Diverse Shape" graphics="MonstrosityofDiverseShape.jpg" text="Unique. Spawn. The Drowning-deeps and Remains of Thangorodrim each have an additional automatic-attack: Spawn - 2 strikes with 15/9 prowess/body. In addition, once per turn the hazard player may use one against the hazard limit to play a Wolf or Animal hazard creature from his discard pile. This card must have already attacked the company this turn.">
+       <attr key="unique" value="yes"/>
+       <attr key="mp" value="4"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Hazard"/>
+       <attr key="spawn" value="yes"/>
+    </card>
+
+    <card name="Press-gang" graphics="Pressgang.jpg" text="When a character would otherwise be discarded from play, discard all cards on him, place him &quot;off to the side&quot; with this card, and return any character already with this card to its owner's hand. A character with this card gives his player negative character marshalling points. Cannot be duplicated.">
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Hazard"/>
+    </card>
+
+    <card name="The Reek" graphics="TheReek.jpg" text="Playable on a company at or moving to a Ruins and Lairs or Under-deeps site if you discard an Animal or Spider creature from your hand. Tap all untapped characters in the company with a mind less than 2 plus the number of Spawn cards in play. Eliminated Spawn do not count. Does not affect Wizards or Ringwraiths.">
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Short-event"/>
+       <attr key="type" value="Hazard"/>
+    </card>
+
+    <card name="Spawn of Ungoliant" graphics="SpawnofUngoliant.jpg" text="Unique. Spawn. The Pûkel-deeps and The Gem-deeps each have an additional automatic-attack: Spawn 3 strikes with 15/8 prowess/body. In addition, +1 to all body checks for Elves, Dwarves, Hobbits, Dúnedain, and Men resulting from Spider attacks.">
+       <attr key="unique" value="yes"/>
+       <attr key="mp" value="4"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Hazard"/>
+       <attr key="spawn" value="yes"/>
+    </card>
+
+    <card name="The Sun Shone Fiercely" graphics="TheSunShoneFiercely.jpg" text="Environment. -1 prowess to all Orc, Troll, Dwarf, and Ringwraith characters not at, nor moving to or from, an Under-deeps site. This modification is -2 if Doors of Night is not in play. Cannot be duplicated.">
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Long-event"/>
+       <attr key="type" value="Hazard"/>
+    </card>
+
+    <card name="Unabated in Malice" graphics="UnabatedinMalice.jpg" text="Playable on an automatic-attack or an attack from Shelob; does not count against the hazard limit. The attack receives +1 strike, +1 prowess, and -2 body. The first attempt to cancel this attack instead cancels the affects of this card. Cannot be duplicated on a given attack.">
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Short-event"/>
+       <attr key="type" value="Hazard"/>
+    </card>
+
+    <card name="Ungoliant's Progeny" graphics="UngoliantsProgeny.jpg" text="Unique. Spawn. The Wind-deeps and The Rusted-deeps each have an additional automatic-attack: Spawn 2 strikes with 16/8 prowess/body. In addition, for each Spider attack your opponent faces, you can choose for it to be at +1 prowess and detainment.">
+       <attr key="unique" value="yes"/>
+       <attr key="mp" value="4"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Hazard"/>
+       <attr key="spawn" value="yes"/>
+    </card>
+
+    <card name="Ungoliant's Foul Issue" graphics="UngoliantsFoulIssue.jpg" text="Unique. Spawn. Ancient Deep-hold has an additional automatic-attack: Spawn 2 strikes with 17/7 prowess/body. In addition, non-unique Spider creatures can be keyed to Under-deeps Ruins and Lairs and Shadow-holds.">
+       <attr key="unique" value="yes"/>
+       <attr key="mp" value="4"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Hazard"/>
+       <attr key="spawn" value="yes"/>
+    </card>
+
+    <card name="Crept Along Carefully" graphics="CreptAlongCarefully.jpg" text="Playable on a company during the organization phase. The company cannot use starter movement or move to an Under-deeps site. In addition, if they move with region movement, they are limited in all cases to 3 regions maximum and their hazard limit is reduced by one (to a minimum of two). Discard this card from play and make a roll to attempt to cancel an attack against them by an opponent's company. If the roll plus the number of rangers in the company is greater than 7, the attack is canceled. Discard when any play deck is exhausted or, if you choose, during your organization phase.">
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Hero Resource"/>
+    </card>
+
+    <card name="Longbottom Leaf" graphics="LongbottomLeaf.jpg" text="Take up to two resources from your sideboard to your play deck and reshuffle. Remove this card from the game.">
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Short-event"/>
+       <attr key="type" value="Hero Resource"/>
+    </card>
+
+    <card name="Rumours of Rings" graphics="RumoursofRings.jpg" text="During your organization phase, you may take one ring special item (except for The One Ring) from your sideboard or discard pile and place it &quot;off to the side&quot; with this card. This item gives no marshalling points. A maximum of two items may be with this card at one time. You may play a ring special item placed with this card as though it were in your hand. You may start the game with this card in lieu of playing a minor item.">
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Hero Resource"/>
+    </card>
+
+    <card name="Show Things Unbidden" graphics="ShowThingsUnbidden.jpg" text="Playable during the organization phase on Galadriel if untapped and at Lórien. Tap Galadriel. Opponent must choose and reveal to you 3 non-environment hazards from his hand and shuffle them into his play deck. If these are not available, opponent must reveal his hand to you and shuffle all non-environment hazards there into his play deck.">
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Short-event"/>
+       <attr key="type" value="Hero Resource"/>
+    </card>
+
+    <card name="To Fealty Sworn" graphics="ToFealtySworn.jpg" text="Playable on a Hobbit: in the same company as Return of the King or during the same site phase his company plays a unique hero faction at a Free-hold (not Bag End). The Hobbit gains the warrior skill, +2 prowess, and +5 direct influence against the Hobbits faction and characters with Bag End as a home site. Cannot be duplicated on a given Hobbit.">
+       <attr key="mp" value="1"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Hero Resource"/>
+    </card>
+
+    <card name="Elven Rope" graphics="ElvenRope.jpg" text="Tap Elven Rope and a ranger bearer during your organization phase to allow his company to move an additional region. Instead of eliminating a creature the bearer's company defeated (with a normal prowess less than 11), you may place the creature's card with Elven Rope. Discard the creature if Elven Rope's bearer becomes wounded. If stored with a creature, the creature stays with Elven Rope and you receive three miscellaneous marshalling points. Otherwise, the creature has no effect on play.">
+       <attr key="corruption" value="1"/>
+       <attr key="mp" value="(3)"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Minor Item"/>
+       <attr key="type" value="Hero Resource"/>
+    </card>
+
+    <card name="Cave Troll" graphics="CaveTroll.jpg" text="Playable at a tapped or untapped Under-deeps site with a Troll automatic-attack. +1 to rolls required for its controller's company to move to adjacent Under-deeps sites.">
+       <attr key="mp" value="1"/>
+       <attr key="playable" value=""/>
+       <attr key="body" value="8"/>
+       <attr key="prowess" value="4"/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Ally"/>
+       <attr key="type" value="Minion Resource"/>
+       <attr key="mind" value="2"/>
+    </card>
+
+    <card name="Ancient Secrets" graphics="AncientSecrets.jpg" text="Tap your Ringwraith to discard one hazard permanent-event. Alternatively, during your organization phase, tap your Ringwraith to take up to two resources from your sideboard to your play deck and reshuffle.">
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C3"/>
+       <attr key="class" value="Short-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Going Ever Under Dark" graphics="GoingEverUnderDark.jpg" text="Playable on a company during the organization phase. The company cannot use starter movement. In addition, if they move with region movement, they are limited in all cases to 3 regions maximum and their hazard limit is reduced by one (to a minimum of two). Discard this card from play and make a roll to attempt to cancel an attack against them by an opponent's company. If the roll plus the number of scouts in the company is greater than 7, the attack is canceled. Discard during your organization phase if you choose. Cannot be duplicated on a given company.">
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Great Army of the North" graphics="GreatArmyoftheNorth.jpg" text="As a permanent-event, +1 to your influence attempts against Orc and Troll factions. If you have at least 4 unique Orc and/or Troll factions none playable at a Dark-hold you receive this card's marshalling points. Cannot be duplicated as a permanent-event. Alternatively, as a short-event, you may choose any Orc and Troll factions from your discard pile and shuffle them into your play deck.">
+       <attr key="mp" value="(2)"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event/Short-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Grond" graphics="Grond.jpg" text="Playable on a unique Orc or Troll Faction. -3 prowess to automatic-attacks at Free-holds and Border-holds in the region the containing the site where the faction is playable, and in all adjacent regions. Only one Grond can so affect a given site.">
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Long Grievous Siege" graphics="LongGrievousSiege.jpg" text="Playable on a unique non-Dragon faction. Place a Border-hold from your location deck &quot;off to the side&quot; with this card. The Border-hold must be in the same region or adjacent thereto as a site where the target faction is playable. Return any faction playable at the Border-hold to its owner's hand. -5 to any attempt to play a faction at any version of the Border-hold. All versions of the Border-hold gain an additional automatic-attack: same type as your target faction 5 strikes with 9 prowess (detainment against your companies). Cannot be duplicated on your faction.">
+       <attr key="mp" value="1"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="No Better Use" graphics="NoBetterUse.jpg" text="Playable on a character during your organization phase. One time you may tap your character to place an opponent's character &quot;off to the side&quot; with this card. Do this in lieu of making opponent's character's body check in company vs. company combat with your character's company. Discard all cards on opponent's character. If your character becomes wounded or leaves active play, discard this card. Opponent's character then forms a company at your character's current or new site. During the site phase at Shelob's Lair, your target character may tap and discard this card to eliminate opponent's character whom you then receive as kill marshalling points.">
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Prone to Violence" graphics="PronetoViolence.jpg" text="Any minion company without a Ringwraith may attack another minion company without a Ringwraith. The attacking company may contain The Balrog. Discard when any play deck is exhausted. Cannot be duplicated.">
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Sauron" graphics="Sauron.jpg" text="Manifestation of The Lidless Eye. Playable if your opponent is a Wizard and you have not revealed a Ringwraith. You are Sauron, not a Ringwraith. You may not reveal a Ringwraith or play Ringwraith followers. +10 to your general influence. Discards and prevents the subsequent play of Bade to Rule. During your organization phase, you may bring a resource or character from your sideboard into your play deck and shuffle and there is no limit to the number of characters you may bring into play. Cannot be duplicated.">
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Whispers of Rings" graphics="WhispersofRings.jpg" text="During your organization phase, you may take one ring special item (except for The One Ring) from your sideboard or discard pile and place it &quot;off to the side&quot; with this card. This item gives no marshalling points. A maximum of two items may be with this card at one time. You may play a ring special item placed with this card as though it were in your hand. You may start the game with this card in lieu of playing a minor item.">
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Evil Things Lingering" graphics="EvilThingsLingering.jpg" text="Unique. Balrog specific. Spawn. Playable at The Under-galleries, The Under-courts, or Remains of Thangorodrim. Discard this ally if its company moves using region or starter movement. If this ally's controlling character is not The Balrog, your opponent makes a roll during your organization phase and subtracts four . The controlling character is eliminated if the result is greater than his mind.">
+       <attr key="unique" value="yes"/>
+       <attr key="specific" value="Balrog"/>
+       <attr key="mp" value="2"/>
+       <attr key="playable" value=""/>
+       <attr key="body" value="9"/>
+       <attr key="prowess" value="9"/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Sage Ally"/>
+       <attr key="type" value="Minion Resource"/>
+       <attr key="mind" value="4"/>
+       <attr key="spawn" value="yes"/>
+    </card>
+
+    <card name="Great Troll" graphics="GreatTroll.jpg" text="Balrog specific. Playable at a non-Darkhaven Under-deeps site and only by The Balrog. Troll. Even if tapped or wounded, you may assign a strike to this ally as though it were untapped.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="mp" value="1"/>
+       <attr key="playable" value=""/>
+       <attr key="body" value="8"/>
+       <attr key="prowess" value="6"/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Warrior Ally"/>
+       <attr key="type" value="Minion Resource"/>
+       <attr key="mind" value="3"/>
+    </card>
+
+    <card name="Nasty Slimy Thing" graphics="NastySlimyThing.jpg" text="Unique. Balrog specific. Spawn. Playable at a non-Darkhaven Under-deeps site. Tap to cancel a Drake attack. Discard this ally if its company moves using region or starter movement.">
+       <attr key="unique" value="yes"/>
+       <attr key="specific" value="Balrog"/>
+       <attr key="mp" value="1"/>
+       <attr key="playable" value=""/>
+       <attr key="body" value="9"/>
+       <attr key="prowess" value="4"/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Ally"/>
+       <attr key="type" value="Minion Resource"/>
+       <attr key="mind" value="2"/>
+       <attr key="spawn" value="yes"/>
+    </card>
+
+    <card name="A More Evil Hour" graphics="AMoreEvilHour.jpg" text="Balrog specific. Tap this card when an opponent plays a card normally giving him three or more marshalling points. This card does not untap. If tapped, you may discard this card during your organization phase to target a company allowed to move with region movement. The company may move up to two additional regions if moving to a site where an opponent's company is present and also, thereafter, when leaving this site.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Angband Revisited" graphics="AngbandRevisited.jpg" text="Balrog specific. Untap a character in The Balrog's company.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C3"/>
+       <attr key="class" value="Short-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Breach the Hold" graphics="BreachtheHold.jpg" text="Balrog specific. Playable during the site phase on The Drowning-deeps or The Rusted-deeps if The Balrog is there. The Balrog's company faces 3 attacks (Spawn 1 strike with 15 prowess, Dwarves 4 strikes with 9 prowess, 2 strikes with 12 prowess). Following the attacks, tap The Balrog or discard this card. The roll required to move to the surface site is reduced to zero. This site is never discarded or returned to its location deck. Cannot be duplicated on a given site.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="mp" value="2"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C2"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Caverns Unchoked" graphics="CavernsUnchoked.jpg" text="Balrog specific. Playable during the organization phase on an Under-deeps site. This site is never discarded or returned to its location deck. Each other site (of yours) in the same region as its surface site is considered adjacent to this Under-deeps site. This only applies if the other site is normally a Shadow-hold, Ruins and Lairs, or Border- hold.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C2"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Challenge the Power" graphics="ChallengethePower.jpg" text="Balrog specific. Playable on The Balrog if he bears The One Ring. Make a roll adding one for each sage in his company and each Challenge the Power in play. If the result is: less than 7, The Balrog is eliminated; 7 or 8, discard this card; 9 or 10, you gain 2 marshalling points and The One Ring affects the Balrog; greater than 10, you win the game. Cannot be duplicated on a given turn.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="mp" value="2"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Cloaked by Darkness" graphics="CloakedbyDarkness.jpg" text="Balrog specific. Playable on a company if Great Shadow is in play. You may bring this card from your sideboard into your play deck and reshuffle during your organization phase. The hazard limit against the company is reduced by one to no minimum.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Short-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Crowned with Storm" graphics="CrownedwithStorm.jpg" text="Balrog specific. Playable if The Balrog's company is not at an Under-deeps site and is in company vs. company combat against a company with a Wizard. Discard all allies with no body at the site. Make a roll: for each character at the site with a mind less than 8 and for each ally normally worth less than 3 marshalling points. If the result minus 1 is greater than the character's/ally's body, he is wounded or, if already wounded, eliminated. Tap all untapped allies and characters with a mind stat.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Short-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Darkness Wielded" graphics="DarknessWielded.jpg" text="Balrog specific. Playable on an attack against The Balrog's company if Great Shadow is in play. You may bring this card from your sideboard into your play deck and reshuffle during your organization phase. The attack receives -2 prowess, -1 body, and is reduced to one strike. Alternatively, cancel this attack and a latter attack of your choice against his company this turn.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Short-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Descent through Fire" graphics="DescentthroughFire.jpg" text="Balrog specific. Playable during the site phase if The Balrog is at an untapped Under-galleries or Under-courts. Tap the site. The Balrog's company faces 3 attacks (Trolls 5 strikes with 8 prowess, 4 strikes with 10 prowess, 3 strikes with 12 prowess). Following the attacks, tap The Balrog or discard this card. If not discarded, place this card in your marshalling point pile. All your characters receive +1 prowess and all your leaders receive +1 direct influence. Cannot be duplicated at a given site.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="mp" value="3"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Eddy in Fate's Tide" graphics="EddyinFatesTide.jpg" text="Balrog specific. Playable during the site phase on an untapped site if The Balrog is there; the site cannot be an Under-deeps site or surface site thereof. Tap the Balrog and the site. This site is never discarded and never untaps for you. Before a company can play any ally or item at any version of this site, it must tap two characters during the site phase.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="mp" value="2"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Flame of Udûn" graphics="FlameofUdun.jpg" text="Balrog specific. Demon Fána. Playable during your organization phase on The Balrog. Return this card to your hand: when you play another Demon Fána card, or, if you choose, during your organization phase. Discard his allies. No other characters or allies can be in his company outside of the organization phase. +3 prowess; -2 direct influence. +1 to all body checks resulting from failed strikes against The Balrog. If The Balrog attacks successfully in company vs. company combat, +1 to defending character's body check.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C2"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Foe Dismayed" graphics="FoeDismayed.jpg" text="Balrog specific. +1 prowess against an attack for all characters in a leader's or The Balrog's company or +3 to an influence attempt by a leader or The Balrog.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C3"/>
+       <attr key="class" value="Short-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Gangways over the Fire" graphics="GangwaysovertheFire.jpg" text="Balrog specific. At the end of its movement/hazard phase, each of your moving companies may attempt to move with Under-deeps movement to a new site they have not used yet this turn. Another site card is played and a movement/hazard phase immediately follows. Subtract the number of complete movement/hazard phases the company has taken so far this turn from its Under-deeps movement rolls. You may start the game with this card in lieu of playing a minor item. Cannot be duplicated.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C2"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Great Fissure" graphics="GreatFissure.jpg" text="Balrog specific. Target and cancel any effect (declared earlier in the same chain of effects) that would cancel an attack by The Balrog's company against an opponent's company. Alternatively, cancel an attack against a company at, or moving to or from, an Under-deeps site.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C3"/>
+       <attr key="class" value="Short-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Great Shadow" graphics="GreatShadow.jpg" text="Balrog specific. Demon Fána. Playable during your organization phase on The Balrog. Return this card to your hand: when you play another Demon Fána card, or, if you choose, during your organization phase. +6 general influence; -2 prowess; -1 body. The Balrog gains the scout skill and may have followers. During your end-of-turn phase, you may take one non-short-event resource or character from your discard pile (show it to your opponent) and shuffle it into your play deck. The Balrog may tap to cancel an attack against his company.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C2"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Heart of Dark Fire" graphics="HeartofDarkFire.jpg" text="Balrog specific. Playable if Strangling Coils is in play. You may bring this card from your sideboard into your play deck and reshuffle during your organization phase. The Balrog receives +5 direct influence this turn while Strangling Coils is in play. Cannot be duplicated on a given turn.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Short-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Invade Their Domain" graphics="InvadeTheirDomain.jpg" text="Balrog specific. Playable during the site phase on the Blue Mountain or Iron Hill Dwarf-hold if The Balrog is there and Breach the Hold is on its adjacent Under-deeps site. The Balrog's company faces 3 attacks (Dwarves 5 strikes with 9 prowess, 4 strikes with 10 prowess, 3 strikes with 12 prowess). Following the attacks, tap The Balrog or discard this card. If this card is not discarded, discard all unique factions playable at the site. Discard this card when the site is discarded or returned to its location deck. Cannot be duplicated on a given site.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="mp" value="3"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Lord and Usurper" graphics="LordandUsurper.jpg" text="Balrog specific. Playable during the site phase on Invade Their Domain. The company faces 2 attacks (Dwarves 4 strikes with 9 prowess, 3 strikes with 10 prowess). Following the attacks, tap a character or discard this card. If this card is not discarded, discard all unique factions playable at the site. All versions of the associated site become a Shadow-hold, may have no factions played there, and lose all Dwarf automatic-attacks. Other versions gain an automatic-attack: Orcs 4 strikes with 7 prowess. Cannot be duplicated on a given card.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="mp" value="5"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Maker's Map" graphics="MakersMap.jpg" text="Balrog specific. Playable during the site phase on an untapped ranger at an untapped site where Information is playable. Tap the ranger and the site. +2 to all rolls for his company to move to adjacent Under-deeps sites.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="mp" value="2"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Memories of Old Torture" graphics="MemoriesofOldTorture.jpg" text="Balrog specific. Playable on a Man, Drake, Orc, Troll, or Giant hazard creature attack with one strike for each of its attacks. All attacks of the creature are canceled. The creature becomes an ally under the control of any character in the company. The character need not tap. The ally has a mind of 1, body of 7, and prowess equal to its normal prowess minus 7. It gives 1 ally marshalling point. Discard this card and the ally if the company moves through a Free-domain or Dark-domain.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="mp" value="1"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Mine or No One's" graphics="MineorNoOnes.jpg" text="Balrog specific. +10 to an influence attempt by The Balrog against an opponent's: item, ally, Troll faction, or Orc faction. Cannot be duplicated on a given attempt.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Short-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Obey Him or Die" graphics="ObeyHimorDie.jpg" text="Balrog specific. Playable during the organization phase on a leader in The Balrog's company. The leader receives +2 direct influence and cannot be discarded by a body check. Discard whenever there is a character in his company with a higher mind. Cannot be duplicated on a given character.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Orders from the Great Demon" graphics="OrdersfromtheGreatDemon.jpg" text="Balrog specific. Playable on a company. May be played with a starting company in lieu of a minor item. This company may contain an additional leader who does not count against the company size maximum.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C2"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Out He Sprang" graphics="OutHeSprang.jpg" text="Balrog specific. If Great Shadow is not in play, The Balrog may move with region movement (overriding his card) to an Under-deeps surface site or from an Under-deeps surface site. Based on his marshalling point (MP) total, he may use the following number of regions: 0-8 MP 1 region; 9-16 MP 2 regions; 17-24 MP 3 regions; 25+ MP 4 regions. This region allowance may not be modified by any other effects except A More Evil Hour.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C3"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="People Diminished" graphics="PeopleDiminished.jpg" text="Balrog specific. Playable during the site phase on an untapped Free-hold or Border-hold. Tap the site. The company faces 3 attacks (Men 4 strikes with 8 prowess, 3 strikes with 10 prowess, 2 strikes with 12 prowess). Following the attacks, tap a character or discard this card. If this card is not discarded, discard all unique factions playable at the site. -5 to each attempt against any faction at any version of this site. This site is never discarded and never untaps for you. Cannot be duplicated on a given site.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="mp" value="2"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Roam the Waste" graphics="RoamtheWaste.jpg" text="Balrog specific. Playable during the organization phase if Strangling Coils is in play. You may bring this card from your sideboard into your play deck and reshuffle during your organization phase. Each of your companies this turn is considered to have one fewer Wilderness and one fewer Shadow-land in its site path.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Short-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Roots of the Earth" graphics="RootsoftheEarth.jpg" text="Balrog specific. Playable during the site phase on an Under-deeps site normally a Ruins and Lairs if The Balrog is there. The Balrog's company faces an attack (Drake 2 strikes with 13 prowess). Following the attack, tap The Balrog or discard this card. The associated site is a Darkhaven and loses all automatic-attacks. All other versions of the site become a Shadow-hold and gain an additional automatic-attack: Orcs 5 strikes with 9 prowess. If Breach the Hold is on the same site, this card gives 3 marshalling points. This site is never discarded or returned to its location deck. Cannot be duplicated on a given site.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="mp" value="1(3)"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C2"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Scourge of Fire" graphics="ScourgeofFire.jpg" text="Balrog specific. Playable if Flame of Udûn is in play. You may bring this card from your sideboard into your play deck and reshuffle during your organization phase. Choose and discard one item an opponent's company bears if The Balrog is untapped and in company vs. company combat with that company. Cannot be duplicated on a given turn.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Short-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Strangling Coils" graphics="StranglingCoils.jpg" text="Balrog specific. Demon Fána. Playable during your organization phase on The Balrog. Return this card to your hand: when you play another Demon Fána card, or, if you choose, during your organization phase. +3 direct influence; -1 body. The Balrog gains the diplomat skill and may have followers. Once during his movement/hazard phase, you may untap all tapped characters in The Balrog's company. If then untapped, tap The Balrog.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C2"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Tempest of Fire" graphics="TempestofFire.jpg" text="Balrog specific. Playable during the site phase on an untapped Border-hold or Shadow-hold; the site cannot be an Under-deeps site or surface site thereof. Tap the site. The company faces three attacks (Men at a Border-hold, Orcs at a Shadow-hold 5 strikes with 8 prowess, 4 strikes with 9 prowess, 3 strikes with 10 prowess). Following these attacks: discard this card or tap a character, place this card in your marshalling point pile, and return each unique faction playable at the site to its owner's hand.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="mp" value="3"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Terror Heralds Doom" graphics="TerrorHeraldsDoom.jpg" text="Balrog specific. Playable during the organization phase if Flame of Udûn is in play. You may bring this card from your sideboard into your play deck and reshuffle during your organization phase. +2 to all influence attempts this turn by any of your companies.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Short-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Vanguard of Might" graphics="VanguardofMight.jpg" text="Balrog specific. Playable if a company at or moving to an Under-deeps site is facing an attack and Flame of Udûn is not in play. If not in the company, The Balrog immediately joins the company. This is considered movement for The Balrog with no movement/hazard phase. The Balrog must face a strike from the attack, regardless of any conflicting effects. Following the attack, if untapped, tap The Balrog.">
+       <attr key="specific" value="Balrog"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Short-event"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="A Few Recruits" graphics="AFewRecruits.jpg" text="Balrog specific. Playable at a tapped or untapped non-Dragon's Lair: Ruins and Lairs, Shadow-hold, or Dark-hold; the site cannot be an Under-deeps site or surface site thereof if the influence check is greater than 8. Modifications: The Balrog (+3), leader (+2).">
+       <attr key="specific" value="Balrog"/>
+       <attr key="mp" value="1"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Orc Faction"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Stabbing Tongue of Fire" graphics="StabbingTongueofFire.jpg" text="Unique. Balrog specific. Playable at any tapped or untapped non-Darkhaven Under-deeps site. May only be borne by The Balrog. This item affects The Balrog. +1 prowess when tapping to face a strike. +1 to all body checks resulting from failed strikes against The Balrog. If The Balrog attacks successfully in company vs. company combat, +1 to the defending character's body check.">
+       <attr key="unique" value="yes"/>
+       <attr key="specific" value="Balrog"/>
+       <attr key="mp" value="1"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Special Item"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Whip of Many Thongs" graphics="WhipofManyThongs.jpg" text="Unique. Balrog specific. Playable at any tapped or untapped non-Darkhaven Under-deeps site. May only be borne by The Balrog. This item affects The Balrog. +1 prowess when tapping to face a strike. If The Balrog is in company vs. company combat, tap this item to cancel all effects of one weapon of your choice (even declared in the same chain of effects) in an opponent's company until the end of the combat. This does not discard the weapon.">
+       <attr key="unique" value="yes"/>
+       <attr key="specific" value="Balrog"/>
+       <attr key="mp" value="1"/>
+       <attr key="playable" value=""/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value="Special Item"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="Ancient Deep-hold" graphics="AncientDeephold.jpg" back="1" text="">
+       <attr key="unique" value="yes"/>
+       <attr key="adjacent" value=" no surface site, one Under-deeps Ruins and Lairs chosen by you when playing this card (8)"/>
+       <attr key="draw" value="2"/>
+       <attr key="region" value="Under-deeps"/>
+       <attr key="site_type" value="{R}"/>
+       <attr key="playable" value="Information, Items (minor, major, greater, gold ring)"/>
+       <attr key="special" value="Any Undead and Spider creatures may be keyed to this site. This site is never discarded or returned to its location deck."/>
+       <attr key="draw_opp" value="2"/>
+       <attr key="auto_attack" value="Undead (1st attack) 4 strikes with 7 prowess; Undead (2nd attack) 3 strikes with 8 prowess; Undead (3rd attack) 2 strikes with 10 prowess. Each character wounded must make a corruption check modified by -2"/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Balrog Site"/>
+    </card>
+
+    <card name="Barad-dûr" graphics="Baraddur.jpg" back="1" text="">
+       <attr key="unique" value="yes"/>
+       <attr key="draw" value="2"/>
+       <attr key="region" value="Gorgoroth"/>
+       <attr key="site_type" value="{D}"/>
+       <attr key="playable" value="Items (minor, major, greater)"/>
+       <attr key="special" value="Creatures keyed to this site attack normally, not as detainment."/>
+       <attr key="draw_opp" value="4"/>
+       <attr key="auto_attack" value="Orcs 4 strikes with 7 prowess; Trolls 3 strikes with 9 prowess; Maia (cannot be canceled) 1 strike with 24 prowess. Any character wounded by the Maia's attack is automatically eliminated"/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Balrog Site"/>
+    </card>
+
+    <card name="Carn Dûm" graphics="CarnDum.jpg" back="1" text="">
+       <attr key="unique" value="yes"/>
+       <attr key="draw" value="2"/>
+       <attr key="region" value="Angmar"/>
+       <attr key="site_type" value="{D}"/>
+       <attr key="playable" value="Items (minor, major)"/>
+       <attr key="special" value="Creatures keyed to this site attack normally, not as detainment."/>
+       <attr key="draw_opp" value="3"/>
+       <attr key="auto_attack" value="Orcs 4 strikes with 7 prowess; Nazgûl (cannot be canceled) 1 strike with 15 prowess"/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Balrog Site"/>
+    </card>
+
+    <card name="Cirith Gorgor" graphics="CirithGorgor.jpg" back="1" text="">
+       <attr key="unique" value="yes"/>
+       <attr key="draw" value="2"/>
+       <attr key="region" value="Udûn"/>
+       <attr key="site_type" value="{D}"/>
+       <attr key="playable" value="Items (minor, major, greater)"/>
+       <attr key="special" value="Creatures keyed to this site attack normally, not as detainment."/>
+       <attr key="draw_opp" value="3"/>
+       <attr key="auto_attack" value="Orcs 5 strikes with 8 prowess; Trolls 2 strikes with 10 prowess"/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Balrog Site"/>
+    </card>
+
+    <card name="Cirith Ungol" graphics="CirithUngol.jpg" back="1" text="">
+       <attr key="unique" value="yes"/>
+       <attr key="draw" value="2"/>
+       <attr key="region" value="Imlad Morgul"/>
+       <attr key="site_type" value="{D}"/>
+       <attr key="playable" value="Items (minor, major)"/>
+       <attr key="special" value="Creatures keyed to this site attack normally, not as detainment."/>
+       <attr key="draw_opp" value="3"/>
+       <attr key="auto_attack" value="Orcs 4 strikes with 7 prowess"/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Balrog Site"/>
+    </card>
+
+    <card name="Dol Guldur" graphics="DolGuldur.jpg" back="1" text="">
+       <attr key="unique" value="yes"/>
+       <attr key="draw" value="2"/>
+       <attr key="region" value="Southern Mirkwood"/>
+       <attr key="site_type" value="{D}"/>
+       <attr key="playable" value="Information, Items (minor, major)"/>
+       <attr key="special" value="Creatures keyed to this site attack normally, not as detainment."/>
+       <attr key="draw_opp" value="3"/>
+       <attr key="auto_attack" value="Orcs 3 strikes with 7 prowess; Trolls 2 strikes with 8 prowess; Nazgûl (cannot be canceled) 1 strike with 15 prowess"/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Balrog Site"/>
+    </card>
+
+    <card name="The Drowning-deeps" graphics="TheDrowningdeeps.jpg" back="1" text="">
+       <attr key="unique" value="yes"/>
+       <attr key="adjacent" value=" Blue Mountain Dwarf-hold (13), The Under-vaults (8), Remains of Thangorodrim (9)"/>
+       <attr key="draw" value="1"/>
+       <attr key="region" value="Under-deeps"/>
+       <attr key="site_type" value="{R}"/>
+       <attr key="playable" value="Items (minor, major)"/>
+       <attr key="special" value="Creatures keyed to Coastal Sea and any Drakes may be keyed to this site."/>
+       <attr key="draw_opp" value="2"/>
+       <attr key="auto_attack" value="Drake (1st attack) 2 strikes with 11 prowess; (2nd attack) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to Coastal Seas"/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Balrog Site"/>
+    </card>
+
+    <card name="The Gem-deeps" graphics="TheGemdeeps.jpg" back="1" text="">
+       <attr key="unique" value="yes"/>
+       <attr key="adjacent" value=" Glittering Caves (0), The Pûkel-deeps (8), The Under-gates (6)"/>
+       <attr key="draw" value="1"/>
+       <attr key="region" value="Under-deeps"/>
+       <attr key="site_type" value="{R}"/>
+       <attr key="playable" value="Items (minor, major, gold ring)"/>
+       <attr key="special" value="Any Undead creature or Pûkel-creature may be keyed to this site."/>
+       <attr key="draw_opp" value="1"/>
+       <attr key="auto_attack" value="Undead (1st attack) 3 strikes with 9 prowess; (2nd attack) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to a Shadow-hold"/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Balrog Site"/>
+    </card>
+
+    <card name="The Iron-deeps" graphics="TheIrondeeps.jpg" back="1" text="">
+       <attr key="unique" value="yes"/>
+       <attr key="adjacent" value=" Carn Dûm (0), The Under-leas (6), The Under-vaults (7)"/>
+       <attr key="draw" value="2"/>
+       <attr key="region" value="Under-deeps"/>
+       <attr key="site_type" value="{D}"/>
+       <attr key="playable" value="Items (minor, major)"/>
+       <attr key="special" value="Creatures keyed to this site attack normally, not as detainment. Any Drake creature (except Sea Serpent) may be keyed to this site."/>
+       <attr key="draw_opp" value="3"/>
+       <attr key="auto_attack" value="Trolls (1st attack) 3 strikes with 9 prowess; (2nd attack) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to a Ruins and Lairs"/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Balrog Site"/>
+    </card>
+
+    <card name="Minas Morgul" graphics="MinasMorgul.jpg" back="1" text="">
+       <attr key="unique" value="yes"/>
+       <attr key="draw" value="2"/>
+       <attr key="region" value="Imlad Morgul"/>
+       <attr key="site_type" value="{D}"/>
+       <attr key="playable" value="Items (minor, major, greater)"/>
+       <attr key="special" value="Creatures keyed to this site attack normally, not as detainment."/>
+       <attr key="draw_opp" value="4"/>
+       <attr key="auto_attack" value="Undead 3 strikes with 8 prowess; Nazgûl (cannot be canceled) 1 strike with 15 prowess"/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Balrog Site"/>
+    </card>
+
+    <card name="Moria" graphics="Moria.jpg" back="1" text="">
+       <attr key="draw" value="1"/>
+       <attr key="region" value="Redhorn Gate"/>
+       <attr key="site_type" value="{H}"/>
+       <attr key="playable" value=""/>
+       <attr key="special" value="Any Gold Ring stored at this site is automatically tested (modify the roll by -2). Creatures keyed to this site are detainment. If one of your companies is at this site, all attacks against it are canceled."/>
+       <attr key="draw_opp" value="1"/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C2"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Balrog Site"/>
+    </card>
+
+    <card name="The Pûkel-deeps" graphics="ThePukeldeeps.jpg" back="1" text="">
+       <attr key="unique" value="yes"/>
+       <attr key="adjacent" value=" Dunharrow (0), The Gem-deeps (8), The Sulfur-deeps (9)"/>
+       <attr key="draw" value="2"/>
+       <attr key="region" value="Under-deeps"/>
+       <attr key="site_type" value="{R}"/>
+       <attr key="playable" value="Items (minor, major, gold ring)"/>
+       <attr key="special" value="Any Undead creature or Pûkel-creature may be keyed to this site."/>
+       <attr key="draw_opp" value="2"/>
+       <attr key="auto_attack" value="Pûkel-creature (1st attack) 2 strikes with 11 prowess; (2nd attack) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to a Shadow-hold"/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Balrog Site"/>
+    </card>
+
+    <card name="Remains of Thangorodrim" graphics="RemainsofThangorodrim.jpg" back="1" text="">
+       <attr key="unique" value="yes"/>
+       <attr key="adjacent" value=" no surface site, The Drowning-deeps (9)"/>
+       <attr key="draw" value="2"/>
+       <attr key="region" value="Under-deeps"/>
+       <attr key="site_type" value="{R}"/>
+       <attr key="playable" value="Information, Items (minor, major, greater)"/>
+       <attr key="special" value="Creatures keyed to Coastal Seas may be keyed to this site."/>
+       <attr key="draw_opp" value="2"/>
+       <attr key="auto_attack" value="Drake (1st attack) 2 strikes with 12 prowess; (2nd attack) Opponent may play as an automatic-attack one hazard creature from his hand normally keyed to Coastal Sea"/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Balrog Site"/>
+    </card>
+
+    <card name="The Rusted-deeps" graphics="TheRusteddeeps.jpg" back="1" text="">
+       <attr key="unique" value="yes"/>
+       <attr key="adjacent" value=" Iron Hill Dwarf-hold (13), The Wind-deeps (8)"/>
+       <attr key="draw" value="1"/>
+       <attr key="region" value="Under-deeps"/>
+       <attr key="site_type" value="{R}"/>
+       <attr key="playable" value="Items (minor, major)"/>
+       <attr key="special" value="Any Dragon creature (except Ëarcaraxë) may be keyed to this site."/>
+       <attr key="draw_opp" value="2"/>
+       <attr key="auto_attack" value="Drake (1st attack) 2 strikes with 11 prowess; (2nd attack) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to a Shadow-hold"/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Balrog Site"/>
+    </card>
+
+    <card name="The Sulfur-deeps" graphics="TheSulfurdeeps.jpg" back="1" text="">
+       <attr key="unique" value="yes"/>
+       <attr key="adjacent" value=" Dol Guldur (0), The Under-gates (6), The Pûkel-deeps (9), The Under-galleries (9), The Under-courts (7)"/>
+       <attr key="draw" value="1"/>
+       <attr key="region" value="Under-deeps"/>
+       <attr key="site_type" value="{D}"/>
+       <attr key="playable" value="Items (minor, major)"/>
+       <attr key="special" value="Creatures keyed to this site attack normally, not as detainment."/>
+       <attr key="draw_opp" value="1"/>
+       <attr key="auto_attack" value="Troll (1st attack) 2 strikes with 9 prowess; (2nd attack) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to a Shadow-hold"/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Balrog Site"/>
+    </card>
+
+    <card name="The Under-courts" graphics="TheUndercourts.jpg" back="1" text="">
+       <attr key="unique" value="yes"/>
+       <attr key="adjacent" value=" Barad-dûr (0), The Under-galleries (6), The Sulfur-deeps (7)"/>
+       <attr key="draw" value="2"/>
+       <attr key="region" value="Under-deeps"/>
+       <attr key="site_type" value="{D}"/>
+       <attr key="playable" value="Items (minor, major)"/>
+       <attr key="special" value="Creatures keyed to this site attack normally, not as detainment."/>
+       <attr key="draw_opp" value="3"/>
+       <attr key="auto_attack" value="Trolls (1st attack) 3 strikes with 10 prowess; (2nd attack) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to a Shadow-hold"/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Balrog Site"/>
+    </card>
+
+    <card name="The Under-galleries" graphics="TheUndergalleries.jpg" back="1" text="">
+       <attr key="unique" value="yes"/>
+       <attr key="adjacent" value=" Any site in Udûn (0), The Under-courts (6), The Sulfur-deeps (9)"/>
+       <attr key="draw" value="2"/>
+       <attr key="region" value="Under-deeps"/>
+       <attr key="site_type" value="{D}"/>
+       <attr key="playable" value="Information, Items (minor, major)"/>
+       <attr key="special" value="Creatures keyed to this site attack normally, not as detainment."/>
+       <attr key="draw_opp" value="2"/>
+       <attr key="auto_attack" value="Trolls (1st attack) 4 strikes with 9 prowess; (2nd attack) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to a Shadow-hold"/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Balrog Site"/>
+    </card>
+
+    <card name="The Under-gates" graphics="TheUndergates.jpg" back="1" text="">
+       <attr key="adjacent" value=" Moria (0), The Gem-deeps (6), The Sulfur-deeps (6), The Under-leas (4), The Under-grottos (6)"/>
+       <attr key="draw" value="1"/>
+       <attr key="region" value="Under-deeps"/>
+       <attr key="site_type" value="{H}"/>
+       <attr key="playable" value=""/>
+       <attr key="special" value="Any Gold Ring stored at this site is automatically tested (modify the roll by -2). Creatures keyed to this site are detainment. If one of your companies is at this site, all attacks against it are canceled."/>
+       <attr key="draw_opp" value="1"/>
+       <attr key="auto_attack" value=""/>
+       <attr key="rarity" value="C2"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Balrog Site"/>
+    </card>
+
+    <card name="The Under-grottos" graphics="TheUndergrottos.jpg" back="1" text="">
+       <attr key="unique" value="yes"/>
+       <attr key="adjacent" value=" Goblin-gate (0), The Under-leas (6), The Under-gates (6)"/>
+       <attr key="draw" value="1"/>
+       <attr key="region" value="Under-deeps"/>
+       <attr key="site_type" value="{R}"/>
+       <attr key="playable" value="Items (minor, gold ring)"/>
+       <attr key="special" value="When a gold ring is tested in a company at this site, the result of the roll is modified by +1."/>
+       <attr key="draw_opp" value="1"/>
+       <attr key="auto_attack" value="Undead (1st attack) 4 strikes with 7 prowess; (2nd attack) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to a Shadow-hold"/>
+       <attr key="rarity" value="C2"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Balrog Site"/>
+    </card>
+
+    <card name="The Under-leas" graphics="TheUnderleas.jpg" back="1" text="">
+       <attr key="unique" value="yes"/>
+       <attr key="adjacent" value=" Mount Gundabad (0), The Wind-deeps (5), The Iron-deeps (6), The Under-grottos (6), The Under-gates (4), The Under-vaults (5)"/>
+       <attr key="draw" value="1"/>
+       <attr key="region" value="Under-deeps"/>
+       <attr key="site_type" value="{S}"/>
+       <attr key="playable" value="Items (minor)"/>
+       <attr key="special" value="Creatures keyed to this site attack normally, not as detainment."/>
+       <attr key="draw_opp" value="1"/>
+       <attr key="auto_attack" value="Orcs (1st attack) 5 strikes with 7 prowess (detainment); (2nd attack) Opponent may play as an automatic-attack one non- unique hazard creature from his hand normally keyed to a Ruins and Lairs"/>
+       <attr key="rarity" value="C2"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Balrog Site"/>
+    </card>
+
+    <card name="The Under-vaults" graphics="TheUndervaults.jpg" back="1" text="">
+       <attr key="unique" value="yes"/>
+       <attr key="adjacent" value=" Mount Gram (0), The Iron-deeps (7), The Under-leas (5), The Drowning-deeps (8)"/>
+       <attr key="draw" value="1"/>
+       <attr key="region" value="Under-deeps"/>
+       <attr key="site_type" value="{R}"/>
+       <attr key="playable" value="Items (minor, major)"/>
+       <attr key="special" value="Any Undead creature may be keyed to this site."/>
+       <attr key="draw_opp" value="1"/>
+       <attr key="auto_attack" value="Undead (1st attack) 3 strikes with 8 prowess; (2nd attack) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to a Shadow-hold"/>
+       <attr key="rarity" value="C2"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Balrog Site"/>
+    </card>
+
+    <card name="The Wind-deeps" graphics="TheWinddeeps.jpg" back="1" text="">
+       <attr key="unique" value="yes"/>
+       <attr key="adjacent" value=" The Wind Throne (0), The Under-leas (5), The Rusted-deeps (8)"/>
+       <attr key="draw" value="1"/>
+       <attr key="region" value="Under-deeps"/>
+       <attr key="site_type" value="{R}"/>
+       <attr key="playable" value="Items (minor, major)"/>
+       <attr key="special" value="Any Drake creature (except Sea Serpent) may be keyed to this site."/>
+       <attr key="draw_opp" value="1"/>
+       <attr key="auto_attack" value="Orcs (1st attack) 3 strikes with 7 prowess; (2nd attack) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to a Shadow-hold"/>
+       <attr key="rarity" value="C1"/>
+       <attr key="class" value=""/>
+       <attr key="type" value="Balrog Site"/>
+    </card>
+
+  </cards>
+</ccg-setinfo>

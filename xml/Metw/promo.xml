@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE ccg-setinfo SYSTEM "../gccg-set.dtd">
+<ccg-setinfo name="Promotional" dir="Promo" abbrev="PR" game="Middle-earth">
+  <cards>
+
+    <card name="Fury of the Iron Crown" graphics="FuryoftheIronCrown.jpg" text="Unique. May not be played if The Iron Crown is in play. The prowess of one strike of an attack by an Orc, Troll, Man, or Nazgul creature is increased by +4. After the attack is resolved, if the creature is not a Nazgul: the creature is removed from play (defender receives the marshalling points); and, in addition, if the defender has The Iron Crown in his hand, he may immediately play it with a character in the defending company.">
+       <attr key="unique" value="yes"/>
+       <attr key="rarity" value="P"/>
+       <attr key="class" value="Short-event"/>
+       <attr key="type" value="Hazard"/>
+    </card>
+
+    <card name="Angmar Arises" graphics="AngmarArises.jpg" text="Any creature that can be keyed to a Shadow-land {s} may be keyed to Forochel, Arthedain, Gundabad, or Rhudaur. Any creature that can be keyed to a Dark-domain {d} may be keyed to Angmar or Gundabad. Discard this card when a creature keyed to one of these regions (not to the region symbol) is defeated.">
+       <attr key="rarity" value="P"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Hazard"/>
+    </card>
+
+    <card name="Never Seen Him" graphics="NeverSeenHim.jpg" text="Playable on an agent. Target agent may take an extra agent action (which does not count against the hazard limit) each time he normally takes an agent action. Cannot be duplicated on a given agent.">
+       <attr key="rarity" value="P"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Hazard"/>
+    </card>
+
+    <card name="Neeker-breekers" graphics="Neekerbreekers.jpg" text="Animals. Does not effect Wizards. Each character in the company faces one strike. His prowess against such a strike is equal to his mind attribute. Any character that would normally be wounded is only tapped intstead - no body checks are made.">
+       <attr key="strikes" value="-1"/>
+       <attr key="mp" value="1"/>
+       <attr key="body" value="-"/>
+       <attr key="playable" value="{b}{w}{s}{d}{R}"/>
+       <attr key="prowess" value="7"/>
+       <attr key="rarity" value="P"/>
+       <attr key="subclass" value="Animals"/>
+       <attr key="type" value="Hazard"/>
+       <attr key="class" value="Creature"/>
+    </card>
+
+    <card name="Black Arrow" graphics="BlackArrow.jpg" text="Warrior only. Tap Black Arrow to give -1 to the prowess and body of any one attack against bearer's company. When Black Arrow is tapped, discard it if its bearer is not a Man.">
+       <attr key="corruption" value="1"/>
+       <attr key="rarity" value="P"/>
+       <attr key="class" value="Minor Item"/>
+       <attr key="type" value="Hero Resource"/>
+    </card>
+
+    <card name="More Alert than Most" graphics="MoreAlertthanMost.jpg" text="The number of strikes of any attack that chooses defending characters is reduced by one (to a minimum of one) - by two if Gates of Morning is in play. Discard when such attack is defeated. Cannot be duplicated.">
+       <attr key="rarity" value="P"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Hero Resource"/>
+    </card>
+
+    <card name="Ireful Flames" graphics="IrefulFlames.jpg" text="Affects the following sites: The Loney Mountain, Irerock, Zarak Dum, and Gold Hill. For any item to be played at one of these sites, its player must remove an item in his hand from play that would itself be playable at the site. Cannot be revealed as an on-guard card. Discard Ireful Flames when any play deck is exhausted.">
+       <attr key="rarity" value="P"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Hazard"/>
+    </card>
+
+    <card name="Stormcrow" graphics="Stormcrow.jpg" text="The direct influence of each Wizard is reduced by 2 (by 4 if Doors of Night is in play). Discard all resource permanent-events that have been played on each company with a Wizard (i.e., on the company as a whole, not individual characters, e.g., Fellowship). No such cards may be played on each Wizard's company. Discard this card when any play deck is exhausted. Cannot be duplicated.">
+       <attr key="rarity" value="P"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Hazard"/>
+    </card>
+
+    <card name="Fatty Bolger" graphics="FattyBolger.jpg" text="Unique. Unless he is one of the starting characters, he may only be brought into play at his home site. All his corruption checks are modified by +1. He can tap to cancel a strike against another hobbit in his company.">
+       <attr key="unique" value="yes"/>
+       <attr key="corruption" value="+1"/>
+       <attr key="skills" value="Scout"/>
+       <attr key="mp" value="1"/>
+       <attr key="body" value="8"/>
+       <attr key="prowess" value="1"/>
+       <attr key="home_site" value="Bag End"/>
+       <attr key="rarity" value="P"/>
+       <attr key="race" value="Hobbit"/>
+       <attr key="type" value="Hero Character"/>
+       <attr key="mind" value="3"/>
+       <attr key="influence" value="0"/>
+    </card>
+
+    <card name="Bill Ferny" graphics="BillFerny.jpg" text="Unique.">
+       <attr key="unique" value="yes"/>
+       <attr key="skills" value="Warrior/Scout"/>
+       <attr key="mp" value="1"/>
+       <attr key="body" value="8"/>
+       <attr key="prowess" value="2"/>
+       <attr key="home_site" value="Bree, Cameth Brin"/>
+       <attr key="rarity" value="P"/>
+       <attr key="race" value="Man"/>
+       <attr key="agent" value="yes"/>
+       <attr key="type" value="Minion Character"/>
+       <attr key="mind" value="3"/>
+       <attr key="influence" value="1"/>
+    </card>
+
+    <card name="The Arkenstone" graphics="TheArkenstone.jpg" text="Unique. +5 to bearer's direct influence against Dwarves and Dwarf factions. Each Dwarf in play has +1 mind. If the bearer of this item is at the same site as a Dwarf character, you may discard this item to force the discard of the Dwarf (and all non-follower cards he controls).">
+       <attr key="unique" value="yes"/>
+       <attr key="corruption" value="3"/>
+       <attr key="mp" value="3"/>
+       <attr key="rarity" value="P"/>
+       <attr key="class" value="Greater Item"/>
+       <attr key="type" value="Minion Resource"/>
+       <attr key="influence" value="(+5)"/>
+    </card>
+
+    <card name="Deadly Dart" graphics="DeadlyDart.jpg" text="Scout only. Tap Deadly Dart to give -1 body and -1 strike (to a minimum of one) to an automatic-attack or to a hazard creature keyed to a site. Tap its bearer or discard Deadly Dart when it is tapped. May also be used as a hero resource (i.e., included in a Wizard's deck), but may not be included with a hero starting company.">
+       <attr key="corruption" value="2"/>
+       <attr key="rarity" value="P"/>
+       <attr key="class" value="Minor Item"/>
+       <attr key="type" value="Minion Resource"/>
+    </card>
+
+    <card name="The Iron Crown" graphics="TheIronCrown.jpg" text="Unique. Whenever bearer makes an influence check, he must also make a corruption check. If the bearer is not a Hobbit: he receives +1 to body to a maximum of 10; he receives +4 to direct influence; and he may tap The Iron Crown to cancel an attack by Orcs, Trolls, or Men against his company.">
+       <attr key="unique" value="yes"/>
+       <attr key="corruption" value="5"/>
+       <attr key="mp" value="4"/>
+       <attr key="body" value="(+1)"/>
+       <attr key="rarity" value="P"/>
+       <attr key="class" value="Greater Item"/>
+       <attr key="type" value="Hero Resource"/>
+       <attr key="influence" value="(+4)"/>
+    </card>
+
+  </cards>
+</ccg-setinfo>

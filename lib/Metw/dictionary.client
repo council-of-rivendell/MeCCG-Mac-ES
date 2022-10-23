@@ -1,0 +1,1378 @@
+#
+# Attribute names
+#
+
+en: set
+de: Set
+fi: setti
+
+en: adjacent
+de: benachbart
+fi: naapurit
+
+en: agent
+de: Agent
+fi: agentti
+
+en: auto_attack
+de: A._Angriff
+fi: oma_hyökkäys
+
+en: body
+de: Konstitution
+fi: keho
+
+en: class
+de: Kategorie
+fi: luokka
+
+en: corruption
+de: Korruption
+fi: turmelus
+
+en: draw
+de: Karten
+fi: nosto
+
+en: draw_opp
+de: Geg.-Karten
+fi: nosto_vast
+
+en: gi
+de: A._Einfluss
+fi: gi
+
+en: haven
+de: Zufluchtsort
+fi: turvapaikka
+
+en: home_site
+de: Heimatort
+fi: kotipaikka
+
+en: influence
+de: Einfluss
+fi: vaikutus
+
+en: magic
+de: Zauber
+fi: taikuus
+
+en: mind
+de: Geisteskraft
+fi: mieli
+
+en: move_to
+de: benachbart
+fi: naapuri
+
+en: mp
+de: SP
+fi: pist
+
+en: playable
+de: spielbar
+fi: saa_pelata
+
+en: prowess
+de: Kampfgeschick
+fi: sotakunto
+
+en: race
+de: Volk
+fi: rotu
+
+en: rarity
+de: Rarität
+fi: harvinaisuus
+
+en: region
+de: Region
+fi: alue
+
+en: region_type
+de: Regionsart
+fi: alueen_laji
+
+en: site_path
+de: Reiseroute
+fi: reitti
+
+en: site_type
+de: Ortstyp
+fi: paikan_tyyppi
+
+en: skills
+de: Berufe
+fi: taidot
+
+en: sp
+de: Entwicklungspunkte
+fi: sp
+
+en: spawn
+fi: sikiö
+
+en: special
+de: spezielles
+fi: erikoista
+
+en: specific
+de: spezifisch
+fi: erityinen
+
+en: strikes
+de: Hiebe
+fi: iskuja
+
+en: subclass
+de: Klasse
+fi: alaluokka
+
+en: type
+de: Typ
+fi: laji
+
+en: unique
+de: Einzigartig
+fi: ainutlaatuinen
+
+en: haven%d
+de: Zuflucht%d
+fi: turvapaikka%d
+
+#
+# Values for adjacent
+#
+
+en: no surface site
+
+en: Any site in Udûn (%d)
+de: Alle Orte in Udûn (%d)
+
+en: The Sulfur-deeps (%d)
+
+en: The Under-courts (%d)
+
+en: Barad-dûr (%d)
+de: Barad-dûr (%d)
+
+en: The Under-galleries (%d)
+
+en: Blue Mountain Dwarf-hold (%d)
+de: Zwergenfeste im Blauen Gebirge (%d)
+
+en: The Under-vaults (%d)
+
+en: Remains of Thangorodrim (%d)
+
+en: Carn Dûm (%d)
+de: Carn Dûm (%d)
+
+en: The Under-leas (%d)
+
+en: Dol Guldur (%d)
+de: Dol Guldur (%d)
+
+en: The Pûkel-deeps (%d)
+de: Die Pûkel-Tiefen (%d)
+
+en: The Under-gates (%d)
+de: Die Unterirdischen Tore (%d)
+
+en: Dunharrow (%d)
+de: Dunharg (%d)
+
+en: The Gem-deeps (%d)
+de: Die Gemmen-Tiefen (%d)
+
+en: Glittering Caves (%d)
+de: Glitzernden Grotten (%d)
+
+en: Goblin-gate (%d)
+
+en: Iron Hill Dwarf-hold (%d)
+
+en: The Wind-deeps (%d)
+
+en: Moria (%d)
+de: Moria (%d)
+
+en: The Under-grottos (%d)
+de: Die Unterirdischen Grotten (%d)
+
+en: Mount Gram (%d)
+de: Gramberg (%d)
+
+en: The Iron-deeps (%d)
+de: Die Eisen-Tiefen (%d)
+
+en: The Drowning-deeps (%d)
+
+en: Mount Gundabad (%d)
+de: Gundabad (%d)
+
+en: The Wind Throne (%d)
+
+en: The Rusted-deeps (%d)
+
+en: one Under-deeps Ruins and Lairs chosen by you when playing this card (%d)
+
+en: Any site in Ûdun (%d)
+de: Jeder Ort in Ûdun (%d)
+
+#
+# Values for auto_attack
+#
+
+en: Dragon - %d strike with %e prowess
+de: Drache - %d Hiebe mit Kampfgeschick %e
+fi: Lohikäärme - %d isku %e:n sotakunnolla
+
+en: Dragon - %d strikes with %e prowess
+de: Drache - %d Hiebe mit Kampfgeschick %e
+fi: Lohikäärme - %d iskua %e:n sotakunnolla
+
+en: When a company enters this site, opponent may play one creature from his hand that is treated in all ways as the site's automatic attack (if defeated, creature is discarded). It must normally be playable keyed to a Ruins & Lairs {R}, Shadow-hold {S}, single Wilderness {w}, or Shadow-land {s}.
+
+en: (%dst) Balrog - %e strikes with %f prowess (%gnd) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to Ruins & Lairs
+
+en: (%dst) Elves - each character faces %e strike with %f prowess (detainment against covert company); (%gnd) Elves - %h strikes with %i prowess (against overt company only)
+
+en: (%dst) Hobbits - %e strikes with %f prowess; (%gnd) Dúnedain - %h strikes with %i prowess
+
+en: (%dst) Men - each character faces %e strike with %f prowess (detainment against covert company); (%gnd) Dúnedain - %h strikes with %i prowess (against overt company only)
+
+en: (%dst) Orcs - %e strikes with %f prowess; (%gnd) Spider (cannot be canceled) - %h strike with %i prowess; any character wounded is immediately eliminated
+
+en: (%dst) Orcs - %e strikes with %f prowess (%gnd) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to a Shadow-hold
+
+en: (%dst) Orcs - %e strikes with %f prowess (%gnd) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to Ruins & Lairs
+
+en: (%dst) Pûkel-men - %e strikes with %f prowess (%gnd) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to Shadow-holds
+
+en: (%dst) Troll - %e strike with %f prowess; (%gnd) Wolves - %h strikes with %i prowess
+de: (%dst) Troll - %d Hiebe mit Kampfgeschick %e; (%gnd) Wölfe - %d Hiebe mit Kampfgeschick %e
+
+en: (%dst) Trolls - %e strikes with %f prowess (%gnd) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to Shadow-holds
+
+en: (%dst) Trolls - %e strikes with %f prowess (%gnd) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to Ruins & Lairs
+
+en: (%dst) Undead - %e strikes with %f prowess (%gnd) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to Shadow-holds
+
+en: (%dst) Undead - %e strikes with %f prowess (%gnd) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to a Shadow-hold
+
+en: Animals - %d strikes with %e prowess (attacker chooses defending characters)
+de: Tiere - %d Hiebe mit Kampfgeschick %e (Angreifer wählt den Verteidiger)
+
+en: Awakened Plant - %d strikes with %e prowess, Awakened Plant - %f strikes with %g prowess
+
+en: Balrog (%dst attack) - %e strikes with %f prowess; (%gnd attack) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to a Ruins and Lairs
+
+en: Drake (%dst attack) %e strikes with %f prowess; (%gnd attack) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to Coastal Seas
+
+en: Drake (%dst attack) %e strikes with %f prowess; (%gnd attack) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to a Shadow-hold
+
+en: Drake (%dst attack) %e strikes with %f prowess; (%gnd attack) Opponent may play as an automatic-attack one hazard creature from his hand normally keyed to Coastal Sea
+
+en: Dwarves - %d strikes with %e prowess
+de: Zwerge - %d Hiebe mit Kampfgeschick %e
+
+en: Dúnedain - each character faces %d strike with %e prowess (detainment against covert company)
+
+en: Elves - %d strikes with %e prowess; Elves - %f strikes with %g prowess
+
+en: Elves - %d strikes with %e prowess; Dúnedain - %f strikes with %g prowess
+
+en: Elves - %d strikes with %e prowess; Elves - %f strikes with %g prowess; Elves - %h strikes with %i prowess
+
+en: Maia - %d strike with %e prowess; Maia - %f strike with %g prowess
+
+en: Maia - %d strikes with %e prowess (cannot be canceled)
+
+en: Men - %d strike with %e prowess
+de: Menschen - %d Hiebe mit Kampfgeschick %e
+
+en: Men - %d strikes with %e prowess
+de: Menschen - %d Hiebe mit Kampfgeschick %e
+
+en: Men - %d strikes with %e prowess (detainment)
+
+en: Men - each character faces %d strike at %e (detainment)
+
+en: Men - each character faces %d strike with %e prowess (detainment against covert company)
+
+en: Orcs (%dst attack) - %e strikes with %f prowess; (%gnd attack) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to a Shadow-hold
+
+en: Orcs (%dst attack) - %e strikes with %f prowess (detainment against overt company); (%gnd attack) Opponent may play as an automatic- attack one non- unique hazard creature from his hand normally keyed to a Ruins and Lairs
+
+en: Orcs (%dst attack) %e strikes with %f prowess; (%gnd attack) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to a Shadow-hold
+
+en: Orcs (%dst attack) %e strikes with %f prowess (detainment); (%gnd attack) Opponent may play as an automatic-attack one non- unique hazard creature from his hand normally keyed to a Ruins and Lairs
+
+en: Orcs - %d strike with %e prowess
+de: Orks - %d Hiebe mit Kampfgeschick %e
+
+en: Orcs - %d strikes with %e prowess
+de: Orks - %d Hiebe mit Kampfgeschick %e
+
+en: Orcs - %d strikes with %e prowess; Trolls - %f strikes with %g prowess
+de: Orks - %d Hiebe mit Kampfgeschick %e; Trolle - %d Hiebe mit Kampfgeschick %e
+
+en: Orcs - %d strikes with %e prowess, Trolls - %f strikes with %g prowess
+de: Orks - %d Hiebe mit Kampfgeschick %e; Trolle - %d Hiebe mit Kampfgeschick %e
+
+en: Orcs - each character faces %d strike with %e prowess (detainment against overt company)
+
+en: Orcs %d strikes with %e prowess; Trolls %f strikes with %g prowess; Nazgûl (cannot be canceled) %h strike with %i prowess
+
+en: Orcs %d strikes with %e prowess
+de: Orks - %d Hiebe mit Kampfgeschick %e
+
+en: Orcs %d strikes with %e prowess; Nazgûl (cannot be canceled) %f strike with %g prowess
+
+en: Orcs %d strikes with %e prowess; Trolls %f strikes with %g prowess; Maia (cannot be canceled) %h strike with %i prowess. Any character wounded by the Maia's attack is automatically eliminated
+
+en: Orcs %d strikes with %e prowess; Trolls %f strikes with %g prowess
+
+en: Pûkel-creature (%dst attack) - %e strikes with %f prowess; (%gnd attack) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to a Shadow-hold
+
+en: Pûkel-creature (%dst attack) %e strikes with %f prowess; (%gnd attack) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to a Shadow-hold
+
+en: Pûkel-creature - %d strike with %e prowess
+de: Pûkel-Kreatur - %d Hiebe mit Kampfgeschick %e
+
+en: Pûkel-creatures - %d strikes with %e prowess
+de: Pûkel-Kreaturen - %d Hiebe mit Kampfgeschick %e
+
+en: Pûkel-man - %d strike with %e prowess
+de: Pûkelmann - %d Hiebe mit Kampfgeschick %e
+
+en: Pûkel-men - %d strikes with %e prowess
+de: Pûkelmänner - %d Hiebe mit Kampfgeschick %e
+
+en: Spiders - %d strikes with %e prowess
+de: Spinnen - %d Hiebe mit Kampfgeschick %e
+
+en: Troll (%dst attack) %e strikes with %f prowess; (%gnd attack) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to a Shadow-hold
+
+en: Troll - %d strike with %e prowess
+de: Troll - %d Hiebe mit Kampfgeschick %e
+
+en: Troll - %d strikes with %e prowess
+de: Trolle - %d Hiebe mit Kampfgeschick %e
+
+en: Trolls (%dst attack) %e strikes with %f prowess; (%gnd attack) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to a Shadow-hold
+
+en: Trolls (%dst attack) %e strikes with %f prowess; (%gnd attack) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to a Ruins and Lairs
+
+en: Trolls - %d strikes with %e prowess (detainment)
+
+en: Undead (%dst attack) - %e strikes with %f prowess; (%gnd attack) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to a Shadow-hold
+
+en: Undead (%dst attack) %e strikes with %f prowess; (%gnd attack) Opponent may play as an automatic-attack one non-unique hazard creature from his hand normally keyed to a Shadow-hold
+
+en: Undead (%dst attack) %e strikes with %f prowess; Undead (%gnd attack) %h strikes with %i prowess; Undead (%jrd attack) %k strikes with %l prowess. Each character wounded must make a corruption check modified by %m
+
+en: Undead - %d strike with %e prowess; each character wounded must make a corruption check
+
+en: Undead - %d strike with %e prowess; each character wounded must make a corruption check modified by %f
+
+en: Undead - %d strike with %e prowess
+de: Untote - %d Hiebe mit Kampfgeschick %e
+
+en: Undead - %d strikes with %e prowess
+de: Untote - %d Hiebe mit Kampfgeschick %e
+
+en: Undead - %d strikes with %e prowess; each character wounded must make a corruption check modified by %f
+
+en: Undead %d strikes with %e prowess; Nazgûl (cannot be canceled) %f strike with %g prowess
+
+en: Wolves - %d strikes with %e prowess
+de: Wölfe - %d Hiebe mit Kampfgeschick %e
+
+#
+# Values for class
+#
+
+en: Ally
+de: Verbündeter
+fi: Liittolainen
+
+en: Animal Faction
+de: Heer der Tiere
+fi: Ryhmä: Eläin
+
+en: Creature
+de: Kreatur
+fi: Olento
+
+en: Creature/Permanent-event
+de: Kreatur/Permanentes Ereignis
+fi: Olento tai Pysyvä tapahtuma
+
+en: Creature/Short-event
+de: Kreatur/Kurzesfristiges Ereignis
+fi: Olento tai Lyhyt tapahtuma
+
+en: Diplomat Ally
+de: Diplomat, Verbündeter
+fi: Neuvottelija Liittolainen
+
+en: Dragon Faction
+de: Heer der Drachen
+fi: Ryhmä: Lohikäärme
+
+en: Dwarf Faction
+de: Heer der Zwerge
+fi: Ryhmä: Kääpiö
+
+en: Dúnadan Faction
+de: Heer der Dúnadan
+fi: Ryhmä: Dúnadan
+
+en: Eagle Faction
+de: Heer der Adler
+fi: Ryhmä: Kotka
+
+en: Elf Faction
+de: Heer der Elben
+fi: Ryhmä: Haltia
+
+en: Ent Faction
+de: Heer der Ents
+fi: Ryhmä: Entti
+
+en: Gold Ring Item
+de: Goldener Ring
+fi: Esine: kultasormus
+
+en: Greater Item
+de: Legendärer Gegenstand
+fi: Mahtava esine
+
+en: Hobbit Faction
+de: Heer der Hobbits
+fi: Ryhmä: Hobitti
+
+en: Long-event
+de: Langfristiges Ereignis
+fi: Pitkä tapahtuma
+
+en: Major Item
+de: Bedeutender Gegenstand
+fi: Vahva esine
+
+en: Man Faction
+de: Heer der Menschen
+fi: Ryhmä: Ihminen
+
+en: Minor Item
+de: Geringerer Gegenstand
+fi: Vähäinen esine
+
+en: Orc Faction
+de: Heer der Orks
+fi: Ryhmä: Örkki
+
+en: Permanent-event
+de: Permanentes Ereignis
+fi: Pysyvä tapahtuma
+
+en: Permanent-event/Short-event
+de: Permanentes Ereignis/Kurzefristiges Ereignis
+fi: Pysyvä tapahtuma tai Lyhyt tapahtuma
+
+en: Sage Ally
+de: Weiser Verbündeter
+fi: Tietäjä Liittolainen
+
+en: Scout Ally
+de: Kundschafter Verbündeter
+fi: Tiedustelija Liittolainen
+
+en: Short-event
+de: Kurzfristiges Ereignis
+fi: Lyhyt tapahtuma
+
+en: Special Faction
+de: Spezielles Heer
+fi: Ryhmä: Erikoinen
+
+en: Special Item
+de: Besonderer Gegenstand
+fi: Erikoinen esine
+
+en: Troll Faction
+de: Heer der Trolle
+fi: Ryhmä: Peikko
+
+en: Warrior Ally
+de: Krieger Verbündeter
+fi: Soturi Liittolainen
+
+en: Wolf Faction
+de: Heer der Wölfe
+fi: Ryhmä: Susi
+
+en: Wose Faction
+de: Heer der Wása
+fi: Ryhmä: Metsäläinen
+
+en: Scout/Diplomat Ally
+de: Kundschafter/Diplomat Verbündeter
+fi: Tiedustelija/Neuvottelija Liittolainen
+
+#
+# Values for haven
+#
+
+en: Geann a-Lisch
+
+#
+# Values for haven1
+#
+
+en: Grey Havens - {f}{c}{c}{c}{c}{w}
+de: Die Grauen Anfurten - {f}{c}{c}{c}{c}{w}
+
+en: Lórien - {w}{b}{w}{w}
+de: Lórien - {w}{b}{w}{w}
+
+en: Rivendell - {w}{w}{b}{w}
+de: Bruchtal - {w}{w}{b}{w}
+
+en: Rivendell - {w}{w}{f}
+de: Bruchtal - {w}{w}{f}
+
+#
+# Values for haven2
+#
+
+en: Edhellond - {w}{b}{f}{f}{b}{w}
+de: Edhellond - {w}{b}{f}{f}{b}{w}
+
+en: Edhellond - {w}{c}{c}{c}{c}{f}
+de: Edhellond - {w}{c}{c}{c}{c}{f}
+
+en: Grey Havens - {f}{w}{w}
+de: Die Grauen Anfurten - {f}{w}{w}
+
+en: Lórien - {w}{b}{f}{f}{b}{w}
+de: Lórien - {w}{b}{f}{f}{b}{w}
+
+#
+# Values for home_site
+#
+
+en: Barad-dûr
+de: Barad-dûr
+fi: Barad-dûr
+
+en: Beorn's House
+de: Beorns Haus
+fi: Beornin Talo
+
+en: Blue Mountain Dwarf-hold
+de: Zwergenfest im Blauen Gebirge
+fi: Sinivuorten Kääpiölinnoitus
+
+en: Cameth Brin
+de: Cameth Brin
+fi: Cameth Brin
+
+en: Dale
+de: Thal
+fi: Dale
+
+en: Dol Amroth
+de: Dol Amroth
+fi: Dol Amroth
+
+en: Drúadan Forest
+de: Drúadan Wald
+fi: Drúadanin Metsä
+
+en: Dunnish Clan-hold
+de: Dunländische Clanfeste
+fi: Mustainmaan Linnakylä
+
+en: Easterling Camp
+de: Lager der Ostlinge
+fi: Itäläisten Leiri
+
+en: Framsburg
+de: Framsburg
+fi: Framsburg
+
+en: Henneth Annûn
+de: Henneth Annûn
+fi: Henneth Annûn
+
+en: Iron Hill Dwarf-hold
+de: Zwergenfeste in den Eisenbergen
+fi: Rautavuorten Kääpiölinnoitus
+
+en: Isengard
+de: Isengart
+fi: Rautapiha
+
+en: Lake-town
+de: Seestadt
+fi: Järvikaupunki
+
+en: Lond Galen
+de: Lond Galen
+fi: Lond Galen
+
+en: Lossadan Camp
+de: Lager der Lossadan
+fi: Lossadanin Leiri
+
+en: Minas Tirith
+de: Minas Tirith
+fi: Minas Tirith
+
+en: Moria
+de: Moria
+fi: Moria
+
+en: None
+de: Keine
+fi: Ei ole
+
+en: Pelargir
+de: Pelargir
+fi: Pelargir
+
+en: Rhosgobel
+de: Rhosgobel
+fi: Rhosgobel
+
+en: Shrel-Kain
+de: Shrel-Kain
+fi: Shrel-Kain
+
+en: Southron Oasis
+de: Oase der Südlinge
+fi: Eteläisten Keidas
+
+en: Woodmen-town
+de: Stadt der Waldmenschen
+fi: Metsänihmisten Kylä
+
+en: Wose Passage-hold
+de: Wegfeste der Wasa
+fi: Metsäläisten Luolasto
+
+en: Mount Gundabad
+de: Gundabadberg
+fi: Gundabadin Vuori
+
+en: Minas Morgul
+de: Minas Morgul
+fi: Minas Morgul
+
+en: Mt. Doom
+de: Schicksalsberg
+fi: Tuomiovuori
+
+en: Dol Guldur
+de: Dol Guldur
+fi: Dol Guldur
+
+en: Any Dark-hold
+de: Jedem Dunklen Reich
+
+en: Any Free-hold
+de: Jedem Freichen Reich
+
+en: Any Haven
+de: Jeden Zufluchtsort
+
+en: Any Ruins and Lairs
+de: Jede(r) Ruine/Hort
+
+en: Any non-"Dragon's lair" Ruins and Lairs in a Wilderness
+
+en: Any site in Gorgoroth
+de: Jeder Ort in Gorgoroth
+
+en: Any site in Imlad Morgul
+de: Jeder Ort in Imlad Morgul
+
+en: Any site in Khand
+de: Jeder Ort in Khand
+
+en: Any site in Nurn
+de: Jeder Ort in Nurn
+
+en: Any site in Udûn
+de: Jeder Ort in Udûn
+
+en: Any site in Udûn or Imlad Morgul
+de: Jeder Ort in Udûn und Imlad Morgul
+
+en: Bag End
+de: Beutelsend
+
+en: Bree
+de: Bree
+
+en: Cirith Ungol
+de: Cirith Ungol
+
+en: Edoras
+de: Edoras
+
+en: Sarn Goriwing
+de: Sarn Goriwing
+
+en: The Under-gates
+de: Die Unterirdischen Tore
+
+en: The White Towers
+de: Die Weißen Türme
+
+en: Thranduil's Halls
+de: Thranduils Hallen
+
+en: Urlurtsu Nurn
+de: Urlurtsu Nurn
+
+en: Vale of Erech
+de: Tal von Erech
+
+en: Variag Camp
+de: Lager der Variags
+
+en: any non-Dark-hold Under-deeps site
+
+en: Carn Dûm
+de: Carn Dûm
+
+en: Mount Gram
+de: Gramberg
+
+en: Stone-circle
+de: Steinkreis
+
+en: Dunharrow
+de: Dunharg
+
+en: Goblin-gate
+
+en: Shelob's Lair
+de: Kankras Lauer
+
+#
+# Values for magic
+#
+
+en: Shadow-magic
+de: Schattenmagie
+
+en: Sorcery
+de: Zauber
+
+en: Spell
+de: Spruch
+
+en: Spirit-magic
+
+#
+# Values for move_to
+#
+
+en: Andrast Coast
+de: Küste von Andrast
+fi: Andrastin Rannikko
+
+en: Andrast
+de: Andrast
+fi: Andrast
+
+en: Mouths of the Anduin
+de: Mündungen des Anduin
+fi: Anduinin Suisto
+
+en: Anfalas
+de: Anfalas
+fi: Anfalas
+
+en: Belfalas
+de: Belfalas
+fi: Belfalas
+
+en: Eriadoran Coast
+de: Küste von Eriador
+fi: Eriadorin Rannikko
+
+en: Old Pûkel-land
+de: Altes Pûkelland
+fi: Vanha Pûkelmaa
+
+en: Cardolan
+de: Cardolan
+fi: Cardolan
+
+en: Elven Shores
+de: Elbenküste
+fi: Haltiaranta
+
+en: Enedhwaith
+de: Enedhwaith
+fi: Enedhwaith
+
+en: Lamedon
+de: Lamedon
+fi: Lamedon
+
+en: Old Pûkel Gap
+de: Alte Pûkel-Wildnis
+fi: Vanhan Pûkelmaan Aukko
+
+en: Gap of Isen
+de: Pforte von Rohan
+fi: Rautkymin Aukko
+
+en: Anduin Vales
+de: Täler des Anduin
+fi: Anduinin Laakso
+
+en: Angmar
+de: Angmar
+fi: Angmar
+
+en: Brown Lands
+de: die Braunen Lande
+fi: Ruskeat Maat
+
+en: Dagorlad
+de: Dagorlad
+fi: Dagorlad
+
+en: Heart of Mirkwood
+de: Herz des Düsterwaldes
+fi: Synkmetsän Sydän
+
+en: Southern Rhovanion
+de: Südliches Rhovanion
+fi: Etelä-Rhovanion
+
+en: Western Mirkwood
+de: Westlicher Düsterwald
+fi: Läntinen Synkmetsä
+
+en: Fangorn
+de: Fangorn
+fi: Fangorn
+
+en: Redhorn Gate
+de: Rothornpaß
+fi: Punasarven Portti
+
+en: Rohan
+de: Rohan
+fi: Rohan
+
+en: Southern Mirkwood
+de: Südlicher Düsterwald
+fi: Eteläinen Synkmetsä
+
+en: Wold & Foothills
+fi: Wold & Reunakukkulat
+
+en: Northern Rhovanion
+de: Nördliches Rhovanion
+fi: Pohjois-Rhovanion
+
+en: Grey Mountain Narrows
+de: Ausläufer des Grauen Gebirges
+fi: Varjovuoren Kapeikko
+
+en: Woodland Realm
+de: Waldreich
+fi: Metsämaan Valtakunta
+
+en: Withered Heath
+de: Dürre Heide
+fi: Kulottunut Nummi
+
+en: Rhudaur
+de: Rhudaur
+fi: Rhudaur
+
+en: Lebennin
+de: Lebennin
+fi: Lebennin
+
+en: Arthedain
+de: Arthedain
+fi: Arthedain
+
+en: High Pass
+de: Der Hohe Pass
+fi: Ylä-Sola
+
+en: Hollin
+de: Hulsten
+fi: Paatsamala
+
+en: Númeriador
+de: Númeriador
+fi: Númeriador
+
+en: Forochel
+de: Forochel
+fi: Forochel
+
+en: Lindon
+de: Lindon
+fi: Lindon
+
+en: The Shire
+de: Das Auenland
+fi: Kontu
+
+en: Anórien
+de: Anórien
+fi: Anórien
+
+en: Harondor
+de: Harondor
+fi: Harondor
+
+en: Imlad Morgul
+de: Imlad Morgul
+fi: Imlad Morgul
+
+en: Dunland
+de: Dunland
+fi: Mustainmaa
+
+en: Gundabad
+de: Gundabad
+fi: Gundabad
+
+en: Horse Plains
+de: Pferdesteppe
+fi: Hevostasanko
+
+en: Ithilien
+de: Ithilien
+fi: Ithilien
+
+en: Dorwinion
+de: Dorwinion
+fi: Dorwinion
+
+en: Nurn
+de: Nurn
+fi: Nurn
+
+en: Iron Hills
+de: Eisengebirge
+fi: Rautavuoret
+
+en: Khand
+de: Khand
+fi: Khand
+
+en: Udûn
+de: Udûn
+fi: Udûn
+
+en: Bay of Belfalas
+de: Bucht von Belfalas
+
+en: Gorgoroth
+de: Gorgoroth
+
+#
+# Values for playable
+#
+
+en: Information
+de: Information
+fi: Tieto
+
+en: Information, Items (minor)
+de: Information, Gegenstände (geringere)
+fi: Tieto, esineet (vähäinen)
+
+en: Information, Items (minor, gold ring)
+de: Information, Gegenstände (geringere, Goldene Ringe)
+fi: Tieto, esineet (vähäinen, kultasormus)
+
+en: Information, Items (minor, major)
+de: Information, Gegenstände (geringere, bedeutende)
+fi: Tieto, esineet (vähäinen, vahva)
+
+en: Information, Items (minor, major, gold ring)
+de: Information, Gegenstände (geringere, bedeutende, Goldene Ringe)
+fi: Tieto, esineet (vähäinen, vahva, kultasormus)
+
+en: Information, Items (minor, major, greater)
+de: Information, Gegenstände (geringere, bedeutende, legendäre)
+fi: Tieto, esineet (vähäinen, vahva, mahtava)
+
+en: Information, Items (minor, major, greater, gold ring)
+de: Information, Gegenstände (geringere, bedeutende, legendäre, Goldene Ringe)
+fi: Tieto, esineet (vähäinen, vahva, mahtava, kultasormus)
+
+en: Items (gold ring)
+de: Gegenstände (Goldene Ringe)
+fi: Esineet (kultasormus)
+
+en: Items (minor)
+de: Gegenstände (geringere)
+fi: Esineet (vähäinen)
+
+en: Items (minor, gold ring)
+de: Gegenstände (geringere, Goldene Ringe)
+fi: Esineet (vähäinen, kultasormus)
+
+en: Items (minor, major)
+de: Gegenstände (geringere, bedeutende)
+fi: Esineet (vähäinen, vahva)
+
+en: Items (minor, major*) *-weapon, armor, shield, or helmet only
+de: Gegenstände (geringere, bedeutende*) * nur Waffen, Rüstungen, Schilde oder Helme
+fi: Esineet (vähäinen, vahva*) *-vain ase, haarniska, kilpi tai kypärä
+
+en: Items (minor, major, gold ring)
+de: Gegenstände (geringere, bedeutende, Goldene Ringe)
+fi: Esineet (vähäinen, vahva, kultasormus)
+
+en: Items (minor, major, greater)
+de: Gegenstände (geringere, bedeutende, legendäre)
+fi: Esineet (vähäinen, vahva, mahtava)
+
+en: Items (minor, major, greater*) *-Palantíri only
+de: Gegenstände (geringere, bedeutende, legendäre*) *nur Palantíri
+fi: Esineet (vähäinen, vahva, mahtava*) *-vain palantír
+
+en: Items (minor, major, greater*) *-Scroll of Isildur only
+de: Gegenstände (geringere, bedeutende, legendäre*) *nur Isildurs Schriften???
+fi: Esineet (vähäinen, vahva, mahtava*) *-vain Isildurin Kirjoitus
+
+en: Items (minor, major, greater, gold ring)
+de: Gegenstände (geringere, bedeutende, legendäre, Goldene Ringe)
+fi: Esineet (vähäinen, vahva, mahtava, kultasormus)
+
+en: Information, Items (minor, major, greater*, gold ring) *-hero item only
+de: Informationen, Gegenstände (geringere, bedeutende, legendäre*, Goldene Ringe) *nur Helden-Gegenstände
+
+#
+# Values for race
+#
+
+en: Balrog
+de: Balrog
+fi: Balrog
+
+en: Dwarf
+de: Zwerg
+fi: Kääpiö
+
+en: Dúnadan
+de: Dúnadan
+fi: Dúnadan
+
+en: Elf
+de: Elb
+fi: Haltia
+
+en: Fallen-wizard
+de: Gefallener_Zauberer
+fi: Langennut Velho
+
+en: Hobbit
+de: Hobbit
+fi: Hobitti
+
+en: Man
+de: Mensch
+fi: Ihminen
+
+en: Orc
+de: Ork
+fi: Örkki
+
+en: Ringwraith
+de: Ringgeist
+fi: Sormusaave
+
+en: Troll
+de: Troll
+fi: Peikko
+
+en: Wizard
+de: Zauberer
+fi: Velho
+
+#
+# Values for region
+#
+
+en: Under-deeps
+fi: Maanalainen
+
+#
+# Values for skills
+#
+
+en: Scout
+de: Kundschafter
+fi: Tiedustelija
+
+en: Warrior
+de: Krieger
+fi: Soturi
+
+en: Ranger
+de: Waldläufer
+fi: Samooja
+
+en: Sage
+de: Weiser
+fi: Tietäjä
+
+en: Diplomat
+de: Diplomat
+fi: Neuvottelija
+
+#
+# Values for special
+#
+
+en: A covert company must tap an untapped character (if available) if this site is revealed as its new site.
+
+en: Agent minions may be brought into play under direct influence at this site.
+
+en: An overt company must tap an untapped character (if available) if this site is revealed as its new site
+
+en: An overt company must tap an untapped character (if available) if this site is revealed as its new site.
+
+en: Any Dragon creature (except Ëarcaraxë) may be keyed to this site.
+
+en: Any Drake creature (except Sea Serpent) may be keyed to this site.
+
+en: Any Undead and Spider creatures may be keyed to this site. This site is never discarded or returned to its location deck.
+
+en: Any Undead creature may also be played at this site.
+
+en: Any Undead creature may be keyed to this site.
+
+en: Any Undead creature may be played at this site.
+de: Jeder Untote kann an diesem Ort gespielt werden.
+
+en: Any Undead creature or Pûkel-creature may also be played at this site.
+
+en: Any Undead creature or Pûkel-creature may be keyed to this site.
+
+en: Any Undead creature or Pûkel-creature may be played at this site.
+
+en: Any man hazard creature can be played here.
+
+en: Contains a hoard.
+
+en: Contains a hoard. Non-Nazgûl creatures played at this site attack normally, not as detainment.
+
+en: Creatures keyed to Coastal Sea and any Drakes may be keyed to this site.
+
+en: Creatures keyed to Coastal Seas may be keyed to this site.
+
+en: Creatures keyed to this site attack normally, not as detainment.
+
+en: Creatures keyed to this site attack normally, not as detainment. Any Drake creature (except Sea Serpent) may be keyed to this site.
+
+en: During the site phase, a company may discard two minor items they bear to make any one major item (including a hoard item) playable here that turn.
+
+en: During the site phase, a covert company may discard two minor items they bear to make any one gold ring item (regardless of its text restrictions) playable at this site this turn.
+
+en: Each character wounded must make a corruption check.
+
+en: Healing effects affect all characters at the site.
+
+en: If Balrog of Moria is in play or if it or Durin's Bane has been defeated, the first automatic attack is canceled.
+
+en: If Khamûl the Easterling or Adûnaphel is in play as a permanent-event, one must be used as an additional automatic-attack (attacker's choice, discard after use-ignore result of defeat).
+
+en: If any Nazgûl permanent-event is in play, one must be used as an additional automatic-attack (attacker's choice, discard after use-ignore result of defeat).
+
+en: If one of your companies is at this site, all attacks against it are canceled.
+
+en: If the Witch-king of Angmar is in play as a permanent-event, it must be used as an additional automatic-attack (discard after use-ignore result of defeat).
+
+en: If the Wizard card Radagast is in play, the automatic-attacks are removed.
+de: Wenn Radagast im Spiel ist, wird die Automatische Attacke ignoriert.
+
+en: If your Ringwraith is at this site, he may tap during the organization phase to bring one Orc or Troll character from your discard pile into play at this site (as another company). The character must move to a different site from that of your Ringwraith this turn or be discarded at the end of the movement/hazard phase.
+
+en: Items may be played at this site even if it is tapped.
+de: Gegenstände können an diesem Ort auch gespielt werden, wenn dieser getappt ist.
+
+en: Items may be played here even if the site is tapped.
+de: Gegenstände können an diesem Ort auch gespielt werden, wenn dieser getappt ist.
+
+en: No character may be brought into play at this site (unless this site is the character's home site). Resources may never be stored at this site. Geann a-Lisch counts as a Ruins and Lairs for the purposes of playing and interpreting hazards. Its site path for this purpose, if needed, is the one from Carn Dûm.
+
+en: Non-Nazgûl creatures played at this site attack normally, not as detainment.
+
+en: Non-Nazgûl creatures played at this site attack normally, not as detainment. If a manifestation of Balrog of Moria is in play or defeated, the first automatic-attack is canceled.
+
+en: Only Radagast's companies may use this card. This site is a protected Wizardhaven. If one of your companies is at this site, all attacks against it are canceled. You receive the stage point if any of your companies are at this site.
+
+en: Special: This site is always returned to the location deck, never to the discard pile.
+
+en: The first minor item played at this site each turn does not tap the site. Contains a hoard.
+
+en: This site never taps.
+de: Dieser Ort wird nie getappt.
+
+en: You may tap a sage and a scout during the site phase to untap this site.
+de: Wenn ein Weiser und Waldläufer in dieser Runde getappt werden, kann der Ort enttappt werden.
+
+en: Any Gold Ring stored at this site is automatically tested (modify the roll by %d). Any attack against a minion company at this site is canceled.
+
+en: Any Gold Ring stored at this site is automatically tested (modify the roll by %d). Creatures keyed to this site are detainment. If one of your companies is at this site, all attacks against it are canceled.
+
+en: Any company moving to Barad-dûr has its hazard limit modified by +%d.
+
+en: Any company moving to Mount Doom has its hazard limit modified by +%d and hazard creatures may always be played keyed to the site regardless of any other cards played.
+
+en: Any company moving to this site has its hazard limit increased by %d. A minion company may not attack another company at this site. A Ringwraith may not move to this site.
+
+en: Any sage may tap to test a ring at this site, modifying the result by %d.
+
+en: Stolen Knowledge. When Under-galleries would be placed in your discard pile, place it in your marshalling points pile instead for %d marshalling points-this card is considered stored.
+
+en: Treat this site as a Darkhaven during the Untap Phase. Any gold ring item at this site is automatically tested during the site phase (the site need not be entered). All ring tests at this site are modified by %d.
+
+en: Unless this site is a character's home site, a non-Orc, non-Troll character may not be brought into play at this site. Any Gold Ring stored at this site is automatically tested (modify the roll by %d). Any attack against a minion company at this site is canceled.
+
+en: When a gold ring is tested in a company at this site, the result of the roll is modified by +%d.
+
+#
+# Values for specific
+#
+
+en: Alatar
+de: Alatar
+
+en: Gandalf
+de: Gandalf
+
+en: Pallando
+de: Pallando
+
+en: Radagast
+de: Radagast
+
+en: Saruman
+de: Saruman
+
+#
+# Values for subclass
+#
+
+en: Animals
+de: Tiere
+
+en: Awakened Plant
+de: Erwachte Pflanzen
+
+en: Dragon
+de: Drachen
+
+en: Drake
+de: Drache
+
+en: Dwarves
+de: Zwerge
+
+en: Dúnedain
+de: Dúnedain
+
+en: Elves
+de: Elben
+
+en: Giants
+de: Riesen
+
+en: Maia
+de: Maia
+
+en: Men
+de: Menschen
+
+en: Nazgûl
+de: Nazgûl
+
+en: Orcs
+de: Orks
+
+en: Pûkel-creature
+de: Pûkel-Kreatur
+
+en: Slayer
+de: Totschläger
+
+en: Spiders
+de: Spinnen
+
+en: Trolls
+de: Trolle
+
+en: Undead
+de: Untote
+
+en: Wolves
+de: Wölfe
+
+en: Bears
+de: Bären
+
+#
+# Values for type
+#
+
+en: Balrog Character
+de: Balrog Charakter
+
+en: Balrog Site
+de: Balrog Ort
+
+en: Fallen-wizard Character
+de: Fallen-wizard Charakter
+
+en: Fallen-wizard Site
+de: Fallen-wizard Ort
+
+en: Hazard
+de: Gefahrenkarte
+
+en: Hero Character
+de: Helden Charakter
+
+en: Hero Resource
+de: Helden Unterstützung
+
+en: Hero Site
+de: Helden Ort
+
+en: Minion Character
+de: Schergen Charakter
+
+en: Minion Resource
+de: Schergen Unterstützung
+
+en: Minion Site
+de: Schergen Ort
+
+en: Region
+de: Region
+
+en: Stage Resource

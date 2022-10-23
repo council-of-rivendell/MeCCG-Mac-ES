@@ -1,0 +1,108 @@
+#
+# DECK RULES
+# ==========
+
+deck_rules=(,);
+server_description="Sealed";
+deck_rules{"Sealed Hero"}=(,);
+deck_rules{"Sealed Hero"}{""}=(
+  ("RuleCardLimitSingle",("Baugúr",0)),
+  ("RuleCardLimitSingle",("Freca",0)),
+  ("RuleCardLimitSingle",("Wolf",0)),
+  ("RuleCardLimitSingle",("Das Pack vor der Tuer",0)),
+  ("RuleCardLimitSingle",("Schwertmeister",0)),
+  ("RuleCardLimitSingle",("Zwergenaxt",0)),
+  ("RuleCardLimitSingle",("Horn der Herausforderung",0)),
+  ("RuleCardLimitSingle",("Ringil",0)),
+  ("RuleCardLimitSingle",("Belegennon",0)),
+  ("RuleCheckExpression",("Maximum mind total for agents is 36","RuleAgentMindTotal(#) <= 36")),
+  ("RuleLimitEachByExpression",(1,"Attr(\"unique\",#)==\"yes\" && Attr(\"race\",#)!=\"Wizard\"")),
+  ("RuleLimitByExpression",(0,"Attr(\"type\",#)==\"Region\"")),
+  ("RuleCheckExpression",("Total number of wizards/ringwraiths","RuleCheckWizards(#,\"total\",\"H\")")),
+  ("RuleLimitByExpression",(999999,"Attr(\"site_type\",#)==\"{H}\"")),
+  ("RuleCardLimitGeneral",3),
+);
+deck_rules{"Sealed Hero"}{"deck"}=(
+  ("RuleCheckExpression",("Creature minimum 10","RuleCountCreatures(#,\"H\") >= 10.0")),
+  ("RuleCheckExpression",("Hazards vs. Resources","RuleHazardResourceBalance(#,\"H\")")),
+  ("RuleCheckExpression",("Number of wizards/ringwraiths in the deck","RuleCheckWizards(#,\"deck\",\"H\")")),
+  ("RuleLimitByExpression",(0,"find(\"Site\",Attr(\"type\",#))!=NULL")),
+  ("RuleLimitByExpression",(10,"Attr(\"type\",#)==\"Hero Character\" && Attr(\"race\",#)!=\"Wizard\"")),
+  ("RuleLimitByExpression",(3,"Attr(\"race\",#)==\"Wizard\"")),
+  ("RuleDeckMinimum",50),
+  ("RuleLimitByExpression",(0,"Attr(\"type\",#)!=\"Hero Character\" && Attr(\"type\",#)!=\"Hero Resource\" && Attr(\"type\",#)!=\"Hazard\" && Attr(\"agent\",#)!=\"yes\" && !(Attr(\"type\",#)==\"Minion Resource\" && find(\"Item\",Attr(\"class\",#))) && name(#)!=\"Tidings of Death\" && name(#)!=\"Deadly Dart\" && name(#)!=\"Sudden Call\" && name(#)!=\"Gnawed Ways\"")),
+  ("RulePass",NULL),
+);
+deck_rules{"Sealed Hero"}{"sideboard"}=(
+  ("RuleDeckMinimum",0),
+  ("RuleDeckMaximum",30),
+  ("RuleLimitByExpression",(0,"find(\"Site\",Attr(\"type\",#)) != NULL")),
+  ("RuleLimitByExpression",(0,"Attr(\"type\",#)!=\"Hero Character\" && Attr(\"type\",#)!=\"Hero Resource\" && Attr(\"type\",#)!=\"Hazard\" && Attr(\"agent\",#)!=\"yes\" && !(Attr(\"type\",#)==\"Minion Resource\" && find(\"Item\",Attr(\"class\",#))) && name(#)!=\"Tidings of Death\" && name(#)!=\"Deadly Dart\" && name(#)!=\"Sudden Call\" && name(#)!=\"Gnawed Ways\"")),
+  ("RulePass",NULL),
+);
+deck_rules{"Sealed Hero"}{"sideboard vs. fw"}=(
+  ("RuleDeckMinimum",0),
+  ("RuleDeckMaximum",0),
+  ("RulePass",NULL),
+);
+deck_rules{"Sealed Hero"}{"pool"}=(
+  ("RuleLimitByExpression",(0,"Attr(\"race\",#)==\"Wizard\"")),
+  ("RuleLimitByExpression",(10,"Attr(\"type\",#)==\"Hero Character\"")),
+  ("RuleLimitByExpression",(2,"(Attr(\"class\",#)==\"Minor Item\" || name(#)==\"Rumours of Rings\") && Attr(\"unique\",#)!=\"yes\"")),
+);
+deck_rules{"Sealed Hero"}{"sites"}=(
+  ("RuleLimitByExpression",(0,"Attr(\"type\",#)!=\"Hero Site\"")),
+  ("RulePass",NULL),
+);
+deck_rules{"Sealed Minion"}=(,);
+deck_rules{"Sealed Minion"}{""}=(
+  ("RuleCardLimitSingle",("Baugúr",0)),
+  ("RuleCardLimitSingle",("Freca",0)),
+  ("RuleCardLimitSingle",("Wolf",0)),
+  ("RuleCardLimitSingle",("Das Pack vor der Tuer",0)),
+  ("RuleCardLimitSingle",("Schwertmeister",0)),
+  ("RuleCardLimitSingle",("Zwergenaxt",0)),
+  ("RuleCardLimitSingle",("Horn der Herausforderung",0)),
+  ("RuleCardLimitSingle",("Ringil",0)),
+  ("RuleCardLimitSingle",("Belegennon",0)),
+  ("RuleCheckExpression",("Maximum mind total for agents is 36","RuleAgentMindTotal(#) <= 36")),
+  ("RuleCheckExpression",("Specific cards","RuleSpecific(#)==0")),
+  ("RuleLimitEachByExpression",(1,"Attr(\"unique\",#)==\"yes\" && Attr(\"race\",#)!=\"Ringwraith\"")),
+  ("RuleLimitByExpression",(0,"Attr(\"type\",#)==\"Region\"")),
+  ("RuleCheckExpression",("Total number of wizards/ringwraiths","RuleCheckWizards(#,\"total\",\"M\")")),
+  ("RuleLimitByExpression",(999999,"Attr(\"site_type\",#)==\"{H}\"")),
+  ("RuleLimitByExpression",(9,"name(#)==\"Black Horse\"")),
+  ("RuleCardLimitGeneral",3),
+);
+deck_rules{"Sealed Minion"}{"deck"}=(
+  ("RuleCheckExpression",("Creature minimum 10","RuleCountCreatures(#,\"M\") >= 10.0")),
+  ("RuleCheckExpression",("Hazards vs. Resources","RuleHazardResourceBalance(#,\"M\")")),
+  ("RuleCheckExpression",("Number of wizards/ringwraiths in the deck","RuleCheckWizards(#,\"deck\",\"M\")")),
+  ("RuleLimitByExpression",(0,"find(\"Site\",Attr(\"type\",#)) != NULL")),
+  ("RuleLimitByExpression",(10,"Attr(\"type\",#)==\"Minion Character\" && Attr(\"race\",#)!=\"Ringwraith\"")),
+  ("RuleLimitByExpression",(3,"Attr(\"race\",#)==\"Ringwraith\"")),
+  ("RuleDeckMinimum",50),
+  ("RuleLimitByExpression",(0,"Attr(\"type\",#)!=\"Minion Character\" && Attr(\"type\",#)!=\"Minion Resource\" && !(Attr(\"type\",#)==\"Hero Resource\" && find(\"Item\",Attr(\"class\",#))) && Attr(\"type\",#)!=\"Hazard\" && name(#)!=\"Beasts of the Wood\" && name(#)!=\"Wild Hounds\" && name(#)!=\"Gnawed Ways\"")),
+  ("RulePass",NULL),
+);
+deck_rules{"Sealed Minion"}{"sideboard"}=(
+  ("RuleDeckMinimum",0),
+  ("RuleDeckMaximum",30),
+  ("RuleLimitByExpression",(0,"find(\"Site\",Attr(\"type\",#)) != NULL")),
+  ("RuleLimitByExpression",(0,"Attr(\"type\",#)!=\"Minion Character\" && Attr(\"type\",#)!=\"Minion Resource\" && !(Attr(\"type\",#)==\"Hero Resource\" && find(\"Item\",Attr(\"class\",#))) && Attr(\"type\",#)!=\"Hazard\" && name(#)!=\"Beasts of the Wood\" && name(#)!=\"Wild Hounds\" && name(#)!=\"Gnawed Ways\"")),
+  ("RulePass",NULL),
+);
+deck_rules{"Sealed Minion"}{"sideboard vs. fw"}=(
+  ("RuleDeckMinimum",0),
+  ("RuleDeckMaximum",0),
+  ("RulePass",NULL),
+);
+deck_rules{"Sealed Minion"}{"pool"}=(
+  ("RuleLimitByExpression",(0,"Attr(\"race\",#)==\"Ringwraith\"")),
+  ("RuleLimitByExpression",(10,"Attr(\"type\",#)==\"Minion Character\"")),
+  ("RuleLimitByExpression",(2,"(Attr(\"class\",#)==\"Minor Item\" || name(#)==\"Open to the Summons\" || name(#)==\"Orders from Lugbúrz\" || name(#)==\"Whispers of Rings\") && Attr(\"unique\",#)!=\"yes\"")),
+);
+deck_rules{"Sealed Minion"}{"sites"}=(
+  ("RuleLimitByExpression",(0,"Attr(\"type\",#)!=\"Minion Site\"")),
+  ("RulePass",NULL),
+);

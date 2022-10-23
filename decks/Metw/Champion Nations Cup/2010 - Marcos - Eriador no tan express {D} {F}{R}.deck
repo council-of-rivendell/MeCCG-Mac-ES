@@ -1,0 +1,233 @@
+#
+# GCCG v0.9.6.3 Middle-earth deck
+#
+#      {orange}Eye vs H/FW eriador
+#
+
+####
+Deck
+####
+
+# Hazard (30)
+
+1 Adûnaphel (TW)
+3 An Unexpected Outpost (DM)
+1 Arthadan Rangers (LE)
+3 Assassin (TW)
+1 Beorning Skin-changers (BA)
+3 Cave-drake (LE)
+1 Corsairs of Umbar (TW)
+1 Daelomin at Home (TD)
+3 Foolish Words (TD)
+1 Itangast Ahunt (TD)
+1 Lobelia Sackville-Baggins (DM)
+1 Mouth of Sauron (TW)
+1 Revealed to all Watchers (DM)
+3 River (LE)
+1 Scatha Ahunt (TD)
+1 Sellswords Between Charters (LE)
+3 Tidings of Bold Spies (LE)
+1 Ûvatha the Horseman (TW)
+
+# Minion Character (5)
+
+1 Bûrat (AS)
+1 Lieutenant of Dol Guldur (LE)
+1 The Mouth (LE)
+1 Tûma (AS)
+1 Wûluag (AS)
+
+# Minion Resource (30)
+
+1 Black Mace (LE)
+1 Come By Night Upon Them (LE)
+3 Dark Tryst (AS)
+1 Diversion (LE)
+2 Eye Never Sleeping (AS)
+1 High Helm (LE)
+1 Hillmen [M] (LE)
+1 Ice-orcs (LE)
+1 Regiment of Black Crows (AS)
+1 Sable Shield (LE)
+1 The Arkenstone [M] (PR)
+1 The Great Eye (AS)
+3 The Lidless Eye (LE)
+3 The Tormented Earth (AS)
+1 The Warg-king (LE)
+3 Threats (LE)
+2 Voices of Malice (LE)
+3 Weigh All Things to a Nicety (LE)
+
+####
+Pool
+####
+
+# Minion Character (6)
+
+1 Baduila (DM)
+1 Drór (DM)
+1 Golodhros (DM)
+1 Lieutenant of Morgul (LE)
+1 The Grimburgoth (DM)
+1 Tros Hesnef (LE)
+
+# Minion Resource (2)
+
+1 Foul-smelling Paste (LE)
+1 Open to the Summons (WH)
+
+#########
+Sideboard
+#########
+
+# Hazard (14)
+
+1 Alone and Unadvised (AS)
+1 Call of Home (LE)
+1 Diminish and Depart (BA)
+1 Lost in Free-domains (TW)
+1 Lure of Expedience (TW)
+1 Many Sorrows Befall (TD)
+1 Muster Disperses (TW)
+1 Pilfer Anything Unwatched (AS)
+1 Rolled down to the Sea (WH)
+1 Searching Eye (TD)
+2 Seized by Terror (DM)
+1 The Balance of Things (TW)
+1 The Roving Eye (LE)
+
+# Hero Resource (1)
+
+1 Aiglos (DM)
+
+# Minion Resource (15)
+
+1 Dunlendings [M] (LE)
+1 Eye Never Sleeping (AS)
+3 Long Grievous Siege (BA)
+1 Orcs of Dol Guldur (AS)
+1 Palantír of Elostirion [M] (LE)
+1 Piercing All Shadows (WH)
+1 Scroll of Isildur [M] (LE)
+1 Sudden Call (LE)
+2 The Great Eye (AS)
+2 Tribute Garnered (AS)
+1 We Have Come to Kill (LE)
+
+################
+Sideboard vs. fw
+################
+
+# Hazard (10)
+
+2 Blind to the West (WH)
+1 Fool's Bane (WH)
+2 Heart Grown Cold (WH)
+1 Heedless Revelry (LE)
+1 Inner Rot (WH)
+2 Ire of the East (WH)
+1 Pilfer Anything Unwatched (AS)
+
+#####
+Sites
+#####
+
+# Minion Site (113)
+
+1 Amon Hen [M] (LE)
+1 Bag End [M] (LE)
+1 Bandit Lair [M] (LE)
+1 Barad-dûr [M] (LE)
+1 Barrow-downs [M] (LE)
+1 Beorn's House [M] (LE)
+1 Blue Mountain Dwarf-hold [M] (LE)
+1 Bree [M] (LE)
+1 Buhr Widu [M] (LE)
+1 Cameth Brin [M] (LE)
+5 Carn Dûm [M] (LE)
+1 Caves of Ûlund [M] (LE)
+1 Cirith Gorgor [M] (LE)
+1 Cirith Ungol [M] (LE)
+1 Dale [M] (LE)
+1 Dancing Spire [M] (AS)
+1 Dead Marshes [M] (LE)
+1 Dimrill Dale [M] (LE)
+1 Dol Amroth [M] (LE)
+5 Dol Guldur [M] (LE)
+1 Drúadan Forest [M] (LE)
+1 Dunharrow [M] (LE)
+1 Dunnish Clan-hold [M] (LE)
+1 Eagles' Eyrie [M] (AS)
+1 Easterling Camp [M] (LE)
+1 Edhellond [M] (AS)
+1 Edoras [M] (LE)
+1 Ettenmoors [M] (LE)
+1 Framsburg [M] (AS)
+5 Geann a-Lisch [M] (LE)
+1 Gladden Fields [M] (LE)
+1 Glittering Caves [M] (LE)
+1 Gobel Mírlond [M] (LE)
+1 Goblin-gate [M] (LE)
+1 Gold Hill [M] (AS)
+1 Gondmaeglom [M] (LE)
+1 Grey Havens [M] (AS)
+1 Haudh-in-Gwanûr [M] (LE)
+1 Henneth Annûn [M] (LE)
+1 Hermit's Hill [M] (LE)
+1 Himring [M] (AS)
+1 Irerock [M] (AS)
+1 Iron Hill Dwarf-hold [M] (LE)
+1 Isengard [M] (LE)
+1 Isle of the Ulond [M] (AS)
+1 Isles of the Dead that Live [M] (AS)
+1 Lake-town [M] (LE)
+1 Lond Galen [M] (LE)
+1 Lossadan Cairn [M] (LE)
+1 Lossadan Camp [M] (LE)
+1 Lórien [M] (AS)
+5 Minas Morgul [M] (LE)
+1 Minas Tirith [M] (LE)
+1 Moria [M] (LE)
+1 Mount Doom [M] (LE)
+1 Mount Gram [M] (LE)
+1 Mount Gundabad [M] (LE)
+1 Nûrniag Camp [M] (LE)
+1 Old Forest [M] (AS)
+1 Ost-in-Edhil [M] (LE)
+1 Ovir Hollow [M] (AS)
+1 Pelargir [M] (LE)
+1 Raider-hold [M] (LE)
+1 Rhosgobel [M] (AS)
+1 Rivendell [M] (AS)
+1 Ruined Signal Tower [M] (LE)
+1 Sarn Goriwing [M] (LE)
+1 Shelob's Lair [M] (LE)
+1 Shrel-Kain [M] (LE)
+1 Southron Oasis [M] (LE)
+1 Stone-circle [M] (LE)
+1 Tharbad [M] (LE)
+1 The Gem-deeps [M] (AS)
+1 The Iron-deeps [M] (AS)
+1 The Lonely Mountain [M] (LE)
+1 The Pûkel-deeps [M] (AS)
+1 The Stones [M] (LE)
+1 The Sulfur-deeps [M] (AS)
+1 The Under-courts [M] (AS)
+1 The Under-galleries [M] (AS)
+1 The Under-gates [M] (AS)
+1 The Under-grottos [M] (AS)
+1 The Under-leas [M] (AS)
+1 The Under-vaults [M] (AS)
+1 The White Towers [M] (LE)
+1 The Wind Throne [M] (LE)
+1 The Worthy Hills [M] (LE)
+1 Thranduil's Halls [M] (LE)
+1 Tolfalas [M] (AS)
+1 Urlurtsu Nurn [M] (LE)
+1 Vale of Erech [M] (LE)
+1 Variag Camp [M] (LE)
+1 Weathertop [M] (AS)
+1 Wellinghall [M] (AS)
+1 Woodmen-town [M] (LE)
+1 Wose Passage-hold [M] (LE)
+1 Zarak Dûm [M] (LE)

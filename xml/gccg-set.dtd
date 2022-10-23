@@ -1,0 +1,22 @@
+<!ENTITY % mtg-attr "color|type|subtype|rarity|cost|power|toughness">
+<!ENTITY % metw-attr "region|move_to|site_path|haven|haven1|haven2|draw|site_type|auto_attack|playable|special|class|mp|corruption|prowess|body|influence|mind|home_site|race|skills|subclass|strikes|region_type|draw_opp|magic|spawn|sp|specific|gi|adjacent|agent">
+<!ENTITY % pokemon-attr "evolve|retreat|weakness|hp|attack1|attack2|resistance">
+<!ENTITY % lotr-attr "block|card_number|class|culture|expansion|home|race|rarity|signet|site|strength|twilight_cost|type|unique|vitality">
+
+<!ELEMENT ccg-setinfo (cards)>
+<!ATTLIST ccg-setinfo
+    name        CDATA #REQUIRED
+    dir         CDATA #IMPLIED
+    abbrev      CDATA #IMPLIED
+    game        CDATA #REQUIRED>
+<!ELEMENT cards (card+)>
+<!ATTLIST card
+    name        CDATA #REQUIRED
+    graphics    CDATA #REQUIRED
+    back        CDATA #IMPLIED
+    text        CDATA #IMPLIED>
+<!ELEMENT card (attr*)>
+<!ELEMENT attr EMPTY>
+<!ATTLIST attr
+    key         (%mtg-attr;|%metw-attr;|%pokemon-attr;|%lotr-attr;) #REQUIRED
+    value       CDATA #REQUIRED>

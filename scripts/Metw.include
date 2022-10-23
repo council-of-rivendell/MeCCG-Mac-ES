@@ -1,0 +1,1317 @@
+#
+# VARIABLES
+# =========
+#
+# underdeeps_region{region} - under-deeps sites below the region
+# image.metw_map - image number of the map
+# image.metw_map_colors - image number of the map color palette
+# color2region{(r,g,b)} - mapping from colors to region
+# object.metw_map - object number for the map
+# metw_map_current - current map number
+# metw_map_total - total number of maps
+
+# COLORS{colorname} - preset colors for RED, ORANGE, YELLOW, GREEN, BLUE, VIOLET, WHITE, BLACK
+# BGCOLOR - generic background color
+# FGCOLOR - generic foreground color
+# BRCOLOR - generic border color
+# BGCOLOR2 - play mode background color
+# FGCOLOR2 - play mode foreground color
+# BRCOLOR2 - play mode border color
+# TXCOLOR - generic text color
+# INCOLOR - input text color
+# BKBGCOLOR - collection background color
+# BKBRCOLOR - collection border color
+# BKTXCOLOR - collection text color
+# TABLE_SHADOW - if set, add {shadow} to table texts
+
+# Generic
+BGCOLOR=(20,10,4);
+FGCOLOR=(219,212,198);
+BRCOLOR=(56,47,43);
+TXCOLOR=(219,212,198);
+
+# Play mode
+BGCOLOR2=(20,10,4);
+FGCOLOR2=(219,212,198);
+BRCOLOR2=(56,47,43);
+
+# Collection
+BKBGCOLOR=(36,26,21);
+BKBRCOLOR=(56,47,43);
+BKTXCOLOR=(219,212,198);
+
+# Input text color (chat)
+INCOLOR=(219,212,198);
+# Number of cards in hand.
+HANDSIZE=8;
+# Size of columns of the decklist in pixels.
+DECKBOX_SIZE=(20,260,170);
+# how far card must be from original position before removing it from the control of the algorithm
+#CLEAR_GROUP_DISTANCE=card.height;
+# minor version number for filter alogrithm
+BOOK_FILTER_VERSION_MINOR=".7";
+# Default export format.
+DEFAULT_EXPORT_FORMAT="NetMECCG";
+# default book sorting criteria.
+BOOK_DEFAULT_SORT=("[age]","[type]","[name]");
+# Servers
+if(server.name=="NO.DEFAULT.SERVER.FOR.THIS.GAME")
+  server.name="gccg.buonanno.org";
+
+if(!port)
+  port=29130;
+
+product.image=(,);
+product.image{"The Wizards starter"}="wizards_starter.jpg";
+product.image{"The Wizards booster"}="wizards_booster.jpg";
+product.image{"The Dragons booster"}="dragons_booster.jpg";
+product.image{"Dark Minions booster"}="minions_booster.jpg";
+product.image{"The Lidless Eye booster"}="mele_booster.jpg";
+product.image{"The Lidless Eye starter"}="mele_starter.jpg";
+product.image{"Against the Shadow booster"}="meas_booster.jpg";
+product.image{"The White Hand booster"}="wh_booster.jpg";
+product.image{"The Balrog booster"}="balrog.jpg";
+
+game.bindings=(
+  ("KeyControlKey1","{orange}Organization phase...",),
+  ("KeyControlKey2","{orange}Long-event phase...",),
+  ("KeyControlKey3","{orange}Movement/Hazard phase...",),
+  ("KeyControlKey4","{orange}Site phase...",),
+  ("KeyControlKey5","{orange}End of turn phase...",),);
+
+# HELP
+# ====
+
+HELP{"chat"}{"set"}[3]=HELP{"chat"}{"set"}[3]+
+  "Game specific options:\n"+
+  "  {green}autodiscard {yellow}<n>{white} - set delay for short event autodiscard to {yellow}n{white} seconds\n";
+
+# MENUS
+# =====
+
+GAME_MENU{"Tap a card"}=(
+ (1,"Tap/Untap","middle click",""),
+ (1,"Tap and keep tapped","","SetStayTapped()"),
+ (1,"Invert as wounded","",'Send("Rotate",(object.number,180))'),
+ (1,"Heal","",'Send("Rotate",(object.number,90))'),
+);
+
+GAME_MENU{"Current Deck Menu"}=(
+ (1,"Clear the site section","","CurrentDeckRemoveSites()"),
+ (1,"Add all hero sites","","CurrentDeckAddSites('Hero Site')"),
+ (1,"Add all minion sites","","CurrentDeckAddSites('Minion Site')"),
+ (1,"Add all Fallen-wizard sites","","CurrentDeckAddSites('Fallen-wizard Site')"),
+ (1,"Add all Balrog (and remove some minion) sites","","CurrentDeckAddSites('Balrog Site')"),
+ (1,"Add some havens","","CurrentDeckAddHavens()"),
+ (1,"Remove sites not owned","","CurrentDeckRemoveUnownedSites()"),
+ (1,"{hr}","",""),
+ (1,"Add sideboard vs. FW","","EditAddSideboard()"),
+ (1,"Remove sideboard vs. FW","","EditRemoveSideboard()"),
+ );
+
+GAME_MENU{"Main Menu - Play"}=(
+ (1,"{hr}","",""),
+ (1,"Show map","Ctrl+M",""),
+ (1,"Look at your sideboard","",'search.source=MyDeck("sideboard");Send("SearchDeck",MyDeck("sideboard"))'),
+ (1,"Add cards vs. fw to sideboard","","AddSideboardFwCards()"),
+ );
+
+GAME_MENU{"Main Menu - Chat"}=(
+ (1,"Show map","Ctrl+M",""),
+ );
+
+GAME_MENU{"Card Select Box"}=(
+     (1,"Play a site face down","left click",""),
+     (1,"Play a site","Ctrl+P",""),
+    );
+
+FILTER_OPTIONS=(
+ ("Characters","find('Character',Attr('type',#))!=NULL",(2,"[race]","[type]","[name]")),
+ ("Hazards","Attr('type',#)=='Hazard'",("[class]","[name]")),
+ ("Creatures","find('Creature',Attr('class',#))!=NULL",("[subclass]","[name]")),
+ ("Hero resources","Attr('type',#)=='Hero Resource'",("[class]","[name]")),
+ ("Minion resources","Attr('type',#)=='Minion Resource'",("[class]","[name]")),
+ ("Stage resources","Attr('type',#)=='Stage Resource'",("[specific]","[name]")),
+ ("Sites","find('Site',Attr('type',#))!=NULL",("[haven]","[type]","[name]")),
+ "{hr}",
+ ("Scouts","find('Scout',Attr('skills',#))!=NULL",("[race]","[type]","[name]")),
+ ("Diplomats","find('Diplomat',Attr('skills',#))!=NULL",("[race]","[type]","[name]")),
+ ("Warriors","find('Warrior',Attr('skills',#))!=NULL",("[race]","[type]","[name]")),
+ ("Rangers","find('Ranger',Attr('skills',#))!=NULL",("[race]","[type]","[name]")),
+ ("Sages","find('Sage',Attr('skills',#))!=NULL",("[race]","[type]","[name]")),
+ "{hr}",
+ ("Allies","find('Ally',Attr('class',#))!=NULL",("[type]","[name]")),
+ ("Factions","find('Faction',Attr('class',#))!=NULL",("[type]","[name]")),
+ ("Items","find('Item',Attr('class',#))!=NULL",("[class]","[type]","[name]")),
+ ("Miscellanous","Attr('mp',#)!='' && find('Resource',Attr('type',#))!=NULL && Attr('class',#)=='Permanent-event'",("[type]","[name]")),
+ "{hr}",
+ ("Spells and Magic","Attr('magic',#)!=''",("[magic]","[name]")),
+ "{hr}",
+ ("Sealed deck","first(book_entry(card.book,#))&&find('Site',Attr('type',#))==NULL",(3,"[type]","[class]","[subclass]","[name]")),
+ "{hr}",
+);
+
+color2region=(,);
+color2region{(50,200,200)}="Andrast";
+color2region{(100,200,200)}="Andrast Coast";
+color2region{(200,50,200)}="Anduin Vales";
+color2region{(100,200,100)}="Anfalas";
+color2region{(25,100,200)}="Angmar";
+color2region{(128,255,0)}="Anórien";
+color2region{(25,150,0)}="Arthedain";
+color2region{(0,0,255)}="Bay of Belfalas";
+color2region{(100,100,100)}="Belfalas";
+color2region{(200,100,200)}="Brown Lands";
+color2region{(25,200,150)}="Cardolan";
+color2region{(165,75,165)}="Dagorlad";
+color2region{(255,255,0)}="Dorwinion";
+color2region{(250,100,100)}="Dunland";
+color2region{(25,150,200)}="Elven Shores";
+color2region{(25,250,100)}="Enedhwaith";
+color2region{(50,50,200)}="Eriadoran Coast";
+color2region{(255,128,64)}="Fangorn";
+color2region{(25,100,250)}="Forochel";
+color2region{(200,100,100)}="Gap of Isen";
+color2region{(0,0,0)}="Gorgoroth";
+color2region{(25,250,250)}="Grey Mountain Narrows";
+color2region{(25,100,150)}="Gundabad";
+color2region{(175,175,175)}="Harondor";
+color2region{(200,200,50)}="Heart of Mirkwood";
+color2region{(200,200,200)}="High Pass";
+color2region{(250,100,0)}="Hollin";
+color2region{(150,150,150)}="Horse Plains";
+color2region{(255,50,50)}="Imlad Morgul";
+color2region{(200,50,50)}="Iron Hills";
+color2region{(255,0,255)}="Ithilien";
+color2region{(192,192,192)}="Khand";
+color2region{(100,100,200)}="Lamedon";
+color2region{(128,255,255)}="Lebennin";
+color2region{(25,150,250)}="Lindon";
+color2region{(0,128,255)}="Mouths of the Anduin";
+color2region{(25,150,150)}="Northern Rhovanion";
+color2region{(25,150,100)}="Númeriador";
+color2region{(128,128,128)}="Nurn";
+color2region{(0,255,128)}="Old Pûkel Gap";
+color2region{(25,250,0)}="Old Pûkel-land";
+color2region{(128,0,0)}="Redhorn Gate";
+color2region{(50,200,50)}="Rhudaur";
+color2region{(128,64,0)}="Rohan";
+color2region{(200,200,100)}="Southern Mirkwood";
+color2region{(220,220,0)}="Southern Rhovanion";
+color2region{(25,200,100)}="The Shire";
+color2region{(255,0,0)}="Udûn";
+color2region{(25,100,100)}="Western Mirkwood";
+color2region{(50,50,50)}="Withered Heath";
+color2region{(128,128,64)}="Wold & Foothills";
+color2region{(25,200,200)}="Woodland Realm";
+
+#
+# GAME FUNCTIONS
+# ==============
+
+#
+# NewDeck() - Game specific creation of empty deck structure.
+#
+def NewDeck
+{
+  return((("deck",(,)),("pool",(,)),("sideboard",(,)),("sites",(,)),));
+}
+
+#
+# InitializeGame() - Game specific initialization of game variables.
+#
+def InitializeGame
+{
+}
+
+#
+# StartGame() - What to do when game begins.
+#
+def StartGame
+{
+  Send("UploadDeck",decks{deck.name});
+  Send("ShuffleDeck",deck);
+}
+
+#
+# ScoreAdjustment(object) - Return current adjustment to score for the object.
+#
+def ScoreAdjustment
+{
+  push(s);
+  return(0);
+  s=get_texts(ARG);
+  if(length(s) > 0)
+    return(toint(substr(first(s),8)));
+  s=pop();
+}
+
+#
+# AdjustScore(object,amount) - Set score adjustment for a card.
+#
+def AdjustScore
+{
+  push(n);
+  n=ScoreAdjustment(ARG[0]);
+  n=n+ARG[1];
+  if(n > 0)
+    n="+"+n;
+  else if(n<0)
+    n=tostr(n);
+  else
+    n="";
+
+  del_all_texts(ARG[0]);
+  set_textalign(ARG[0],0);
+  set_textmargin(ARG[0],5);
+  set_textvalign(ARG[0],0);
+  set_textsize(ARG[0],16);
+  add_text(ARG[0],"{shadow}"+n);
+  n=pop();
+}
+
+#
+# ScoreToText(score structure) - Convert a score structure to string.
+# 
+def ScoreToText
+{
+  push(s);
+  push(t);
+  push(r);
+  t=0;
+  r="";
+  for(p)(ARG)
+  {
+    if(p[0]!="SP")
+    {
+      r=r+p[0]+tostr(p[1])+" ";
+      t=t+toint(p[1]);
+    }
+  }
+  r=r+"= "+t;
+  if(ARG{"SP"} > 0)
+    r="(SP="+ARG{"SP"}+") "+r;
+
+  return(r)
+;
+  r=pop();
+  t=pop();
+  s=pop();
+}
+
+#
+# RecalculateScores() - Compute and update scores on server.
+#
+def RecalculateScores
+{
+  push(sc);
+  push(s);
+  push(t);
+  push(o);
+
+  sc=(,);
+
+  for(p)(players)
+  {
+    sc{p}=(,);
+    sc{p}{"C"}=0;
+    sc{p}{"I"}=0;
+    sc{p}{"F"}=0;
+    sc{p}{"A"}=0;
+    sc{p}{"K"}=0;
+    sc{p}{"M"}=0;
+    sc{p}{"SP"}=0;
+
+    for(c)(inplay())
+    {
+      o=card_data(c);
+      s=toint(Attr('mp',card(c))) + ScoreAdjustment(c);
+      c=card(c);
+
+      if(s != 0)
+      {
+        t="";
+        if(Attr('type',c)=="Hazard")
+        {
+          if(players!=2)
+          {
+            if(o[0]==p)
+            {
+              t="K";
+            }
+          }
+          else if(o[0]!=p)
+          {
+            t="K";
+          }
+        }
+        else
+        {
+          if(o[0]==p)
+          {
+            t="M";
+            if(name(c)=="Andúril, the Flame of the West" || name(c)=="Barrow-blade")
+              t="I";
+            else if(name(c)=="Elven Rope")
+              t="M";
+            else if(right(Attr('type',c),9)=="Character")
+              t="C";
+            else if(right(Attr('class',c),4)=="Item")
+              t="I";
+            else if(right(Attr('class',c),4)=="Ally" || name(c)=="Ready to His Will")
+              t="A";
+            else if(right(Attr('class',c),7)=="Faction")
+              t="F";
+          }
+        }
+  
+        if(t!="")
+        {
+          sc{p}{t}=sc{p}{t}+s;
+        }
+      }
+ 
+      if(players<=2)
+      {
+        s=toint(Attr('sp',c));
+        if(s != 0)
+        {
+          if(Attr('type',c)=="Hazard")
+          {
+            if(o[0]!=p)
+              sc{p}{"SP"}=sc{p}{"SP"}+s;
+          }
+          else if(o[0]==p)
+            sc{p}{"SP"}=sc{p}{"SP"}+s;
+        }
+      }
+    }
+  }
+
+  for(p)(players)
+    Send("Score",(p,sc{p}));
+
+  o=pop();
+  t=pop();
+  s=pop();
+  sc=pop();
+}
+
+#
+# SitesOfRegion(region name) - Return list of sites currently in location deck
+#   that are accessible from the region.
+#
+def SitesOfRegion
+{
+  push(s);
+  s=select('Attr("region",#)==ARG',deck_content{MyDeck("sites")});
+
+  if(underdeeps_region==NULL)
+  {
+    underdeeps_region=(,);
+
+    push(u); 
+    push(a); 
+    u=select('Attr("region",#)=="Under-deeps"',cards());
+    for(s)(u)
+    {
+      a=first(split(Attr("adjacent",s),","));
+      if(a!=NULL)
+      {
+        if(right(a,3)=="(0)")
+        {          
+          a=first(images(trim(left(a,length(a)-4))));
+          if(a==NULL)
+            a=first(images("Cirith Gorgor"));
+        }
+        else
+          a=NULL;
+      }
+
+      if(a!=NULL)
+      {
+        a=Attr("region",a);
+        if(underdeeps_region{a}==NULL)
+          underdeeps_region{a}=(,);
+        underdeeps_region{a}=underdeeps_region{a}+(s,);
+      }
+    }
+
+    if(underdeeps_region{"Númeriador"}==NULL)
+      underdeeps_region{"Númeriador"}=(,);
+    if(underdeeps_region{"Iron Hills"}==NULL)
+      underdeeps_region{"Iron Hills"}=(,);
+
+    underdeeps_region{"Númeriador"}=underdeeps_region{"Númeriador"}+images("The Drowning-deeps");
+    underdeeps_region{"Númeriador"}=underdeeps_region{"Númeriador"}+images("Remains of Thangorodrim");
+    underdeeps_region{"Iron Hills"}=underdeeps_region{"Iron Hills"}+images("The Rusted-deeps");
+
+    a=pop();
+    u=pop();
+  }
+
+  if(length(underdeeps_region{ARG})>0)
+    s=s+select('count(#,deck_content{MyDeck("sites")})',underdeeps_region{ARG});
+
+  return(s);
+  s=pop();
+}
+
+#
+# MOUSE
+# =====
+
+#
+# MouseLeftClickPool() - Look at pool.
+#
+def MouseLeftClickPool
+  PlayKeyControlKeyL();
+
+#
+# MouseLeftClickSites() - Look at sites.
+#
+def MouseLeftClickSites
+  KeyControlKeyM();
+
+#
+# MouseMiddleClickSites() - Show a map.
+#
+def MouseMiddleClickSites
+  PlayKeyControlKeyL();
+
+#
+# MouseLeftClickSideboard() - Look at sideboard.
+#
+def MouseLeftClickSideboard
+  PlayKeyControlKeyL();
+
+#
+# MouseLeftClickDiscardPile() - Look at discard.
+#
+def MouseLeftClickDiscardPile
+  PlayKeyControlKeyL();
+
+#
+# MouseLeftClickPoolSearchBoxHook() - Play a card face up from pool.
+#
+def MouseLeftClickPoolSearchBoxHook
+{
+  TryTransferTo("play",0);
+}
+
+#
+# MouseMiddleClickPoolSearchBoxHook() - Play a card face down from pool.
+#
+def MouseMiddleClickPoolSearchBoxHook
+{
+  TryTransferTo("play",1);
+}
+
+#
+# MouseLeftClickSitesSearchBoxHook() - Play a site face down or face up if the first site.
+#
+def MouseLeftClickSitesSearchBoxHook
+{
+  if(length(select("card_back(#)==1",card(inplay(me)))))
+    TryTransferTo("play",1);
+  else
+    TryTransferTo("play",0);
+  KeyEscape();
+}
+
+#
+# MouseLeftClickSideboardSearchBoxHook() - Shuffle a card to the deck and reveal type.
+#
+def MouseLeftClickSideboardSearchBoxHook
+{
+  del_cardbox_recenter(search.box,cardbox.card_index);
+  Send("Transfer",(1,("deck",search.source,cardbox.card_index),("deck.top",deck),(("reveal","type"),)));
+  Send("ShuffleDeck",deck);
+  KeyEscape();
+}
+
+#
+# MouseMiddleClickHand() - Play card face down.
+#
+def MouseMiddleClickHand
+{
+  if(length(hand(hand[me])))
+  {
+    ClearSearchbox();
+    TryTransferTo("play",1);
+  }
+}
+
+#
+# MouseLeftClickMap() - Search sites of the clicked region.
+#
+def MouseLeftClickMap
+{
+  if(mode=="play")
+  {
+    push(o);
+    push(x);
+    push(y);
+    push(c);
+    o=object_data(object.number);
+    x=(mouse.x - o[0]);
+    y=(mouse.y - o[1]);
+
+    if(image.metw_map_colors==NULL)
+       image.metw_map_colors=load_image("mapcolors.png");
+    c=image_pixel(image.metw_map_colors,x,y);
+
+    if(color2region{c}!=NULL)
+    {
+      SelectCard(SitesOfRegion(color2region{c}),"PlaySiteFromSelection(#)",'("deck.search",MyDeck("sites"),#)');
+    }
+    else 
+    {
+      push(s);
+      s=images("Ancient Deep-hold")+images("Remains of Thangorodrim")+images("Deep Mines");
+      s=select('count(#,deck_content{MyDeck("sites")})',s);
+      SelectCard(s,"PlaySiteFromSelection(#)",'("deck.search",MyDeck("sites"),#)');
+      s=pop();
+    }
+
+    c=pop();
+    y=pop();
+    x=pop();
+    o=pop();
+  }
+}
+
+#
+# MouseControlMiddleClickMap() - Add region name and type to the chat.
+#
+def MouseControlMiddleClickMap
+{
+  push(o);
+  push(x);
+  push(y);
+  push(c);
+
+  o=object_data(object.number);
+  x=(mouse.x - o[0]);
+  y=(mouse.y - o[1]);
+
+  if(image.metw_map_colors==NULL)
+     image.metw_map_colors=load_image("mapcolors.png");
+  c=image_pixel(image.metw_map_colors,x,y);
+  if(color2region{c}!=NULL)
+  {
+    c=color2region{c};
+    Input(c+"("+Attr("region_type",first(images(c)))+") ");
+  }
+
+  c=pop();
+  y=pop();
+  x=pop();
+  o=pop();
+}
+
+# PLAYING CARDS
+# =============
+
+#
+# PlaySiteFromSelection(card number) - Play site from selector.
+#
+def PlaySiteFromSelection
+{
+  set_attr(object.metw_map,"visible",0);
+  if(length(select("card_back(#)==1",card(inplay(me)))))
+    Send("Transfer",(1,("deck.search",MyDeck("sites"),ARG),("play",1)));
+  else
+    Send("Transfer",(1,("deck.search",MyDeck("sites"),ARG),("play",0)));
+}
+
+#
+# MENU FUNCTIONS
+# ==============
+
+#
+# EditAddSideboard() - Add sideboard vs. fw to the current deck.
+#
+def EditAddSideboard
+{
+  if(deck.name!=NULL)
+  {
+    if(has_entry("sideboard vs. fw",decks{deck.name}))
+      Msg("{red}Sideboard vs. fw already added.");
+    else
+    {
+      decks{deck.name}{"sideboard vs. fw"}=(,);
+      RefreshCurrentDeck();
+    }
+  }
+}
+
+#
+# EditRemoveSideboard() - Remove sideboard vs. fw from the current deck if exist.
+#
+def EditRemoveSideboard
+{
+  if(deck.name!=NULL)
+  {
+    if(!has_entry("sideboard vs. fw",decks{deck.name}))
+      Msg("{red}The deck has no sideboard vs. fw.");
+    else
+    {
+      decks{deck.name}=del_entry("sideboard vs. fw",decks{deck.name});
+      RefreshCurrentDeck();
+    }
+  }
+}
+
+#
+# AddSideboardFwCards() - Add anti fw cards to sideboard.
+#
+def AddSideboardFwCards
+{
+  Send("Transfer",(length(deck(deck.objects[me]{"sideboard vs. fw"})),("deck.top",deck.objects[me]{"sideboard vs. fw"}),("deck.bottom",deck.objects[me]{"sideboard"})));
+}
+
+#
+# PlayPoolMenu() - Generate menu for pool.
+#
+def PlayPoolMenu
+{
+  Menu("Character pool",(
+   ("Look at your pool","left click",""),
+  ));
+}
+
+#
+# PlaySideboardMenu() - Generate menu for sideboard.
+#
+def PlaySideboardMenu
+{
+  Menu("Sideboard",(
+   ("Look at your sideboard","left click",""),
+  ));
+}
+
+#
+# PlaySitesMenu() - Generate menu for sites.
+#
+def PlaySitesMenu
+{
+  Menu("Sites",(
+   ("Show map","left click",""),
+   ("Look at your sites","middle click",""),
+  ));
+}
+
+#
+# PlayMapMenu() - Generate menu for map.
+#
+def PlayMapMenu
+{
+  Menu("Map",(
+   ("Browse sites at the region","left click",""),
+   ("Close","Escape",""),
+  ));
+}
+
+#
+# ChatMapMenu() - Generate menu for map.
+#
+def ChatMapMenu
+{
+  Menu("Map",(
+   ("Close","Escape",""),
+  ));
+}
+
+#
+# CurrentDeckRemoveSites() - Delete all cards from 'sites' section.
+#
+def CurrentDeckRemoveSites
+{
+  if(deck.name!=NULL && has_entry(deck.name,decks))
+  {
+    decks{deck.name}{"sites"}=(,);  
+    RefreshCurrentDeck();
+  }
+}
+#
+# CurrentDeckAddSites(site type) - Add one card of each site with the given type.
+#
+def CurrentDeckAddSites
+{
+  if(deck.name!=NULL && has_entry(deck.name,decks))
+  {
+    decks{deck.name}{"sites"}=decks{deck.name}{"sites"} + select("card_attr('type',#)==ARG",cards());
+
+    if(ARG=="Balrog Site")
+    {
+      decks{deck.name}{"sites"}=decks{deck.name}{"sites"} -
+        flatten(images("Moria [M]",
+                       "Barad-dûr [M]",
+                       "Carn Dûm [M]",
+                       "Cirith Gorgor [M]",
+                       "Cirith Ungol [M]",
+                       "Dol Guldur [M]",
+                       "Minas Morgul [M]",
+                       "Moria [M]",
+                       "The Gem-deeps [M]",
+                       "The Iron-deeps [M]",
+                       "The Pûkel-deeps [M]",
+                       "The Sulfur-deeps [M]",
+                       "The Under-courts [M]",
+                       "The Under-galleries [M]",
+                       "The Under-gates [M]",
+                       "The Under-grottos [M]",
+                       "The Under-leas [M]",
+                       "The Under-vaults [M]"));
+    }
+
+    SortSites();
+    RefreshCurrentDeck();
+  }
+}
+
+#
+# CurrentDeckAddHavens() - Check site types already in deck and add havens of that type.
+#
+def CurrentDeckAddHavens
+{
+  if(deck.name!=NULL && has_entry(deck.name,decks))
+  {
+    push(t);
+    t=unique(sort(Attr("type",decks{deck.name}{"sites"})));
+    if(count("Hero Site",t))
+    {
+      decks{deck.name}{"sites"}=3*images("Rivendell [H]")+3*images("Lórien [H]")+3*images("Grey Havens [H]")+3*images("Edhellond [H]") + decks{deck.name}{"sites"};
+    }
+    if(count("Balrog Site",t))
+    {
+      decks{deck.name}{"sites"}=3*images("Moria [B]") + 3*images("The Under-gates [B]") + decks{deck.name}{"sites"};
+    }
+    else if(count("Minion Site",t))
+    {
+      decks{deck.name}{"sites"}=3*images("Dol Guldur [M]") + 3*images("Minas Morgul [M]") + 3*images("Carn Dûm [M]") + 3*images("Geann a-Lich [M]") + decks{deck.name}{"sites"};
+    }
+    if(count("Fallen-wizard Site",t))
+    {
+      decks{deck.name}{"sites"}=3*images("Isengard [F]") + 3*images("Rhosgobel [F]") + 3*images("The White Towers [F]") + decks{deck.name}{"sites"};
+    }
+    SortSites();
+    RefreshCurrentDeck();
+    t=pop();
+  }
+}
+
+#
+# CurrentDeckRemoveUnownedSites() - Remove sites that player does not have.
+#
+def CurrentDeckRemoveUnownedSites
+{
+  if(deck.name!=NULL && has_entry(deck.name,decks))
+  {
+    push(e);
+    push(n);
+    for(c)(unique(sort(decks{deck.name}{"sites"})))
+    {
+      e=book_entry(card.book,c);
+      n=count(c,decks{deck.name}{"sites"});
+      if(e[0] < n)
+        decks{deck.name}{"sites"}=decks{deck.name}{"sites"} - (c,) + ((c,)*e[0]);
+    }
+    RefreshCurrentDeck();
+    n=pop();
+    e=pop();
+  } 
+}
+
+#
+# SortSites() - Sort sites of the cuttent deck to order used during game.
+#
+def SortSites
+{
+  if(deck.name!=NULL && has_entry(deck.name,decks))
+  {
+    decks{deck.name}{"sites"}=sort_by(("[type]","[name]"),decks{deck.name}{"sites"});
+  }
+}
+
+# SPECIAL KEYS
+# ============
+
+#
+# KeyShiftControlKeyB() - Produce {b}.
+#
+def KeyShiftControlKeyB
+{
+    Input("{b}");
+}
+#
+# KeyShiftControlKeyC() - Produce {c}.
+#
+def KeyShiftControlKeyC
+{
+    Input("{c}");
+}
+#
+# KeyShiftControlKeyD() - Produce {d}.
+#
+def KeyShiftControlKeyD
+{
+    Input("{d}");
+}
+#
+# KeyShiftControlKeyF() - Produce {f}.
+#
+def KeyShiftControlKeyF
+{
+    Input("{f}");
+}
+#
+# KeyShiftControlKeyS() - Produce {s}.
+#
+def KeyShiftControlKeyS
+{
+    Input("{s}");
+}
+#
+# KeyShiftControlKeyW() - Produce {w}.
+#
+def KeyShiftControlKeyW
+{
+    Input("{w}");
+}
+#
+# KeyShiftAltKeyB() - Produce {B}.
+#
+def KeyShiftAltKeyB
+{
+    Input("{B}");
+}
+#
+# KeyShiftAltKeyD() - Produce {D}.
+#
+def KeyShiftAltKeyD
+{
+    Input("{D}");
+}
+#
+# KeyShiftAltKeyF() - Produce {F}.
+#
+def KeyShiftAltKeyF
+{
+    Input("{F}");
+}
+#
+# KeyShiftAltKeyH() - Produce {H}.
+#
+def KeyShiftAltKeyH
+{
+    Input("{H}");
+}
+#
+# KeyShiftAltKeyR() - Produce {R}.
+#
+def KeyShiftAltKeyR
+{
+    Input("{R}");
+}
+#
+# KeyShiftAltKeyS() - Produce {S}.
+#
+def KeyShiftAltKeyS
+{
+    Input("{S}");
+}
+
+#
+# OVERRIDED FUNCTIONS
+# ===================
+
+#
+# PlayKeyControlKeyPlus() - Increase score for a card.
+#
+def PlayKeyControlKeyPlus
+{ 
+  if(object.number)
+  {
+    if(card(object.number))
+    {
+      Send("Special",("AdjustScore",object.number,1));
+    }
+  }
+}
+
+#
+# PlayKeyControlKeyMinus() - Decrease score for a card.
+#
+def PlayKeyControlKeyMinus
+{
+  if(object.number)
+  {
+    if(card(object.number))
+    {
+      Send("Special",("AdjustScore",object.number,-1));
+    }
+  }
+}
+
+#
+# KeyControlKeyM() - Toggle map.
+#
+def KeyControlKeyM
+{
+  if(object.metw_map==NULL)
+  {
+    image.metw_map=load_image("map.png");
+    object.metw_map=create_image((screen.width-image_width(image.metw_map))/2,(screen.height-image_height(image.metw_map))/2,obj=obj+1,image.metw_map,"Map",0);
+    set_attr(object.metw_map,"ontop",1);
+    set_attr(object.metw_map,"clickable",1);
+  }
+  raise(object.metw_map);
+  set_attr(object.metw_map,"visible",!get_attr(object.metw_map,"visible"));
+}
+
+#
+# PlayKeyEnter() - Enter to the site.
+#
+def PlayKeyEnter
+{
+  if(input=="" && card.number && object.type=="card")
+  {
+    if(right(Attr("type",card.number),4)=="Site")
+    {
+      if(Attr("auto_attack",card.number)!="")
+        Send("Say","My company enters "+card.name+" and faces "+Attr("auto_attack",card.number)+".");
+      else
+        Send("Say","My company enters "+card.name+".");
+    }
+   	else if(right(Attr("type",card.number),9)=="Character")
+   	{
+   		Send("Say", card.name + " faces a strike. (Prowess "+Attr("prowess",card.number)+", body "+Attr("body",card.number)+".)");
+   	}
+    else if(find(Attr("class",card.number), "Creature")!=NULL)
+    {
+    	Send("Say","Face "+card.name+" ("+ Attr("subclass",card.number) +".) "+
+    			Attr("strikes",card.number)+" strike(s) at "+Attr("prowess",card.number)+" prowess.");
+   	}
+    else
+      KeyReturn();
+  }
+  else
+    KeyReturn();
+}
+
+#
+# MouseLeftClickActiveSet() - Play a card.
+#
+def MouseLeftClickActiveSet
+{
+  PlayKeyControlKeyP();
+}
+
+#
+# SPECIAL NETWORK EVENTS
+# ======================
+
+#
+# SpecialEventAdjustScore(object number,change) - Hande special event AdjustScore.
+#
+def SpecialEventAdjustScore
+{
+   AdjustScore(ARG);
+   if(me==0)
+     RecalculateScores();
+}
+
+#
+# HOOKS
+# =====
+
+#
+# TryTransferHook(dest) - called before applying relevant transfer function.
+#
+def TryTransferHook
+{
+  if((ARG==("deck.top",deck) || ARG==("deck.bottom",deck)) && (card_back(card.number)==1 || card.number==1))
+    return(ARG[0],deck.objects[me]{"sites"});
+  else
+    return(ARG);
+}
+
+#
+# SingleCardMenuHook(context) - added to menu for a single card.
+#
+def SingleCardMenuHook
+{
+  push(m);
+
+  m=(("Put to sideboard","","TryTransferTo('deck.top',deck.objects[me]{'sideboard'})"),
+     ("Put to the pool","","TryTransferTo('deck.top',deck.objects[me]{'pool'})"),);
+
+  if(ARG=="inplay")
+  {
+    m=m+(("Adjust score by +1","Ctrl++",""),
+         ("Adjust score by -1","Ctrl+-",""));
+    if(right(Attr("type",card.number),4)=="Site")
+       m=m+(("Enter to site","Enter",""),);
+  }
+
+  if(ARG=="discard")
+  {
+    m=m+(("Shuffle to the deck revealing {green}"+Attr("type",card.number),"left click",""),);
+    m=m+(("Put to hand and reveal {green}"+Attr("type",card.number),"",'transfer.options{"reveal"}="type"; TryTransferTo("hand",me)'),);
+  }
+
+  return(m);
+  m=pop();
+}
+
+#
+# MouseLeftClickDiscardPileSearchBoxHook() - Shuffle a card to the deck revealing type.
+#
+def MouseLeftClickDiscardPileSearchBoxHook
+{
+  transfer.options{"reveal"}="type";
+  TryTransferTo("deck.top",deck);
+  Send("ShuffleDeck",deck);
+  ClearSearchbox();
+}
+
+#
+# MouseMiddleClickMap() - Toggle map off.
+#
+def MouseMiddleClickMap
+{
+  KeyControlKeyM();
+}
+
+#
+# UntapHook(object number) - Return 1 if card shoud be untapped using Ctrl+U.
+#
+def UntapHook
+{
+  return(tapped(ARG) && card_back(card(ARG)) == 0 && card(ARG)!=1);
+}
+
+#
+# PutTableHook(n,x,y,o,c,p) - Put a card number 'c' owned by 'p' using
+#   object number 'n' to the table centered at (x,y) oriented 'o' degrees
+#   clockwise.
+#
+def PutTableHook
+{
+  if(me==0)
+  {
+    if(Attr("type",ARG[4])=="Hazard" && toint(Attr("mp",ARG[4]))!=0)
+      Send("Special",("AdjustScore",ARG[0],-toint(Attr("mp",ARG[4]))));
+ 
+    RecalculateScores();
+  }
+
+  if(Attr("class",ARG[4])=="Short-event" && ARG[5]==me && options{"autodiscard"} > 0)
+    AddTimer(toint(options{"autodiscard"}),'if(mode=="play")Send("Transfer",(1,("table",'+ARG[0]+'),("deck.top",'+discard+')))');
+}
+
+#
+# DelTableHook(object number) - Del a card 'object number' from the table.
+#
+def DelTableHook
+{
+  if(me==0)
+    RecalculateScores();
+}
+
+#
+# ReplaceTableHook(object,card,old card) - Replace card on table with new card image.
+#
+def ReplaceTableHook
+{
+  if(Owner(ARG[0])==me)
+  {
+    if(Attr("type",max(ARG[1],ARG[2]))=="Hazard")
+    {
+      if(ARG[2]==0)
+        Send("Special",("AdjustScore",ARG[0],-toint(Attr("mp",ARG[1]))));
+      else
+        Send("Special",("AdjustScore",ARG[0],-ScoreAdjustment(ARG[0])));
+    }
+    else if(Attr("agent",max(ARG[1],ARG[2]))=="yes" && length(select('find("Site",Attr("type",card(#)))!=NULL',inplay(me)))>0)
+    {
+      if(ARG[2]==0)
+        Send("Special",("AdjustScore",ARG[0],-toint(Attr("mp",ARG[1]))));
+      else
+        Send("Special",("AdjustScore",ARG[0],-ScoreAdjustment(ARG[0])));
+    }
+    else
+      RecalculateScores();
+  }
+}
+
+#
+# SideboardSearchBoxMenuHook() - Generate menu for sideboard search box.
+#
+def SideboardSearchBoxMenuHook
+{
+  push(m);
+  m=(,);
+  if(card.number)
+  {
+    m=m+(
+	 ("Put to the top of the deck","Home",""),
+     ("Reveal type and shuffle to the deck","left click",""),
+     ("Reveal type and put to the discard","",'transfer.options{"reveal"}="type"; TryTransferTo("deck.top",deck.objects[me]{"discard pile"})'),
+ 	 ("{hr}","",""),
+    );
+  }
+  m=m+(("Close","Escape",""),);
+
+  Menu("Look at sideboard",m);
+  m=pop();
+}
+
+#
+# PoolSearchBoxMenuHook() - Generate menu for a character pool.
+#
+def PoolSearchBoxMenuHook
+{
+  push(m);
+  m=(,);
+  if(card.number)
+  {
+    m=m+(
+      ("Play {blue}"+card.name,"left click",""),
+      ("Play {blue}"+card.name+"{black} face down","middle click",""),
+	  ("Put to the top of the deck","Home",""),
+      ("Remove from the game","Ctrl+Delete",""),
+      ("Show card text","Ctrl+H",""),
+    );
+  }
+  m=m+(("Close","Escape",""),);
+
+  Menu("Look at your pool",m);
+  m=pop();
+}
+
+#
+# KeyEscapeHook(current list of objects) - Modify list of objects potentially hided by key Esc.
+#
+def KeyEscapeHook
+{
+  return(ARG);
+  if(object.metw_map != NULL)
+  {
+    if(get_attr(object.metw_map,"visible"))
+      return(ARG+(object.metw_map,));
+  }
+}
+
+#  CreateDeckHook(object num,owner player,name,(x,y)) - This hook is
+#    called after creation of a deck.
+#
+def CreateDeckHook
+{
+  if(ARG[2]=="pool" || ARG[2]=="opponent pool" || ARG[2]=="sideboard vs. fw" || ARG[2]=="opponent sideboard vs. fw")
+    set_attr(ARG[0],"visible",0);
+}
+
+#
+# DelDeckHook(object number,deck name, card number, index) - Called before removing a card from the deck.
+#
+def DelDeckHook
+{
+  if(ARG[1]=="pool" || ARG[1]=="opponent pool")
+  {
+    if(length(deck(ARG[0]))<=1)
+      set_attr(ARG[0],"visible",0);
+  }
+}
+
+#
+# PutDeckHook(object number,deck name, card number(s)) - Called after adding cards to the deck.
+#
+def PutDeckHook
+{
+  if(ARG[1]=="pool" || ARG[1]=="opponent pool")
+  {
+    if(length(deck(ARG[0]))>0)
+      set_attr(ARG[0],"visible",1);
+    else
+      set_attr(ARG[0],"visible",0);
+  }
+}
+
+#
+# PlayFromSelectionHook(NULL) - Called after transfering a card
+#   directly from the selection. Hides the map.
+#
+def PlayFromSelectionHook
+{
+  set_attr(object.metw_map,"visible",0);
+}
+
+#
+# LOCATION TABLES
+# ===============
+
+#
+# InitializeLocationTables() - Fill tables for location algorithm (See Mtg.include for details).
+#
+def InitializeLocationTables
+{
+
+  rules.category=(
+    ('findspace.facedown && (right(type,4)=="Site" || card==1)',
+      '("site","face down")'),
+    ('right(type,4)=="Site"',
+      '("site","")'),
+    ('findspace.facedown',
+      '("onguard/agent","")'),
+    ('right(class,7)=="Faction"',
+      '("mp","")'),
+    ('class=="Short-event"',
+      '("short-event","")'),
+    ('type=="Hazard" && class=="Permanent-event" && (left(text(card),11)=="Corruption." || left(text(card),12)=="Playable on ") && card!=1072 && card!=1083',
+      '("item/hazard","")'),
+    ('class=="Long-event"',
+      '("events","long")'),
+    ('right(class,5)=="event" && type=="Hazard"',
+      '("events","hazard")'),
+    ('right(class,5)=="event"',
+      '("events","other")'),
+    ('right(type,9)=="Character"',
+      '("character","")'),
+    ('find("Item",class)!=NULL',
+      '("item/hazard","")'),
+  );
+
+  rules.coordinate=(
+    (("site","face down"),(
+       (("FindOtherCard",'find("Site",Attr("type",card))!=NULL && Attachments(#)==(,) && ParentObject(#)==NULL',0,20),),
+       (,)
+    )),
+    (("site",""),(
+       (("LocationList",((design.width/8,0),(design.width/2,0),((design.width*3)/4,0),(design.width/5,design.height/4),(design.width/2,design.height/4),((design.width*3)/4,design.height/4)),),),
+       (,)
+    )),
+    (("mp",),(
+       (("StacksByGroup",3,design.height/2-card.ystep+((players>2)*(card.ystep/2)),15,0,0,0),),
+       (("OffscreenEnabled","yes"),)
+    )),
+    (("events","long"),(
+       (("StacksByGroup",100,-card.ystep/2+15,card.xstep/3,0,0,0),),
+       (("AutoRaiseGroupTail","yes"),)
+    )),
+    (("events","other"),(
+       (("StacksByGroup",design.width-card.xstep,card.ystep/2,0,20,0,0),),
+       (("AutoRaiseGroupTail","yes"),)
+    )),
+    (("events","hazard"),(
+       (("StacksByGroup",design.width-card.xstep*2,card.ystep/2,0,20,0,0),),
+       (("AutoRaiseGroupTail","yes"),)
+    )),
+#    (("item/hazard",),(
+#       (("TargetCard",-w(20),-h(20),-w(20),-h(20)),),
+#       (("OffscreenEnabled","yes"),("RaiseTarget","yes"))
+#    )),
+  );
+}

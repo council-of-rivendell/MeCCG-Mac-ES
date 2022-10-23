@@ -1,0 +1,685 @@
+#
+# Metw Deck Statistics Script by Malakh Harbonah
+#
+
+def CountSites
+{
+  push(a);
+  push(n);
+  push(t);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+    if(find("Site",a)!=NULL)
+      t=t+1.0;
+  }
+  return(format("%3.0f",t));
+  t=pop();
+  n=pop();
+  a=pop();
+}
+
+def CountPlayableGreater
+{
+  push(a);
+  push(b);
+  push(n);
+  push(t);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+	b=Attr("playable",c);
+    if(find("Site",a)!=NULL && find("greater",b)!=NULL)
+      t=t+1.0;
+  }
+  return(format("%3.0f",t));
+  t=pop();
+  n=pop();
+  b=pop();
+  a=pop();
+}
+
+def CountPlayableMajor
+{
+  push(a);
+  push(b);
+  push(n);
+  push(t);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+	b=Attr("playable",c);
+    if(find("Site",a)!=NULL && find("major",b)!=NULL)
+      t=t+1.0;
+  }
+  return(format("%3.0f",t));
+  t=pop();
+  n=pop();
+  b=pop();
+  a=pop();
+}
+
+def CountPlayableGreater
+{
+  push(a);
+  push(b);
+  push(n);
+  push(t);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+	b=Attr("playable",c);
+    if(find("Site",a)!=NULL && find("greater",b)!=NULL)
+      t=t+1.0;
+  }
+  return(format("%3.0f",t));
+  t=pop();
+  n=pop();
+  b=pop();
+  a=pop();
+}
+
+
+#
+# CountHazards() - Return number of Hazards in current deck.
+#
+
+def CountHazards
+{
+  push(a);
+  push(n);
+  push(t);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+    if(a=="Hazard")
+      t=t+1.0;
+  }
+  return(t);
+  t=pop();
+  n=pop();
+  a=pop();
+}
+
+#
+# CountResources() - Return number of All Resources in current deck.
+#
+
+def CountResources
+{
+  push(a);
+  push(n);
+  push(t);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+    if(find("Resource",a)!=NULL)
+      t=t+1.0;
+  }
+  return(t);
+  t=pop();
+  n=pop();
+  a=pop();
+}
+
+#
+# CountHeroResources() - Return number of Hero Resources in current deck.
+#
+
+def CountHeroResources
+{
+  push(a);
+  push(n);
+  push(t);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+    if(a=="Hero Resource")
+      t=t+1.0;
+  }
+  return(t);
+  t=pop();
+  n=pop();
+  a=pop();
+}
+
+#
+# CountMinionRes() - Return number of Minion Resources in current deck.
+#
+
+def CountMinionRes
+{
+  push(a);
+  push(n);
+  push(t);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+    if(a=="Minion Resource")
+      t=t+1.0;
+  }
+  return(t);
+  t=pop();
+  n=pop();
+  a=pop();
+}
+
+#
+# CountHeros() - Return number of Hero Characters in current deck.
+#
+
+def CountHeros
+{
+  push(a);
+  push(n);
+  push(t);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+    if(a=="Hero Character")
+      t=t+1.0;
+  }
+  return(t);
+  t=pop();
+  n=pop();
+  a=pop();
+}
+
+#
+# CountMinionChars() - Return number of Minion Characters in current deck.
+#
+
+def CountMinionChars
+{
+  push(a);
+  push(n);
+  push(t);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+    if(a=="Minion Character")
+      t=t+1.0;
+  }
+  return(t);
+  t=pop();
+  n=pop();
+  a=pop();
+}
+
+
+#
+# CountHazCreatures() - Return number of Hazard Creatures in current deck.
+#
+
+def CountHazCreatures
+{
+  push(a);
+  push(n);
+  push(t);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+	b=Attr("class",c);
+    if(find("Creature",b)!=NULL && find("Hazard",a)!=NULL)
+      t=t+1.0;
+  }
+  return(t);
+  t=pop();
+  n=pop();
+  a=pop();
+}
+
+#
+# CountHazShort() - Return number of Hazard Short-Events in current deck.
+#
+
+def CountHazShort
+{
+  push(a);
+  push(n);
+  push(t);
+  push(b);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+	b=Attr("class",c);
+
+	   if(find("Short-event",b)!=NULL && find("Hazard",a)!=NULL)
+          t=t+1.0;
+  }
+  return(t);
+  b=pop();
+  t=pop();
+  n=pop();
+  a=pop();
+}
+
+#
+# CountHazLong() - Return number of Hazard Long-Events in current deck.
+#
+
+def CountHazLong
+{
+  push(a);
+  push(n);
+  push(t);
+  push(b);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+	b=Attr("class",c);
+
+	   if(find("Long-event",b)!=NULL && find("Hazard",a)!=NULL)
+          t=t+1.0;
+  }
+  return(t);
+  b=pop();
+  t=pop();
+  n=pop();
+  a=pop();
+}
+
+#
+# CountHazPerm() - Return number of Hazard Permanent-Events in current deck.
+#
+
+def CountHazPerm
+{
+  push(a);
+  push(n);
+  push(t);
+  push(b);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+	b=Attr("class",c);
+
+	   if(find("Permanent-event",b)!=NULL && find("Hazard",a)!=NULL)
+          t=t+1.0;
+  }
+  return(t);
+  b=pop();
+  t=pop();
+  n=pop();
+  a=pop();
+}
+
+#
+# CountResShort() - Return number of Resource Short-Events in current deck.
+#
+
+def CountResShort
+{
+  push(a);
+  push(n);
+  push(t);
+  push(b);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+	b=Attr("class",c);
+
+	   if(find("Short-event",b)!=NULL && find("Resource",a)!=NULL)
+          t=t+1.0;
+  }
+  return(t);
+  b=pop();
+  t=pop();
+  n=pop();
+  a=pop();
+}
+
+#
+# CountResLong() - Return number of Resource Long-Events in current deck.
+#
+
+def CountResLong
+{
+  push(a);
+  push(n);
+  push(t);
+  push(b);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+	b=Attr("class",c);
+
+	   if(find("Long-event",b)!=NULL && find("Resource",a)!=NULL)
+          t=t+1.0;
+  }
+  return(t);
+  b=pop();
+  t=pop();
+  n=pop();
+  a=pop();
+}
+
+#
+# CountResPerm() - Return number of Resource Permanent-Events in current deck.
+#
+
+def CountResPerm
+{
+  push(a);
+  push(n);
+  push(t);
+  push(b);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+	b=Attr("class",c);
+
+	   if(find("Permanent-event",b)!=NULL && find("Resource",a)!=NULL)
+          t=t+1.0;
+  }
+  return(t);
+  b=pop();
+  t=pop();
+  n=pop();
+  a=pop();
+}
+
+#
+# CountResFactions() - Return number of Factions in current deck.
+#
+
+def CountResFactions
+{
+  push(a);
+  push(n);
+  push(t);
+  push(b);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+	b=Attr("class",c);
+
+	   if(find("Faction",b)!=NULL && find("Resource",a)!=NULL)
+          t=t+1.0;
+  }
+  return(t);
+  b=pop();
+  t=pop();
+  n=pop();
+  a=pop();
+}
+
+#
+# CountResAllies() - Return number of Allies in current deck.
+#
+
+def CountResAllies
+{
+  push(a);
+  push(n);
+  push(t);
+  push(b);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+	b=Attr("class",c);
+
+	   if(find("Ally",b)!=NULL && find("Resource",a)!=NULL)
+          t=t+1.0;
+  }
+  return(t);
+  b=pop();
+  t=pop();
+  n=pop();
+  a=pop();
+}
+
+#
+# CountResItems() - Return number of Items in current deck.
+#
+
+def CountResItems
+{
+  push(a);
+  push(n);
+  push(t);
+  push(b);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+	b=Attr("class",c);
+
+	   if(find("Item",b)!=NULL && find("Resource",a)!=NULL)
+          t=t+1.0;
+  }
+  return(t);
+  b=pop();
+  t=pop();
+  n=pop();
+  a=pop();
+}
+
+#
+# CountResGreaterItems() - Return number of GreaterItems in current deck.
+#
+
+def CountResGreaterItems
+{
+  push(a);
+  push(n);
+  push(t);
+  push(b);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+	b=Attr("class",c);
+
+	   if(find("Greater Item",b)!=NULL && find("Resource",a)!=NULL)
+          t=t+1.0;
+  }
+  return(t);
+  b=pop();
+  t=pop();
+  n=pop();
+  a=pop();
+}
+
+#
+# CountResMajorItems() - Return number of MajorItems in current deck.
+#
+
+def CountResMajorItems
+{
+  push(a);
+  push(n);
+  push(t);
+  push(b);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+	b=Attr("class",c);
+
+	   if(find("Major Item",b)!=NULL && find("Resource",a)!=NULL)
+          t=t+1.0;
+  }
+  return(t);
+  b=pop();
+  t=pop();
+  n=pop();
+  a=pop();
+}
+
+#
+# CountResMinorItems() - Return number of MinorItems in current deck.
+#
+
+def CountResMinorItems
+{
+  push(a);
+  push(n);
+  push(t);
+  push(b);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+	b=Attr("class",c);
+
+	   if(find("Minor Item",b)!=NULL && find("Resource",a)!=NULL)
+          t=t+1.0;
+  }
+  return(t);
+  b=pop();
+  t=pop();
+  n=pop();
+  a=pop();
+}
+
+#
+# CountResSpecialItems() - Return number of SpecialItems in current deck.
+#
+
+def CountResSpecialItems
+{
+  push(a);
+  push(n);
+  push(t);
+  push(b);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+	b=Attr("class",c);
+
+	   if(find("Special Item",b)!=NULL && find("Resource",a)!=NULL)
+          t=t+1.0;
+  }
+  return(t);
+  b=pop();
+  t=pop();
+  n=pop();
+  a=pop();
+}
+
+#
+# CountResRingItems() - Return number of RingItems in current deck.
+#
+
+def CountResRingItems
+{
+  push(a);
+  push(n);
+  push(t);
+  push(b);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+	b=Attr("class",c);
+
+	   if(find("Ring Item",b)!=NULL && find("Resource",a)!=NULL)
+          t=t+1.0;
+  }
+  return(t);
+  b=pop();
+  t=pop();
+  n=pop();
+  a=pop();
+}
+
+#
+# CountMp() - Return number of MP in current deck.
+#
+
+def CountMp
+{
+  push(a);
+  push(b);
+  push(n);
+  push(t);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+	b=Attr("mp",c);
+	if(find("Hazard",a)==NULL)
+	   t=t+toreal(b);
+
+  }
+  return(t);
+  t=pop();
+  n=pop();
+  b=pop();
+  a=pop();
+}
+
+#
+# CountCharMp() - Return number of Hazards in current deck.
+#
+
+def CountCharMp
+{
+  push(a);
+  push(b);
+  push(n);
+  push(t);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+	b=Attr("mp",c);
+    if(find("Character",a)!=NULL)
+	{
+	  t=t+toreal(b);
+	}
+  }
+  return(t);
+  t=pop();
+  n=pop();
+  b=pop();
+  a=pop();
+}
+
+#
+# CountResMp() - Return number of Hazards in current deck.
+#
+
+def CountResMp
+{
+  push(a);
+  push(b);
+  push(n);
+  push(t);
+  t=0.0;
+  for(c)(ARG)
+  {
+    a=Attr("type",c);
+	b=Attr("mp",c);
+    if(find("Resource",a)!=NULL)
+	{
+	  t=t+toreal(b);
+	}
+  }
+  return(t);
+  t=pop();
+  n=pop();
+  b=pop();
+  a=pop();
+}

@@ -1,0 +1,238 @@
+#
+# GCCG v0.9.6.3 Middle-earth deck
+#
+#      2019 - Laxander - Balrog Burning Eriador - World Champion 2019 {d} {F}{R}
+#
+
+####
+Deck
+####
+
+# Balrog Character (3)
+
+3 The Balrog [B] (BA)
+
+# Hazard (30)
+
+1 Adûnaphel (TW)
+3 Ambusher (TW)
+2 An Unexpected Outpost (DM)
+3 Assassin (TW)
+3 Blind to the West (WH)
+1 Cave-drake (TW)
+1 Daelomin at Home (TD)
+3 Echoes of the Song (WH)
+2 Foolish Words (LE)
+1 Mouth of Sauron (TW)
+3 River (TW)
+1 Rolled down to the Sea (WH)
+3 Sellswords Between Charters (LE)
+2 Whole Villages Roused (WH)
+1 Ûvatha the Horseman (TW)
+
+# Minion Resource (30)
+
+1 Ancient Black Axe (AS)
+3 Burning Rick, Cot, and Tree (LE)
+3 Dark Tryst (AS)
+1 Foe Dismayed (BA)
+1 Gangways over the Fire (BA)
+2 Great Shadow (BA)
+1 High Helm (LE)
+3 I'll Report You (LE)
+2 Maker's Map (BA)
+1 Orcs of Moria (LE)
+1 Regiment of Black Crows (AS)
+1 Stinker (LE)
+1 Tempest of Fire (BA)
+1 The Warg-king (LE)
+3 Voices of Malice (LE)
+2 War-warg (LE)
+2 We Have Come to Kill (LE)
+1 Weigh All Things to a Nicety (LE)
+
+####
+Pool
+####
+
+# Minion Character (9)
+
+1 Azog (BA)
+1 Bolg (BA)
+1 Bûthrakaur (BA)
+1 Doeth (Durthak) (WH)
+1 Shagrat (LE)
+1 Troll-chief (LE)
+1 Ufthak (LE)
+1 Uglúk (WH)
+1 Umagaur (BA)
+
+# Minion Resource (2)
+
+1 Foul-smelling Paste (LE)
+1 Orders from the Great Demon (BA)
+
+#########
+Sideboard
+#########
+
+# Hazard (6)
+
+1 Call of Home (TW)
+1 Heedless Revelry (LE)
+1 In the Heart of his Realm (DM)
+2 Seized by Terror (DM)
+1 The Will of the Ring (TW)
+
+# Minion Character (10)
+
+1 Crook-legged Orc (BA)
+3 Hill-troll (BA)
+3 Ill-favoured Fellow (WH)
+3 Mountain-maggot (BA)
+
+# Minion Resource (13)
+
+1 A Few Recruits (BA)
+1 Foe Dismayed (BA)
+1 Great Shadow (BA)
+1 Long Grievous Siege (BA)
+1 People Diminished (BA)
+1 Piercing All Shadows (WH)
+1 Prone to Violence (BA)
+1 Scroll of Isildur [M] (LE)
+1 Sudden Call (LE)
+1 Tempest of Fire (BA)
+1 The Arkenstone [M] (PR)
+1 Threats (LE)
+1 War-warg (LE)
+
+################
+Sideboard vs. fw
+################
+
+# Hazard (9)
+
+2 Choking Shadows (TW)
+2 Heart Grown Cold (WH)
+1 Inner Rot (WH)
+1 Ire of the East (WH)
+1 Lobelia Sackville-Baggins (DM)
+1 Neither so Ancient Nor so Potent (DM)
+1 Pilfer Anything Unwatched (AS)
+
+# Minion Character (1)
+
+1 Drór (DM)
+
+#####
+Sites
+#####
+
+# Balrog Site (28)
+
+1 Ancient Deep-hold (BA)
+1 Barad-dûr [B] (BA)
+1 Carn Dûm [B] (BA)
+1 Cirith Gorgor [B] (BA)
+1 Cirith Ungol [B] (BA)
+1 Dol Guldur [B] (BA)
+1 Minas Morgul [B] (BA)
+4 Moria [B] (BA)
+1 Remains of Thangorodrim (BA)
+1 The Drowning-deeps (BA)
+1 The Gem-deeps [B] (BA)
+1 The Iron-deeps [B] (BA)
+1 The Pûkel-deeps [B] (BA)
+1 The Rusted-deeps (BA)
+1 The Sulfur-deeps [B] (BA)
+1 The Under-courts [B] (BA)
+1 The Under-galleries [B] (BA)
+4 The Under-gates [B] (BA)
+1 The Under-grottos [B] (BA)
+1 The Under-leas [B] (BA)
+1 The Under-vaults [B] (BA)
+1 The Wind-deeps (BA)
+
+# Minion Site (80)
+
+1 Amon Hen [M] (LE)
+1 Bag End [M] (LE)
+1 Bandit Lair [M] (LE)
+1 Barrow-downs [M] (LE)
+1 Beorn's House [M] (LE)
+1 Blue Mountain Dwarf-hold [M] (LE)
+1 Bree [M] (LE)
+1 Buhr Widu [M] (LE)
+1 Cameth Brin [M] (LE)
+1 Caves of Ûlund [M] (LE)
+1 Dale [M] (LE)
+1 Dancing Spire [M] (AS)
+1 Dead Marshes [M] (LE)
+1 Dimrill Dale [M] (LE)
+1 Dol Amroth [M] (LE)
+1 Drúadan Forest [M] (LE)
+1 Dunharrow [M] (LE)
+1 Dunnish Clan-hold [M] (LE)
+1 Eagles' Eyrie [M] (AS)
+1 Easterling Camp [M] (LE)
+1 Edhellond [M] (AS)
+1 Edoras [M] (LE)
+1 Ettenmoors [M] (LE)
+1 Framsburg [M] (AS)
+1 Geann a-Lisch [M] (LE)
+1 Gladden Fields [M] (LE)
+1 Glittering Caves [M] (LE)
+1 Gobel Mírlond [M] (LE)
+1 Goblin-gate [M] (LE)
+1 Gold Hill [M] (AS)
+1 Gondmaeglom [M] (LE)
+1 Grey Havens [M] (AS)
+1 Haudh-in-Gwanûr [M] (LE)
+1 Henneth Annûn [M] (LE)
+1 Hermit's Hill [M] (LE)
+1 Himring [M] (AS)
+1 Irerock [M] (AS)
+1 Iron Hill Dwarf-hold [M] (LE)
+1 Isengard [M] (LE)
+1 Isle of the Ulond [M] (AS)
+1 Isles of the Dead that Live [M] (AS)
+1 Lake-town [M] (LE)
+1 Lond Galen [M] (LE)
+1 Lossadan Cairn [M] (LE)
+1 Lossadan Camp [M] (LE)
+1 Lórien [M] (AS)
+1 Minas Tirith [M] (LE)
+1 Mount Doom [M] (LE)
+1 Mount Gram [M] (LE)
+1 Mount Gundabad [M] (LE)
+1 Nûrniag Camp [M] (LE)
+1 Old Forest [M] (AS)
+1 Ost-in-Edhil [M] (LE)
+1 Ovir Hollow [M] (AS)
+1 Pelargir [M] (LE)
+1 Raider-hold [M] (LE)
+1 Rhosgobel [M] (AS)
+1 Rivendell [M] (AS)
+1 Ruined Signal Tower [M] (LE)
+1 Sarn Goriwing [M] (LE)
+1 Shelob's Lair [M] (LE)
+1 Shrel-Kain [M] (LE)
+1 Southron Oasis [M] (LE)
+1 Stone-circle [M] (LE)
+1 Tharbad [M] (LE)
+1 The Lonely Mountain [M] (LE)
+1 The Stones [M] (LE)
+1 The White Towers [M] (LE)
+1 The Wind Throne [M] (LE)
+1 The Worthy Hills [M] (LE)
+1 Thranduil's Halls [M] (LE)
+1 Tolfalas [M] (AS)
+1 Urlurtsu Nurn [M] (LE)
+1 Vale of Erech [M] (LE)
+1 Variag Camp [M] (LE)
+1 Weathertop [M] (AS)
+1 Wellinghall [M] (AS)
+1 Woodmen-town [M] (LE)
+1 Wose Passage-hold [M] (LE)
+1 Zarak Dûm [M] (LE)

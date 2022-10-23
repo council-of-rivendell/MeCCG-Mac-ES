@@ -1,0 +1,16 @@
+<!ELEMENT modules (store?,source*,module*)>
+<!ELEMENT module (include)*>
+<!ATTLIST module
+    name        CDATA #REQUIRED
+    version     CDATA #REQUIRED>
+<!ELEMENT source EMPTY>
+<!ATTLIST source
+    url         CDATA #REQUIRED>
+<!ELEMENT include EMPTY>
+<!ATTLIST include
+    dir         CDATA #IMPLIED
+    files       CDATA #IMPLIED
+    file        CDATA #IMPLIED>
+<!ELEMENT store EMPTY>
+<!ATTLIST store
+    dir         CDATA #REQUIRED>

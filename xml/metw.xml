@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE ccg SYSTEM "gccg-game.dtd">
+
+<ccg name="Middle-earth" dir="Metw">
+
+  <cardset source="metw_basecards.xml"/>
+  <cardset source="wizards.xml"/>
+  <cardset source="dragons.xml"/>
+  <cardset source="dark_minions.xml"/>
+  <cardset source="lidless_eye.xml"/>
+  <cardset source="against_shadow.xml"/>
+  <cardset source="white_hand.xml"/>
+  <cardset source="balrog.xml"/>
+  <cardset source="promo.xml"/>
+  <cardset source="promo_de.xml"/>
+
+  <image file="b.png" tag="{b}"/>
+  <image file="c.png" tag="{c}"/>
+  <image file="d.png" tag="{d}"/>
+  <image file="f.png" tag="{f}"/>
+  <image file="s.png" tag="{s}"/>
+  <image file="w.png" tag="{w}"/>
+  <image file="bh.png" tag="{B}"/>
+  <image file="dh.png" tag="{D}"/>
+  <image file="fh.png" tag="{F}"/>
+  <image file="H.png" tag="{H}"/>
+  <image file="R.png" tag="{R}"/>
+  <image file="sh.png" tag="{S}"/>
+
+  <option name="hand card size" value="25"/>
+  <option name="table card size" value="25"/>
+  <option name="deck card size" value="15"/>
+  <option name="book card size" value="25"/>
+
+  <option name="draw hints" value="race"/>
+  <option name="draw hints 2" value="type"/>
+  <option name="canonical key" value="type"/>
+  <option name="canonical key length" value="1"/>
+
+  <option name="Hero Character back color" value="114,131,157"/>
+  <option name="Minion Character back color" value="80,56,106"/>
+  <option name="Balrog Character back color" value="80,56,106"/>
+  <option name="Hero Resource back color" value="117,79,68"/>
+  <option name="Hero Site back color" value="242,233,192"/>
+  <option name="Hazard back color" value="25,28,33"/>
+  <option name="Region back color" value="109,122,34"/>
+  <option name="Region border width" value="15"/>
+  <option name="Alatar back color" value="185,192,200"/>
+  <option name="Pallando back color" value="131,114,146"/>
+  <option name="Gandalf back color" value="214,208,210"/>
+  <option name="Radagast back color" value="194,162,151"/>
+  <option name="Saruman back color" value="254,255,255"/>
+  <option name="Minion Resource back color" value="103,80,108"/>
+  <option name="Ringwraith back color" value="128,0,0"/>
+  <option name="The Balrog back color" value="128,0,0"/>
+  <option name="Minion Site back color" value="119,101,101"/>
+  <option name="Balrog Site back color" value="124,90,78"/>
+  <option name="Balrog Site border color" value="227,106,25"/>
+  <option name="Stage Resource back color" value="134,144,117"/>
+  <option name="Fallen-wizard Site back color" value="183,173,164"/>
+
+  <option name="default title box border" value="4"/>
+  <option name="Hero Character title box" value="84,28,296,40"/>
+  <option name="Hero Character title box color" value="171,183,195"/>
+  <option name="Region title box" value="40,40,336,32"/>
+  <option name="Region title box color" value="246,241,199"/>
+  <option name="Region title box border color" value="162,151,121"/>
+
+  <option name="default title" value="80,28,312,44"/>
+  <option name="Region title" value="40,30,312,44"/>
+  <option name="default title font" value="0"/>
+  <option name="default title font color" value="0,0,0"/>
+  <option name="Hazard title font color" value="255,255,255"/>
+  <option name="Hero Resource title font color" value="255,255,255"/>
+  <option name="default title font size" value="36"/>
+  <option name="default title align" value="1"/>
+  <option name="default title shadow" value="0"/>
+
+  <option name="default image" value="72,86,300,240"/>
+  <option name="Region image" value="0,0,0,0"/>
+  <option name="default image color" value="39,55,68"/>
+  <option name="default image border" value="10"/>
+  <option name="default image font size" value="160"/>
+
+  <option name="default text box" value="42,360,334,190"/>
+  <option name="Region text box" value="0,0,0,0"/>
+  <option name="default text box font size" value="24"/>
+  <option name="default text box valign" value="0"/>
+  <option name="default text box color" value="174,186,200"/>
+  <option name="default text box border" value="4"/>
+  <option name="Hazard text box color" value="86,85,81"/>
+  <option name="Hero Resource text box color" value="200,180,129"/>
+  <option name="Minion Resource text box color" value="150,154,168"/>
+  <option name="Stage Resource text box color" value="214,204,169"/>
+  <option name="Hero Site text box color" value="252,252,214"/>
+  <option name="Minion Site text box color" value="165,145,146"/>
+  <option name="Balrog Site text box color" value="174,146,135"/>
+  <option name="Fallen-wizard Site text box color" value="219,208,202"/>
+  <option name="Minion Character text box color" value="123,94,138"/>
+
+  <option name="default box 1" value="20,510,54,58"/>
+  <option name="Region box 1" value="0,0,0,0"/>
+  <option name="default box 1 color" value="93,93,103"/>
+  <option name="default box 1 require" value="[prowess]/[body]"/>
+  <option name="Hazard box 1 color" value="25,28,33"/>
+  <option name="Hero Resource box 1 color" value="120,102,66"/>
+  <option name="default text 1" value="20,510,54,58"/>
+  <option name="default text 1 font size" value="28"/>
+  <option name="default text 1 align" value="1"/>
+  <option name="default text 1 content" value="[prowess]/[body]"/>
+  <option name="default text 1 font color" value="192,193,197"/>
+
+  <option name="default box 2" value="20,18,58,54"/>
+  <option name="Region box 2" value="0,0,0,0"/>
+  <option name="default box 2 color" value="171,183,195"/>
+  <option name="Hazard box 2 color" value="33,33,33"/>
+  <option name="Hero Resource box 2 color" value="117,79,68"/>
+  <option name="Hero Site box 2 color" value="242,233,192"/>
+  <option name="default box 2 border" value="4"/>
+  <option name="Hazard box 2 border" value="0"/>
+  <option name="default text 2" value="20,18,58,54"/>
+  <option name="Hazard text 2 font color" value="255,255,255"/>
+  <option name="default text 2 font size" value="40"/>
+  <option name="default text 2 align" value="1"/>
+  <option name="default text 2 content" value="[mp]"/>
+  <option name="Hero Site text 2 content" value="[site_type]"/>
+  <option name="Minion Site text 2 content" value="[site_type]"/>
+  <option name="Fallen-wizard Site text 2 content" value="[site_type]"/>
+  <option name="Balrog Site text 2 content" value="[site_type]"/>
+  <option name="Minion Resource box 2 color" value="150,154,168"/>
+  <option name="Stage Resource box 2 color" value="214,204,169"/>
+  <option name="Minion Site box 2 color" value="165,145,146"/>
+  <option name="Balrog Site box 2 color" value="174,146,135"/>
+  <option name="Fallen-wizard Site box 2 color" value="219,208,202"/>
+  <option name="Minion Character box 2 color" value="123,94,138"/>
+
+  <option name="Hero Character box 3" value="24,108,26,34"/>
+  <option name="Hero Resource box 3" value="24,108,26,34"/>
+  <option name="default box 3 require" value="[mind]"/>
+  <option name="default box 3 color" value="219,219,219"/>
+  <option name="default box 3 border" value="2"/>
+  <option name="default box 3 border color" value="0,0,0"/>
+  <option name="default text 3" value="24,108,26,34"/>
+  <option name="default text 3 font size" value="24"/>
+  <option name="default text 3 align" value="1"/>
+  <option name="default text 3 content" value="[mind]"/>
+  <option name="Hero Site box 3" value="34,496,40,40"/>
+  <option name="Hero Site text 3" value="34,496,40,40"/>
+  <option name="Hero Site box 3 color" value="143,131,115"/>
+  <option name="Hero Site box 3 require" value="[draw_opp]"/>
+  <option name="Hero Site text 3 content" value="[draw_opp]"/>
+  <option name="Hero Site text 3 font color" value="243,238,218"/>
+  <option name="Minion Site box 3" value="34,496,40,40"/>
+  <option name="Minion Site text 3" value="34,496,40,40"/>
+  <option name="Minion Site box 3 color" value="76,58,58"/>
+  <option name="Minion Site box 3 require" value="[draw_opp]"/>
+  <option name="Minion Site text 3 content" value="[draw_opp]"/>
+  <option name="Minion Site text 3 font color" value="128,110,110"/>
+  <option name="Balrog Site box 3" value="34,496,40,40"/>
+  <option name="Balrog Site text 3" value="34,496,40,40"/>
+  <option name="Balrog Site box 3 color" value="72,48,48"/>
+  <option name="Balrog Site box 3 require" value="[draw_opp]"/>
+  <option name="Balrog Site text 3 content" value="[draw_opp]"/>
+  <option name="Balrog Site text 3 font color" value="137,105,90"/>
+  <option name="Fallen-wizard Site box 3" value="34,496,40,40"/>
+  <option name="Fallen-wizard Site text 3" value="34,496,40,40"/>
+  <option name="Fallen-wizard Site box 3 color" value="143,131,115"/>
+  <option name="Fallen-wizard Site box 3 require" value="[draw_opp]"/>
+  <option name="Fallen-wizard Site text 3 content" value="[draw_opp]"/>
+  <option name="Fallen-wizard Site text 3 font color" value="243,238,218"/>
+
+  <option name="default box 4" value="0,0,0,0"/>
+  <option name="Hero Character box 4" value="24,170,26,34"/>
+  <option name="Hero Resource box 4" value="24,170,26,34"/>
+  <option name="default box 4 require" value="[influence]"/>
+  <option name="default box 4 color" value="0,0,0"/>
+  <option name="default box 4 border" value="2"/>
+  <option name="default box 4 border color" value="219,219,219"/>
+  <option name="default text 4" value="24,170,26,34"/>
+  <option name="default text 4 font color" value="219,219,219"/>
+  <option name="default text 4 font size" value="24"/>
+  <option name="default text 4 align" value="1"/>
+  <option name="default text 4 content" value="[influence]"/>
+  <option name="Hero Site box 4" value="34,536,40,40"/>
+  <option name="Hero Site text 4" value="34,536,40,40"/>
+  <option name="Hero Site box 4 color" value="243,238,218"/>
+  <option name="Hero Site text 4 content" value="[draw]"/>
+  <option name="Hero Site box 4 require" value="[draw]"/>
+  <option name="Hero Site text 4 font color" value="143,131,115"/>
+  <option name="Minion Site box 4" value="34,536,40,40"/>
+  <option name="Minion Site text 4" value="34,536,40,40"/>
+  <option name="Minion Site box 4 color" value="128,110,110"/>
+  <option name="Minion Site text 4 content" value="[draw]"/>
+  <option name="Minion Site box 4 require" value="[draw]"/>
+  <option name="Minion Site text 4 font color" value="76,58,58"/>
+  <option name="Balrog Site box 4" value="34,536,40,40"/>
+  <option name="Balrog Site text 4" value="34,536,40,40"/>
+  <option name="Balrog Site box 4 color" value="137,105,90"/>
+  <option name="Balrog Site text 4 content" value="[draw]"/>
+  <option name="Balrog Site box 4 require" value="[draw]"/>
+  <option name="Balrog Site text 4 font color" value="72,48,48"/>
+  <option name="Fallen-wizard Site box 4" value="34,536,40,40"/>
+  <option name="Fallen-wizard Site text 4" value="34,536,40,40"/>
+  <option name="Fallen-wizard Site box 4 color" value="243,238,218"/>
+  <option name="Fallen-wizard Site text 4 content" value="[draw]"/>
+  <option name="Fallen-wizard Site box 4 require" value="[draw]"/>
+  <option name="Fallen-wizard Site text 4 font color" value="143,131,115"/>
+
+  <option name="default box 5" value="348,526,40,40"/>
+  <option name="default box 5" value="348,526,40,40"/>
+  <option name="Region box 5" value="0,0,0,0"/>
+  <option name="default box 5 color" value="171,183,195"/>
+  <option name="Hazard box 5 color" value="33,33,33"/>
+  <option name="Hero Resource box 5 color" value="200,180,129"/>
+  <option name="Hero Site box 5 color" value="242,233,192"/>
+  <option name="default box 5 border" value="4"/>
+  <option name="default text 5" value="348,526,40,40"/>
+  <option name="Hazard text 5 font color" value="255,255,255"/>
+  <option name="default text 5 font size" value="24"/>
+  <option name="default text 5 align" value="1"/>
+  <option name="default text 5 content" value="[corruption]"/>
+  <option name="Minion Resource box 5 color" value="150,154,168"/>
+  <option name="Stage Resource box 5 color" value="214,204,169"/>
+  <option name="Minion Site box 5 color" value="165,145,146"/>
+  <option name="Balrog Site box 5 color" value="174,146,135"/>
+  <option name="Fallen-wizard Site box 5 color" value="219,208,202"/>
+  <option name="Minion Character box 5 color" value="123,94,138"/>
+
+  <option name="default text 6" value="78,524,264,28"/>
+  <option name="default text 6 font size" value="24"/>
+  <option name="default text 6 align" value="2"/>
+  <option name="default text 6 content" value="Home Site: [home site]"/>
+  <option name="Hero Site text 6" value="42,360,334,190"/>
+  <option name="Hero Site text 6 require" value="[playable][auto_attack]"/>
+  <option name="Hero Site text 6 content" value="{font3}Playable:{font4} [playable]\n{font3}Autoattack:{font4} [auto_attack]"/>
+  <option name="Hero Site text 6 valign" value="0"/>
+  <option name="Hero Site text 6 align" value="0"/>
+  <option name="Minion Site text 6" value="42,360,334,190"/>
+  <option name="Minion Site text 6 require" value="[playable][auto_attack]"/>
+  <option name="Minion Site text 6 content" value="{font3}Playable:{font4} [playable]\n{font3}Autoattack:{font4} [auto_attack]"/>
+  <option name="Minion Site text 6 valign" value="0"/>
+  <option name="Minion Site text 6 align" value="0"/>
+  <option name="Fallen-wizard Site text 6" value="42,360,334,190"/>
+  <option name="Fallen-wizard Site text 6 require" value="[playable][auto_attack]"/>
+  <option name="Fallen-wizard Site text 6 content" value="{font3}Playable:{font4} [playable]\n{font3}Autoattack:{font4} [auto_attack]"/>
+  <option name="Fallen-wizard Site text 6 valign" value="0"/>
+  <option name="Fallen-wizard Site text 6 align" value="0"/>
+  <option name="Balrog Site text 6" value="42,360,334,190"/>
+  <option name="Balrog Site text 6 require" value="[playable][auto_attack]"/>
+  <option name="Balrog Site text 6 content" value="{font3}Playable:{font4} [playable]\n{font3}Autoattack:{font4} [auto_attack]"/>
+  <option name="Balrog Site text 6 valign" value="0"/>
+  <option name="Balrog Site text 6 align" value="0"/>
+
+  <option name="default text 7" value="68,334,320,26"/>
+  <option name="default text 7 font" value="0"/>
+  <option name="Hazard text 7 font color" value="255,255,255"/>
+  <option name="Hero Resource text 7 font color" value="255,255,255"/>
+  <option name="default text 7 font size" value="20"/>
+  <option name="default text 7 align" value="2"/>
+  <option name="default text 7 content" value="[skills] [race]"/>
+  <option name="Hazard text 7 content" value="[class]"/>
+  <option name="Hero Resource text 7 content" value="[class]"/>
+  <option name="Hero Site text 7 content" value="[region]"/>
+  <option name="Minion Site text 7 content" value="[region]"/>
+  <option name="Fallen-wizard Site text 7 content" value="[region]"/>
+  <option name="Balrog Site text 7 content" value="[region]"/>
+
+  <option name="Hazard text 8" value="12,94,25,258"/>
+  <option name="Hazard text 8 content" value="[playable]"/>
+  <option name="Hero Site text 8" value="12,94,25,258"/>
+  <option name="Hero Site text 8 content" value="[site_path]"/>
+  <option name="Hero Site text 8 valign" value="0"/>
+  <option name="Minion Site text 8" value="12,94,25,258"/>
+  <option name="Minion Site text 8 content" value="[site_path]"/>
+  <option name="Minion Site text 8 valign" value="0"/>
+
+  <option name="deck order" value="type"/>
+  <option name="deck color by" value="type"/>
+  <option name="Hero Character text" value="{blue}"/>
+  <option name="Minion Character text" value="{magenta}"/>
+  <option name="Balrog Character text" value="{red}"/>
+  <option name="Fallen-wizard Character text" value="{magenta}"/>
+  <option name="Hero Resource text" value="{brown}"/>
+  <option name="Minion Resource text" value="{cyan}"/>
+  <option name="Stage Resource text" value="{green}"/>
+  <option name="Hero Site text" value="{yellow}"/>
+  <option name="Minion Site text" value="{gray}"/>
+  <option name="Fallen-wizard Site text" value="{black}"/>
+  <option name="Balrog Site text" value="{orange}"/>
+  <option name="Region text" value="{green}"/>
+
+  <trigger event="location hint" attribute="type"/>
+  <trigger event="location hint" attribute="class"/>
+
+  <trigger event="play" attribute="class"/>
+</ccg>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE ccg-setinfo SYSTEM "../gccg-set.dtd">
+<ccg-setinfo name="Promotional german" dir="Promo_de" abbrev="PRde" game="Middle-earth">
+  <cards>
+
+    <card name="Baugúr" graphics="Baugur.jpg" text="Unique. Half-orc. Agent. Leader. Discard on a body check result of 8. +2 direct influence against Orcs and Orc factions. Agent only: May not move to Free-holds {f} and Border-holds {b}.">
+       <attr key="unique" value="yes"/>
+       <attr key="skills" value="Warrior"/>
+       <attr key="mp" value="1"/>
+       <attr key="prowess" value="4"/>
+       <attr key="body" value="8"/>
+       <attr key="home_site" value="Isengard"/>
+       <attr key="rarity" value="P"/>
+       <attr key="agent" value="yes"/>
+       <attr key="race" value="Orc"/>
+       <attr key="type" value="Minion Character"/>
+       <attr key="mind" value="4"/>
+       <attr key="influence" value="1"/>
+    </card>
+
+    <card name="Freca" graphics="Freca.jpg" text="Unique. Agent. +1 direct influence against the Riders of Rohan and Dunlendings factions.">
+       <attr key="unique" value="yes"/>
+       <attr key="skills" value="Warrior/Diplomat"/>
+       <attr key="mp" value="2"/>
+       <attr key="body" value="8"/>
+       <attr key="prowess" value="4"/>
+       <attr key="home_site" value="Edoras, Dunnish Clan-hold"/>
+       <attr key="rarity" value="P"/>
+       <attr key="race" value="Man"/>
+       <attr key="agent" value="yes"/>
+       <attr key="type" value="Minion Character"/>
+       <attr key="mind" value="5"/>
+       <attr key="influence" value="2"/>
+    </card>
+
+    <card name="Wolf" graphics="Wolf.jpg" text="Unique. Agent. +2 direct influence against the Dunlendings faction.">
+       <attr key="unique" value="yes"/>
+       <attr key="skills" value="Warrior/Diplomat"/>
+       <attr key="mp" value="1"/>
+       <attr key="body" value="7"/>
+       <attr key="prowess" value="3"/>
+       <attr key="home_site" value="Edoras, Dunnish Clan-hold"/>
+       <attr key="rarity" value="P"/>
+       <attr key="race" value="Man"/>
+       <attr key="agent" value="yes"/>
+       <attr key="type" value="Minion Character"/>
+       <attr key="mind" value="4"/>
+       <attr key="influence" value="2"/>
+    </card>
+
+    <card name="Zirperkirper" graphics="Zirperkirper.jpg" text="Animals. Each character in the company faces one strike. His prowess against such a strike is equal to his mind attribute. Any character that would normally be wounded is only tapped intstead - no body checks are made.">
+       <attr key="strikes" value="1"/>
+       <attr key="mp" value="1"/>
+       <attr key="body" value="-"/>
+       <attr key="prowess" value="7"/>
+       <attr key="playable" value="{b}{w}{s}{d}{R}"/>
+       <attr key="subclass" value="Animals"/>
+       <attr key="rarity" value="P"/>
+       <attr key="class" value="Creature"/>
+       <attr key="type" value="Hazard"/>
+    </card>
+
+    <card name="Schwarzer Pfeil" graphics="SchwarzerPfeil.jpg" text="Warrior only. Tap Black Arrow to give -1 to the prowess and body of any one attack against bearer's company. When Black Arrow is tapped, discard it if its bearer is not a Man.">
+       <attr key="corruption" value="1"/>
+       <attr key="rarity" value="P"/>
+       <attr key="class" value="Minor Item"/>
+       <attr key="type" value="Hero Resource"/>
+    </card>
+
+    <card name="Der Arkenstein" graphics="DerArkenstein.jpg" text="Unique. +5 to bearer's direct influence against Dwarves and Dwarf factions. Each Dwarf in play has +1 mind. If the bearer of this item is at the same site as a Dwarf character, you may discard this item to force the discard of the Dwarf (and all non-follower cards he controls).">
+       <attr key="unique" value="yes"/>
+       <attr key="corruption" value="3"/>
+       <attr key="mp" value="3"/>
+       <attr key="rarity" value="P"/>
+       <attr key="class" value="Greater Item"/>
+       <attr key="type" value="Minion Resource"/>
+       <attr key="influence" value="(+5)"/>
+    </card>
+
+    <card name="Die Eiserne Krone" graphics="DieEiserneKrone.jpg" text="Unique. Whenever bearer makes an influence check, he must also make a corruption check. If the bearer is not a Hobbit: he receives +1 to body to a maximum of 10; he receives +4 to direct influence; and he may tap The Iron Crown to cancel an attack by Orcs, Trolls, or Men against his company.">
+       <attr key="unique" value="yes"/>
+       <attr key="corruption" value="5"/>
+       <attr key="mp" value="4"/>
+       <attr key="body" value="(+1)"/>
+       <attr key="rarity" value="P"/>
+       <attr key="class" value="Greater Item"/>
+       <attr key="type" value="Hero Resource"/>
+       <attr key="influence" value="(+4)"/>
+    </card>
+
+    <card name="Das Pack vor der Tuer" graphics="DasPackvorderTuer.jpg" text="Playable if Doors of Night are in play. Each non-unique Animal, Spider and Wolf creature may be played in Border-lands {b}, Border-holds {B} or Ruins &amp; Lairs {R}. The creature must be playable in a non-Coastal Sea {c} region.">
+       <attr key="rarity" value="P"/>
+       <attr key="class" value="Long-event"/>
+       <attr key="type" value="Hazard"/>
+    </card>
+
+    <card name="Das Wueten der Eisernen Krone" graphics="DasWuetenderEisernenKrone.jpg" text="Unique. Only playable if Die Eiserne Krone (The Iron Crown) is not in play. The prowness of a strike against Orcs, Trolls, Men or Nazgûl are modified by +4. If the Target Creature are not a Nazgûl, the Creature is to discard from the game (The defender get the MPs). The Defender can also play the Die Eiserne Krone (The Iron Crown) from his hand at once.">
+       <attr key="unique" value="yes"/>
+       <attr key="rarity" value="P"/>
+       <attr key="class" value="Short-event"/>
+       <attr key="type" value="Hazard"/>
+    </card>
+
+    <card name="Schwertmeister" graphics="Schwertmeister.jpg" text="Sage only. Playable on an untapped sage at an untapped site where Information is playable during site phase. Tap the site and the sage. Gives the sage warrior skill. If the sage is already a warrior, he can use two weapons (both modifiers count). If he uses two weapons, he can not use a shield. Cannot be duplicated on a given character.">
+       <attr key="mp" value="1"/>
+       <attr key="rarity" value="P"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Hero Resource"/>
+    </card>
+
+    <card name="Zwergenaxt" graphics="Zwergenaxt.jpg" text="Weapon. Warrior only. +2 prowess (to a maximum of 7); +3 prowess if held by a Dwarf (to a maximum of 8).">
+       <attr key="corruption" value="2"/>
+       <attr key="mp" value="2"/>
+       <attr key="body" value="-"/>
+       <attr key="prowess" value="++2 (+3)"/>
+       <attr key="rarity" value="P"/>
+       <attr key="class" value="Major Item"/>
+       <attr key="type" value="Hero Resource"/>
+    </card>
+
+    <card name="Horn der Herausforderung" graphics="HornderHerausforderung.jpg" text="Unique. Hoard item. +2 direct influence. A stored Reforging may be placed with this item to &quot;restore&quot; it. Once restored, Horn der Herausforderung gives 3 MP and 2 CP. If its bearer is the first to face a strike, that character may choose to face all strikes of an attack. The character faces a separate strike sequence for each strike.">
+       <attr key="unique" value="yes"/>
+       <attr key="corruption" value="1 (2)"/>
+       <attr key="mp" value="1 (3)"/>
+       <attr key="body" value="-"/>
+       <attr key="prowess" value="++2 (+3)"/>
+       <attr key="rarity" value="P"/>
+       <attr key="class" value="Greater Item"/>
+       <attr key="type" value="Hero Resource"/>
+       <attr key="influence" value="++2"/>
+    </card>
+
+    <card name="Ringil" graphics="Ringil.jpg" text="Unique. Hoard item. Weapon. +1 body. Warrior only: +1 prowess (to a maximum of 8). A stored Reforging may be placed with this item to &quot;restore&quot; it. Once restored, Ringil gives 4 MP, 3 CP and +5 prowess (to a maximum of 11).">
+       <attr key="unique" value="yes"/>
+       <attr key="corruption" value="2 (3)"/>
+       <attr key="mp" value="2 (4)"/>
+       <attr key="body" value="-"/>
+       <attr key="prowess" value="(+1) (+5)"/>
+       <attr key="rarity" value="P"/>
+       <attr key="class" value="Greater Item"/>
+       <attr key="type" value="Hero Resource"/>
+    </card>
+
+    <card name="Belegennon" graphics="Belegennon.jpg" text="Unique. Hoard item. Armor. +1 body (to a maximum of 9). A stored Reforging may be placed with this item to &quot;restore&quot; it. Once restored, Belegennon gives 4 MP and 3 CP. Warrior only (restored): If bearer chooses not to tap against a strike, he receives no prowess penalty.">
+       <attr key="unique" value="yes"/>
+       <attr key="corruption" value="2 (3)"/>
+       <attr key="mp" value="2 (4)"/>
+       <attr key="body" value="++1"/>
+       <attr key="rarity" value="P"/>
+       <attr key="class" value="Greater Item"/>
+       <attr key="type" value="Hero Resource"/>
+    </card>
+
+    <card name="Flammen des Zorns" graphics="FlammendesZorns.jpg" text="Affects the following sites: The Loney Mountain, Irerock, Zarak Dûm, and Gold Hill. For any item to be played at one of these sites, its player must remove an item in his hand from play that would itself be playable at the site. Cannot be revealed as an on-guard card. Discard Ireful Flames when any play deck is exhausted.">
+       <attr key="rarity" value="P"/>
+       <attr key="class" value="Permanent-event"/>
+       <attr key="type" value="Hazard"/>
+    </card>
+
+  </cards>
+</ccg-setinfo>

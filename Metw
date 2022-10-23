@@ -1,0 +1,30 @@
+#!/bin/sh --login
+LD_LIBRARY_PATH="$LD_LIBRARY_PATH:./lib"
+DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:./lib"
+export LD_LIBRARY_PATH
+export DYLD_LIBRARY_PATH
+
+CCG_PATH=`which $0`
+CCG_PATH=`dirname $CCG_PATH`
+cd $CCG_PATH
+
+if [ ! -f ./scripts/client.functions ]; then
+  echo "You must install 'client' package."
+  exit 1
+fi
+
+if [ "$1" = "--text" ]; then
+  if [ ! -x ./ccg_text_client ]; then
+    echo "You must install package containing program binaries for text version, for example 'linux-text-i386'."
+    exit 1
+  fi
+  shift
+  ./ccg_text_client $* metw.xml
+else
+  if [ ! -x ./ccg_client ]; then
+    echo "You must install package containing program binaries, for example 'linux-i386'."
+    exit 1
+  fi
+  ./ccg_client --server gccg.meccg.es --design 1600x1000 --user Aragorn314 metw.xml
+fi
+

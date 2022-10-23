@@ -1,0 +1,273 @@
+#
+# VARIABLES
+# =========
+
+# Deck name mapping.
+deck_name{"deck"}="play deck";
+deck_name{"sites"}="location deck";
+deck_name{"discard pile"}="discard pile";
+deck_name{"sideboard"}="sideboard";
+deck_name{"pool"}="pool";
+deck_name{"opponent deck"}="play deck";
+deck_name{"opponent sites"}="location deck";
+deck_name{"opponent discard pile"}="discard pile";
+deck_name{"opponent sideboard"}="sideboard";
+deck_name{"opponent pool"}="pool";
+
+#
+# SPECIAL DECK RULES
+# ==================
+
+#
+# RuleCountCreatures(list of card numbers,"H"/"M"/"F"/"B") - Return number of creatures.
+#
+def RuleCountCreatures
+{
+  push(a);
+  push(n);
+  push(t);
+  t=0.0;
+  for(c)(ARG[0])
+  {
+    a=Attr("class",c);
+    if(a=="Creature")
+      t=t+1.0;
+    else if(find("Creature",a) != NULL)
+      t=t+0.5;
+    else if(card_attr("spawn",c) == "yes")
+      t=t+0.5;
+    else if((ARG[1]=="H" || ARG[1]=="B" || card_attr("type",c)=="Hazard")&& card_attr("agent",c) == "yes")
+      t=t+0.5;
+    else if(card_attr("type",c)=="Hazard")
+    {
+      n=name(c);
+      if(n=="Agburanar at Home" ||
+         n=="Bairanax at Home" ||
+         n=="Daelomin at Home" ||
+         n=="Eärcaraxë at Home" ||
+         n=="Itangast at Home" ||
+         n=="Leucaruth at Home" ||
+         n=="Scatha at Home" ||
+         n=="Scorba at Home" ||
+         n=="Smaug at Home" ||
+         n=="Agburanar Ahunt" ||
+         n=="Bairanax Ahunt" ||
+         n=="Daelomin Ahunt" ||
+         n=="Eärcaraxë Ahunt" ||
+         n=="Itangast Ahunt" ||
+         n=="Leucaruth Ahunt" ||
+         n=="Scatha Ahunt" ||
+         n=="Scorba Ahunt" ||
+         n=="Smaug Ahunt")
+      t=t+0.5;
+    }
+  }
+
+  deck_rulecheck.info="found "+format("%.1f",t)+" creatures";
+
+  return(t);
+  t=pop();
+  n=pop();
+  a=pop();
+}
+
+#
+# RuleHazardResourceBalance(card list,"H"/"M"/"F"/"B") - Check that
+#   there is as many hazards as resources. 
+#
+def RuleHazardResourceBalance
+{
+  push(a);
+  push(s);
+  push(t);
+  push(n);
+  push(h);
+  push(hmax);
+  s=(,);
+  s{""}=0;
+  s{"h"}=0;
+  s{"r"}=0;
+  s{"n"}=0;
+  hmax=3;
+  if(ARG[1]=="F")
+    hmax=2;
+  h=(,);
+  h{"Twilight"}=0;
+  h{"Sudden Call"}=0;
+  h{"Tookish Blood"}=0;
+  h{"Great Secrets Buried There"}=0;
+
+  for(c)(ARG[0])
+  { 
+    t="";
+    n=name(c);
+    if(n=="Gnawed Ways")
+    {
+      if(ARG[1]=="F")
+        t="n";
+      else
+        t="h";
+    }
+    else if(n=="Sudden Call")
+    {
+      h{n}=h{n}+1;
+      if(ARG[1]=="H" || h{n}>=hmax)
+        t="h";
+      else
+        t="n";
+    }
+    else if(n=="Tookish Blood" && h{n} < hmax)
+    {
+      h{n}=h{n}+1;
+      if(ARG[1]=="M")
+        t="h";
+      else
+        t="n";
+    }
+    else if((n=="Twilight" || n=="Great Secrets Buried There") && h{n} < hmax)
+    {
+        h{n}=h{n}+1;
+        t="n";
+    }
+    else
+    {
+      a=Attr("type",c);
+      if(a=="Hazard")
+        t="h";
+      else if(find("Resource",a) != NULL)
+        t="r";
+    }
+
+    if(ARG[1]=="H" || ARG[1]=="B")
+    {
+      if(t=="" && card_attr("agent",c) == "yes")
+        t="h";
+    }
+ 
+    s{t}=s{t}+1;
+  }
+
+  deck_rulecheck.info="Haz="+s{"h"}+", Res="+s{"r"}+", Both="+s{"n"}+", Other="+s{""};
+
+  return((s{"h"}+s{"r"}+s{"n"})%2==0 && abs(s{"r"}-s{"h"})<=s{"n"});
+  hmax=pop();
+  h=pop();
+  n=pop();
+  t=pop();
+  s=pop();
+  a=pop();
+}
+
+#
+# RuleCheckWizards(card list,"deck"/"total","H"/"M"/"F"/"B") - Check
+#   that the number of wizards comply rules in deck or in total.
+#
+def RuleCheckWizards
+{
+  push(w);
+  w=select('Attr("race",#)=="Wizard" || Attr("race",#)=="Ringwraith" || Attr("race",#)=="Fallen-wizard" || Attr("race",#)=="Balrog"',ARG[0]);
+
+  if(ARG[1]=="deck")
+    return(length(w)<=3 && length(unique(sort(w)))<=2);
+  else
+  {
+    push(v);
+    v=sort(w);
+    for(n)(w)
+    {
+      if(count(n,w)==1)
+        v=v-(n,);
+    }
+    if(length(unique(v))<=1) 
+      return(1);
+    else
+    {
+      deck_rulecheck.info="found "+join(name(unique(v))," and ");
+      return(0);
+    }
+    v=pop();
+  }
+  w=pop();
+}
+
+#
+# RuleAgentMindTotal(list of card numbers) - Check that total mind of agents are not exceeded.
+#
+def RuleAgentMindTotal
+{
+  push(m);
+  m=sum(forall('toint(Attr("mind",#))',select('Attr("agent",#)=="yes"',ARG)));
+  deck_rulecheck.info="mind now "+m;
+  return(m);
+  m=pop();
+}
+
+#
+# RuleSpecific(cards) - Return number of "specifics" in deck.
+#
+def RuleSpecific
+{
+  push(s);
+  push(n);
+  s=(,);
+  for(c)(ARG)
+  {
+    n=Attr("specific",c);
+    if(n!="")
+    {
+      if(s{n}==NULL)
+        s{n}=0;
+      s{n}=s{n}+1;
+    }
+  }
+  deck_rulecheck.info=join(forall('s{#}+" for "+#',keys(s)),", ");
+  return(length(s));
+  n=pop();
+  s=pop();
+}
+
+#
+# RuleStagepoints(cards) - Count number of stage points.
+#
+def RuleStagepoints
+{
+  push(s);
+  s=0;
+  for(c)(ARG)
+    s=s+toint(Attr("sp",c));
+  deck_rulecheck.info="SP="+s;
+  return(s);
+  s=pop();
+}
+
+#
+# RuleNonUniqueStageCards(cards) - Count number of non-unique stage cards.
+#
+def RuleNonUniqueStageCards
+{
+  push(c);
+  c=select("Attr('type',#)=='Stage Resource'",ARG);
+  c=select("Attr('unique',#)!='yes'",c);
+  return(length(c));
+  c=pop();
+}
+
+#
+# RuleBothHeroAndMinionUnique(cards) - Return 1 if there are no unique
+#    cards as both hero and minion version.
+#
+def RuleBothHeroAndMinionUnique
+{
+  push(c);
+  c=select("Attr('unique',#)=='yes'",ARG);
+  if(length(unique(sort(name(c))))==length(c))
+    return(1);
+  else
+  {
+    c=name(c);
+    c=select('count(#,c) > 1',c);
+    deck_rulecheck.info=join(unique(sort(c)),", ");
+    return(0);
+  }
+  c=pop();  
+}

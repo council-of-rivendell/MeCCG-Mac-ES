@@ -1,0 +1,43 @@
+#!/bin/bash
+
+function gccg()
+{
+	SYS=`uname -s|tr A-Z a-z`-`uname -m`
+	SYS=`echo $SYS|sed -e 's/i[3456]86/i386/'`
+
+	CCG_PATH=`which $0`
+	CCG_PATH=`dirname $CCG_PATH`
+
+	LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$CCG_PATH/lib:$CCG_PATH/module_$SYS"
+	DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$CCG_PATH/lib:$CCG_PATH/module_$SYS"
+
+	export LD_LIBRARY_PATH
+	export DYLD_LIBRARY_PATH
+
+	if [ ! -f $CCG_PATH/scripts/client.functions ]; then
+	  echo "You must install 'client' package."
+	  exit 1
+	fi
+
+	# Get prebuild if home made not found.
+	if [ ! -x $CCG_PATH/ccg_client -a -x $CCG_PATH/module_$SYS/ccg_client ]; then
+	    CCG_PATH=$CCG_PATH/module_$SYS
+	fi
+
+	if [ "$1" = "--text" ]; then
+	  if [ ! -x $CCG_PATH/ccg_text_client ]; then
+	    echo "You must install package containing program binaries for text version, for example 'linux-text-i386'."
+	    exit 1
+	  fi
+	  shift
+	  echo Running $CCG_PATH/ccg_text_client $*
+	  $CCG_PATH/ccg_text_client $*
+	else
+	  if [ ! -x $CCG_PATH/ccg_client ]; then
+	    echo "You must install package containing program binaries, for example 'linux-i386'."
+	    exit 1
+	  fi
+	echo Running $CCG_PATH/ccg_client $*
+	$CCG_PATH/ccg_client $*
+	fi
+}
