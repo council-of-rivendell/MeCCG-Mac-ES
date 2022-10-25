@@ -322,7 +322,7 @@ FILTER_FUNCTIONS=(,);
 GAME_ATTRIBUTES=(,);
 
 # Common (server-side) basic table size (independent of the display size)
-BASE_TABLE_WIDTH=1024;
+BASE_TABLE_WIDTH=1280;
 BASE_TABLE_HEIGHT=768;
 
 # Which load/save functions should be called? (for compatibility)
@@ -3758,6 +3758,7 @@ def CreateHand
 
   hand[ARG[1]]=create_hand(ARG[3][0]-10,y,ARG[0],ARG[2]);
   set_attr(hand[ARG[1]],"ontop",Z_HAND);
+  set_attr(hand[ARG[1]],"compact",1);
   raise(hand[ARG[1]]);
 
   if(ARG[1]!=me)
@@ -4319,6 +4320,7 @@ def SetHand
     else
     {
       set_attr(hand[ARG[0]],"tiny",0);
+      set_attr(hand[ARG[0]],"compact",1);
       n=object_data(hand[ARG[0]]);
       if(n[0]+n[2] > screen.width)
          move_object(hand[ARG[0]],d[0]-(n[2]-d[2]),d[1]);

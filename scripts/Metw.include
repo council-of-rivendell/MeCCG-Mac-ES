@@ -1293,22 +1293,22 @@ def InitializeLocationTables
        (("LocationList",((design.width/8,0),(design.width/2,0),((design.width*3)/4,0),(design.width/5,design.height/4),(design.width/2,design.height/4),((design.width*3)/4,design.height/4)),),),
        (,)
     )),
-    (("mp",),(
-       (("StacksByGroup",3,design.height/2-card.ystep+((players>2)*(card.ystep/2)),15,0,0,0),),
-       (("OffscreenEnabled","yes"),)
-    )),
-    (("events","long"),(
-       (("StacksByGroup",100,-card.ystep/2+15,card.xstep/3,0,0,0),),
-       (("AutoRaiseGroupTail","yes"),)
-    )),
-    (("events","other"),(
-       (("StacksByGroup",design.width-card.xstep,card.ystep/2,0,20,0,0),),
-       (("AutoRaiseGroupTail","yes"),)
-    )),
-    (("events","hazard"),(
-       (("StacksByGroup",design.width-card.xstep*2,card.ystep/2,0,20,0,0),),
-       (("AutoRaiseGroupTail","yes"),)
-    )),
+#    (("mp",),(
+#       (("StacksByGroup",3,table.height/2-card.ystep+((players>2)*(card.ystep/2)),15,0,0,0),),
+#       (("OffscreenEnabled","yes"),)
+#    )),
+#    (("events","long"),(
+#       (("StacksByGroup",100,-card.ystep/2+15,card.xstep/3,0,0,0),),
+#       (("AutoRaiseGroupTail","yes"),)
+#    )),
+#    (("events","other"),(
+#       (("StacksByGroup",table.width-card.xstep*1,card.ystep/2,0,40,0,20),),
+#       (("AutoRaiseGroupTail","yes"),)
+#    )),
+#    (("events","hazard"),(
+#       (("StacksByGroup",table.width-card.xstep*2,card.ystep/2,0,40,0,20),),
+#       (("AutoRaiseGroupTail","yes"),)
+#    )),
 #    (("item/hazard",),(
 #       (("TargetCard",-w(20),-h(20),-w(20),-h(20)),),
 #       (("OffscreenEnabled","yes"),("RaiseTarget","yes"))
